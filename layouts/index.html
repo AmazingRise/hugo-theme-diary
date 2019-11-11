@@ -1,0 +1,43 @@
+
+{{ define "main" }}
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-no-background">
+        {{range .Site.Pages}}
+            {{if .IsPage}}
+            <a href="{{.Permalink}}" class="a-block">
+                <div class="post-item-wrapper">
+                    <div class="post-item post-item-no-divider">
+                        <div class="post-item-info-wrapper">
+                            <div class="post-item-title">
+                                {{.Title}}
+                            </div>
+                            <div class="post-item-summary">
+                                {{.Description}}
+                            </div>
+                            <div class="post-item-meta">
+                                {{ .PublishDate.Format "2006-01-02" }}
+                            </div>
+                        </div>
+                        <!--
+                        <% if(item.featured_image){ %>
+                        <div class="post-item-image-wrapper">
+                            <div class="post-item-image"
+                                 style="background-image: url('<%= config.root + item.path + item.featured_image %>')"></div>
+                        </div>
+                        <% } %>
+                    -->
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
+        </a>
+        <p>Placeholder for page indicator</p>
+    </div>
+    
+</div>
+<!--
+<% include _include/container_tail.ejs %>
+<% include _include/tail.ejs %>
+-->
+{{ end }}

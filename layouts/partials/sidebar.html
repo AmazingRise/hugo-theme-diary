@@ -1,0 +1,37 @@
+<div ref="sideContainer" class="side-container">
+    {{ if eq .Title .Site.Title}}
+    <a class="a-block nav-head active" href="{{.Site.BaseURL}}">
+    {{ else }}
+    <a class="a-block nav-head false" href="{{.Site.BaseURL}}">
+    {{ end }}
+        <div class="nav-title">
+            {{.Site.Title}}
+        </div>
+        <div class="nav-subtitle">
+            {{ with .Params.subtitle }}
+            <span class="subtitle">{{.}}</span>
+            {{ end }}
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        {{ $current := .Permalink }}
+        {{range .Site.Pages}}
+            {{if (and .IsNode (not .IsHome))}}
+                {{if eq $current .Permalink}}
+                <a class="a-block nav-link-item active" href="{{.Permalink}}">
+                    {{.Title}}
+                </a>
+                {{else}}
+                <a class="a-block nav-link-item false" href="{{.Permalink}}">
+                    {{.Title}}
+                </a>
+                {{end}}
+            {{ end }}
+        {{ end }}
+    </div>
+
+    <div class="nav-footer">
+        {{partial "footer.html" .}}
+    </div>
+</div>

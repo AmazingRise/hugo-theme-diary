@@ -1,0 +1,18 @@
+name = "Diary"
+license = "MIT"
+licenselink = "https://github.com/amazingrise/hugo-theme-diary/blob/master/LICENSE"
+description = "Moments piled up."
+homepage = "https://amazingrise.net/"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "amazingrise"
+  homepage = "https://amazingrise.net/"
+
+# If porting an existing theme
+[original]
+  name = "SumiMakito"
+  homepage = "https://mak1t0.cc"
+  repo = "https://github.com/SumiMakito/hexo-theme-Journal/"
