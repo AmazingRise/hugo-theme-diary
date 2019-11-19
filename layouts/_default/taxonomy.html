@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            {{ $featured_image := false}}
+            {{ $post_class := "post-head-wrapper-text-only"}}
+            {{ if $featured_image }}
+                {{ $post_class := "post-head-wrapper"}}
+            {{ end }}
+            <div class="{{$post_class}}"
+                 style="background-image: url('<%= getFeaturedImage() %>')">
+
+                <div class="post-title">
+                    {{ .Title }}
+                    <div class="post-meta">
+                        <time itemprop="datePublished">
+                            {{ .PublishDate.Format "2006-01-02 15:04" }}
+                        </time>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                  {{ range  .Pages }}
+                    {{ .Summary  }}
+                  {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
