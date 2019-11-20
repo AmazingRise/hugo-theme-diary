@@ -15,18 +15,19 @@
     </a>
 
     <div class="nav-link-list">
-        {{ $current := .Permalink }}
-        {{range .Site.Pages}}
-            {{if (and .IsNode (not .IsHome))}}
+        {{ $current := .Permalink}}
+        {{range $taxonomyname, $taxonomy := .Site.Taxonomies}}
+            
+            {{ with $.Site.GetPage (printf "/%s" $taxonomyname) }}
+
+            {{$actived := "false"}}
                 {{if eq $current .Permalink}}
-                <a class="a-block nav-link-item active" href="{{.Permalink}}">
-                    {{.Title}}
-                </a>
-                {{else}}
-                <a class="a-block nav-link-item false" href="{{.Permalink}}">
-                    {{.Title}}
-                </a>
+                    {{$actived = "active"}}
+                    
                 {{end}}
+                <a class="a-block nav-link-item {{$actived}}" href="{{.Permalink}}">
+                    {{.Title}}
+                </a>
             {{ end }}
         {{ end }}
     </div>
