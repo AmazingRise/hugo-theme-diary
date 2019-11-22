@@ -39,7 +39,14 @@
                     {{.Content}}
                 </div>
             </div>
-        <p> Placeholder for comment.</p>
+
+        {{ if eq .Params.comment false }}
+        <p style="opacity: 0.6; padding: 30px 15px" align="center">
+            <small>Comments Disabled.</small>
+        </p>
+        {{ else }}
+        {{- partial "comment.html" . -}}
+        {{ end }}
         </div>
     </div>
 </div>
