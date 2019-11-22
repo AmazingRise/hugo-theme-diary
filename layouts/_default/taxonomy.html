@@ -1,33 +1,38 @@
 {{ define "main" }}
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            {{ $featured_image := false}}
-            {{ $post_class := "post-head-wrapper-text-only"}}
-            {{ if $featured_image }}
-                {{ $post_class := "post-head-wrapper"}}
-            {{ end }}
-            <div class="{{$post_class}}"
-                 style="background-image: url('<%= getFeaturedImage() %>')">
-
-                <div class="post-title">
-                    {{ .Title }}
-                    <div class="post-meta">
-                        <time itemprop="datePublished">
-                            {{ .PublishDate.Format "2006-01-02 15:04" }}
-                        </time>
+        <div class="post-item-wrapper post-item-wrapper-no-hover">
+            <div class="post-item post-item-no-gaps">
+                <div class="post-item-info-wrapper">
+                    <div class="post-item-title  post-item-title-small">
+                        <a href="{{.FirstSection.Permalink}}">{{.FirstSection.Title}}</a> / {{ .Title }}
                     </div>
                 </div>
             </div>
-    
-            <div class="post-body-wrapper">
-                <div class="post-body">
-                  {{ range  .Pages }}
-                    {{ .Summary  }}
-                  {{ end }}
+        </div>
+        {{- range .Data.Pages -}}
+        {{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
+        {{- else -}}
+        <a href="{{ .RelPermalink }}" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            {{.Title}}
+                        </div>
+                        <div class="post-item-meta">
+                            {{ dateFormat "Jan 2, 2006" .Date }}
+
+                            {{ if .Draft }}
+                            <span class="draft-label">DRAFT</span>
+                            {{ end }}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
+        {{- end -}}
+        {{- end -}}
     </div>
 </div>
 {{ end }}

@@ -9,7 +9,6 @@
             {{ end }}
             <div class="{{$post_class}}"
                  style="background-image: url('<%= getFeaturedImage() %>')">
-
                 <div class="post-title">
                     {{ .Title }}
                     <div class="post-meta">
@@ -19,7 +18,7 @@
                     </div>
                 </div>
             </div>
-    
+            
             <div class="post-body-wrapper">
                 <div class="post-body">
                     {{.Content}}
