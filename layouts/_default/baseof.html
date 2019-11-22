@@ -2,13 +2,16 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
+
     	<div id="app">
+        {{- partial "header.html" . -}}
     	{{- partial "sidebar.html" . -}}
     	{{- partial "extrabar.html" . -}}
-        {{- partial "header.html" . -}}
+        
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>
     	</div>
+    <script src="/js/journal.js"></script>
     </body>
 </html>

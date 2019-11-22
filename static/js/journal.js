@@ -9,41 +9,41 @@ app = new Vue({
         mounted: false,
     },
     methods: {
-        sgn(t, x) {
-            let k = 1. / (1. - 2 * t);
-            if (x <= t) return 0;
-            else if (x >= 1 - t) return 1;
-            else {
-                return k * (x - t);
-            }
-        },
-        handleScroll() {
-            this.scrollY = window.scrollY;
-            this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
-            const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
 
-            if (this.navOpacity >= 1) {
-                navBackground.style.opacity = 1;
-                navTitle.style.opacity = 1;
-            } else {
-                navBackground.style.opacity = 0;
-                navTitle.style.opacity = 0;
-            }
-        },
-        handleResize() {
-            const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
-            extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
-        },
-        navBarHeight() {
-            return this.$refs.navBar.offsetHeight;
-        },
-        pageHeadHeight() {
-            return this.$refs.pageHead.offsetHeight;
-        },
-        toggleDrawer() {
-            this.isDrawerOpen = !this.isDrawerOpen;
-            document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
-        },
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
     },
     created() {
         window.addEventListener('scroll', this.handleScroll);
