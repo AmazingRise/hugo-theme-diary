@@ -15,6 +15,22 @@
                         <time itemprop="datePublished">
                             {{ .PublishDate.Format "2006-01-02 15:04" }}
                         </time>
+
+                        {{ if gt .Params.categories 0 }}
+                            <i class="material-icons" style="">folder</i>
+                            {{ range .Params.categories }}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                &nbsp;
+                            {{ end }}
+                        {{ end }}
+
+                        {{ if gt .Params.tags 0 }}
+                            <i class="material-icons" style="">label</i>
+                            {{ range .Params.tags }}
+                                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                &nbsp;
+                            {{ end }}
+                        {{ end }}
                     </div>
                 </div>
             </div>
