@@ -19,14 +19,12 @@
                                 {{ .PublishDate.Format "2006-01-02" }}
                             </div>
                         </div>
-                        <!--
-                        <% if(item.featured_image){ %>
-                        <div class="post-item-image-wrapper">
+                        {{ if .Params.featured_image }}
+                            <div class="post-item-image-wrapper">
                             <div class="post-item-image"
-                                 style="background-image: url('<%= config.root + item.path + item.featured_image %>')"></div>
-                        </div>
-                        <% } %>
-                    -->
+                                 style="background-image: url('{{.Params.featured_image}}')"></div>
+                            </div>
+                        {{ end }}
                     </div>
                 </div>
             {{ end }}

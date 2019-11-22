@@ -1,0 +1,36 @@
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        <!--
+        <% if(!config.__noPager) { %>
+        <% if(page.current && page.total && page.total > 1) { %>
+        <div class="pagination-indicator">
+            <span style="text-align: center">
+                <%= page.current %><br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br><%= page.total %>
+            </span>
+        </div>
+        <% } %>
+
+        <% if (page.prev) { %>
+        <a class="pagination-action" href="<%- url_for(page.prev_link) %>">
+            <i class="material-icons pagination-action-icon">
+                chevron_left
+            </i>
+        </a>
+        <% } %>
+
+        <% if (page.next) { %>
+        <a class="pagination-action" href="<%- url_for(page.next_link) %>">
+            <i class="material-icons pagination-action-icon">
+                chevron_right
+            </i>
+        </a>
+        <% } %>
+        <% } %>
+        -->
+    </div>
+</div>
