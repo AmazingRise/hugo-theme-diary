@@ -2,15 +2,18 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-
     	<div id="app">
-        {{- partial "header.html" . -}}
-    	{{- partial "sidebar.html" . -}}
-    	{{- partial "extrabar.html" . -}}
-        
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
+            {{- partial "header.html" . -}}
+        	{{- partial "sidebar.html" . -}}
+        	{{- partial "extrabar.html" . -}}
+            
+            <div id="content">
+            {{- block "main" . }}{{- end }}
+            </div>
+
+            <div id="single-column-footer">
+                {{- partial "footer.html" . -}}
+            </div>
     	</div>
     <script src="/js/journal.js"></script>
     </body>

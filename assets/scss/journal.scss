@@ -938,7 +938,10 @@ a {
     }
   }
 
-  .single-column-footer {
+  
+}
+
+#single-column-footer {
     display: none;
 
     @media screen and (max-width: $single-column-max-width) {
@@ -948,5 +951,4 @@ a {
       font-family: $sans-preferred-font-list;
       padding: 40px 20px 40px 20px;
     }
-  }
 }

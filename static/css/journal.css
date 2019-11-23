@@ -700,10 +700,11 @@ a {
             text-decoration: none; }
             .stream-container .pagination .pagination-action:hover * {
               color: #7a422c; } }
-  .stream-container .single-column-footer {
+  /*.stream-container .single-column-footer*/
+  .single-column-footer {
     display: none; }
     @media screen and (max-width: 1020px) {
-      .stream-container .single-column-footer {
+      .single-column-footer {
         display: block !important;
         text-align: center;
         font-size: 13px;
