@@ -1,6 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "A Hugo Site"
+copyright = "This is a customized copyright."
 
 theme = "diary"
 googleAnalytics = "UA-123-45"
