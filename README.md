@@ -1,5 +1,6 @@
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
+[Live Demo](https://amazingrise.net/hugo-theme-diary/)
 
 Original Author: [SumiMakito](https://github.com/SumiMakito)
 
@@ -15,6 +16,8 @@ Hereinafter referred to the original version made by SumiMakito as `the ori`.
 This theme is [under construction](https://github.com/AmazingRise/hugo-theme-diary/projects/2).
 
 ## Screenshots
+
+[Live Demo here!](https://amazingrise.net/hugo-theme-diary/)
 
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/screenshot.png)
 
@@ -69,9 +72,35 @@ From the root of themes/diary/exampleSite:
 hugo server --themesDir ../..
 ```
 
-## Customize
+## Example config
 
-For customization, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
+Here is an example config. (The same as /exampleSite/config.toml)
+```
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "A Hugo Site"
+copyright = "This is a customized copyright."
+
+theme = "diary"
+# googleAnalytics = "UA-123-45"
+
+[params]
+subtitle = "Themed by Diary."
+enableGitalk = true
+
+[params.gitalk]
+  owner = "user"
+  repo = "repo name"
+  client_id = "your client id"
+  client_secret = "your client secret"
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+```
+
+## Using & Customize
+
+As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
 ## Comparison
 
