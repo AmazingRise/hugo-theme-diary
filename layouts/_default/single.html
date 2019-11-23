@@ -15,12 +15,10 @@
                             {{ .PublishDate.Format "2006-01-02 15:04" }}
                         </time>
 
-                        {{ if gt .Params.categories 0 }}
+                        {{ if .Params.categories }}
                             <i class="material-icons" style="">folder</i>
-                            {{ range .Params.categories }}
-                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
                                 &nbsp;
-                            {{ end }}
                         {{ end }}
 
                         {{ if gt .Params.tags 0 }}
