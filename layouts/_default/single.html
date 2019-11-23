@@ -40,13 +40,35 @@
                 </div>
             </div>
 
-        {{ if eq .Params.comment false }}
-        <p style="opacity: 0.6; padding: 30px 15px" align="center">
-            <small>Comments Disabled.</small>
-        </p>
-        {{ else }}
-        {{- partial "comment.html" . -}}
-        {{ end }}
+            <nav class="post-pagination">
+                {{if .Next}}
+                <a class="newer-posts" href="{{.Next.Permalink}}">
+                    Next<br>{{.Next.Title}}
+                </a>
+                {{else}}
+                <a class="newer-posts">
+                    No newer posts.
+                </a>
+                {{end}}
+                
+                {{if .Prev}}
+                <a class="older-posts" href="{{.Prev.Permalink}}">
+                    Previous<br>{{.Prev.Title}}
+                </a>
+                {{else}}
+                <a class="older-posts">
+                    No older posts.
+                </a>
+                {{end}}
+            </nav>
+
+            {{ if eq .Params.comment false }}
+            <p style="opacity: 0.6; padding: 30px 15px" align="center">
+                <small>Comments Disabled.</small>
+            </p>
+            {{ else }}
+            {{- partial "comment.html" . -}}
+            {{ end }}
         </div>
     </div>
 </div>
