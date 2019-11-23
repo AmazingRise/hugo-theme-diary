@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "A Hugo Site"
+
+theme = "diary"
+googleAnalytics = "UA-123-45"
+
+[params]
+subtitle = "Themed by Diary."
+enableGitalk = true
+
+[params.gitalk]
+  owner = "user"
+  repo = "repo name"
+  client_id = "your client id"
+  client_secret = "your client secret"
+[taxonomies]
+   tag = "tags"
+   category = "categories"
