@@ -17,12 +17,15 @@ This theme is [under construction](https://github.com/AmazingRise/hugo-theme-dia
 ## Screenshots
 
 ![](arts/main.png)
+
 Site Main Page
 
 ![](arts/essay.png)
+
 An essay with picture.
 
 ![](arts/m_main.png)
+
 Mobile Main Page
 
 ## Features
