@@ -7,11 +7,11 @@
         <div class="nav-title">
             {{.Site.Title}}
         </div>
+        {{ with .Site.Params.subtitle }}
         <div class="nav-subtitle">
-            {{ with .Params.subtitle }}
-            <span class="subtitle">{{.}}</span>
-            {{ end }}
+            {{.}}
         </div>
+        {{ end }}
     </a>
 
     <div class="nav-link-list">
@@ -34,7 +34,7 @@
 
 
     <div class="nav-footer">
-        {{partial "footer.html" .}}
+        {{partial "copyright.html" .}}
     </div>
     
 </div>

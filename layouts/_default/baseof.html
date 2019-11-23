@@ -3,17 +3,18 @@
     {{- partial "head.html" . -}}
     <body>
     	<div id="app">
-            {{- partial "header.html" . -}}
-        	{{- partial "sidebar.html" . -}}
-        	{{- partial "extrabar.html" . -}}
-            
+            {{- partial "sidebar.html" . -}}
+            {{- partial "extrabar.html" . -}}
+            <!-- PC view -->
+
+            {{- partial "mobile-header.html" . -}}
+            <!-- mobile header -->
             <div id="content">
             {{- block "main" . }}{{- end }}
             </div>
 
-            <div id="single-column-footer">
-                {{- partial "footer.html" . -}}
-            </div>
+            {{- partial "mobile-footer.html" . -}}
+            <!-- mobile footer -->
     	</div>
     <script src="/js/journal.js"></script>
     </body>
