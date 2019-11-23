@@ -16,15 +16,15 @@ This theme is [under construction](https://github.com/AmazingRise/hugo-theme-dia
 
 ## Screenshots
 
-![](arts/main.png)
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/screenshot.png)
 
 Site Main Page
 
-![](arts/essay.png)
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
 
 An essay with picture.
 
-![](arts/m_main.png)
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_main.png)
 
 Mobile Main Page
 

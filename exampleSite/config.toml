@@ -4,7 +4,7 @@ title = "A Hugo Site"
 copyright = "This is a customized copyright."
 
 theme = "diary"
-googleAnalytics = "UA-123-45"
+# googleAnalytics = "UA-123-45"
 
 [params]
 subtitle = "Themed by Diary."

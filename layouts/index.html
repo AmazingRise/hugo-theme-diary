@@ -19,10 +19,11 @@
                                 {{ .PublishDate.Format "2006-01-02" }}
                             </div>
                         </div>
-                        {{ if .Params.featured_image }}
+                        {{ $featured_image := .Params.featured_image }}
+                        {{ if $featured_image }}
                             <div class="post-item-image-wrapper">
                             <div class="post-item-image"
-                                 style="background-image: url('{{.Params.featured_image}}')"></div>
+                                 style="background-image: url('{{$featured_image | relLangURL }}')"></div>
                             </div>
                         {{ end }}
                     </div>

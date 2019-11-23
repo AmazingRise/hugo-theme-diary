@@ -1,11 +1,11 @@
 name = "Diary"
 license = "MIT"
 licenselink = "https://github.com/amazingrise/hugo-theme-diary/blob/master/LICENSE"
-description = "Moments piled up."
+description = "Moments piled up. A simple, elegant blog theme."
 homepage = "https://amazingrise.net/"
-tags = []
-features = []
-min_version = "0.41"
+tags = ["blog"]
+features = ["mobile","elegant"]
+min_version = "0.59.0"
 
 [author]
   name = "amazingrise"
