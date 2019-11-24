@@ -2,13 +2,11 @@ $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: "Lora", "source-han-serif-tc", serif;
+$default-font-list: "Lora", "Noto Serif SC", serif;
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
 $sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro",
   "Helvetica", "Arial", $default-font-list;
-//$default-font-list: "Cousine", Monaco, Menlo, "Source Code Pro", sans-serif;
-//$sans-preferred-font-list: "Cousine", Monaco, Menlo, "Source Code Pro", sans-serif;
 
 $side-container-width: 25%; //280px;
 $extra-container-width: 64px;

@@ -71,10 +71,16 @@ From the root of themes/diary/exampleSite:
 ```bash
 hugo server --themesDir ../..
 ```
+## Using & Customize
 
-## Example config
+As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
-Here is an example config. (The same as /exampleSite/config.toml)
+[How to change color scheme?](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+[How to add or disable comment area?](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
+
+### Example config
+
+Here is an example config. (The same as `/exampleSite/config.toml`)
 ```
 baseURL = "http://example.org/"
 languageCode = "en-us"
@@ -97,10 +103,6 @@ enableGitalk = true
    tag = "tags"
    category = "categories"
 ```
-
-## Using & Customize
-
-As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
 ## Comparison
 
