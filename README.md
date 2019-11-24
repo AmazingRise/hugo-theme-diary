@@ -76,6 +76,7 @@ hugo server --themesDir ../..
 As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
 [How to change color scheme?](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+
 [How to add or disable comment area?](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
 
 ### Example config
