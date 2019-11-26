@@ -1,5 +1,6 @@
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
+
 [Live Demo](https://amazingrise.net/hugo-theme-diary/)
 
 Original Author: [SumiMakito](https://github.com/SumiMakito)
@@ -13,7 +14,9 @@ A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/Sumi
 
 Hereinafter referred to the original version made by SumiMakito as `the ori`.
 
-This theme is [under construction](https://github.com/AmazingRise/hugo-theme-diary/projects/2).
+The porting is basically finished.
+
+[And more functions are on the way.](https://github.com/AmazingRise/hugo-theme-diary/projects/3).
 
 ## Screenshots
 
@@ -75,9 +78,13 @@ hugo server --themesDir ../..
 
 As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
-[How to change color scheme?](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+[Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
 
-[How to add or disable comment area?](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
+[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
+
+[Add Google Analytics](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
+
+[About sidebar and taxonomies](https://github.com/AmazingRise/hugo-theme-diary/wiki/Tag-&-Category-Index-or-Taxonomies)
 
 ### Example config
 
@@ -96,13 +103,14 @@ subtitle = "Themed by Diary."
 enableGitalk = true
 
 [params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
+owner = "user"
+repo = "repo name"
+client_id = "your client id"
+client_secret = "your client secret"
+
 [taxonomies]
-   tag = "tags"
-   category = "categories"
+tag = "tags"
+category = "categories"
 ```
 
 ## Comparison

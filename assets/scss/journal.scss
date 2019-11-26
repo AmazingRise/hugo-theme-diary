@@ -53,6 +53,10 @@ $h-diff: 3px;
   display: none;
 }
 
+::selection {
+  background: rgba($color-accent, 0.4);
+}
+
 body {
   background: $back-container-background;
   padding: 0;
