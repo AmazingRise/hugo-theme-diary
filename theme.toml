@@ -11,6 +11,7 @@ min_version = "0.59.0"
   name = "amazingrise"
   homepage = "https://amazingrise.net/"
 
+
 # If porting an existing theme
 [original]
   name = "SumiMakito"

@@ -1,22 +1,18 @@
 # hugo-theme-diary
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-[Live Demo](https://amazingrise.net/hugo-theme-diary/)
-
-Original Author: [SumiMakito](https://github.com/SumiMakito)
-
 隻言片語・於此匯聚
 
 Moments piled up.
----
 
 A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/SumiMakito/hexo-theme-Journal/).
 
-Hereinafter referred to the original version made by SumiMakito as `the ori`.
+## Links
+[Live Demo](https://amazingrise.net/hugo-theme-diary/)
+[Changelog (Progress and TODO List)](https://github.com/AmazingRise/hugo-theme-diary/projects/)
+[Customization](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
 
-The porting is basically finished.
-
-[And more functions are on the way.](https://github.com/AmazingRise/hugo-theme-diary/projects/3).
+Original Author: [SumiMakito](https://github.com/SumiMakito)
 
 ## Screenshots
 
@@ -74,7 +70,7 @@ From the root of themes/diary/exampleSite:
 ```bash
 hugo server --themesDir ../..
 ```
-## Using & Customize
+## Customization
 
 As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
@@ -84,34 +80,13 @@ As for other details, please visit [the project wiki](https://github.com/amazing
 
 [Add Google Analytics](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
 
-[About sidebar and taxonomies](https://github.com/AmazingRise/hugo-theme-diary/wiki/Tag-&-Category-Index-or-Taxonomies)
+[Customize sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
+
 
 ### Example config
 
-Here is an example config. (The same as `/exampleSite/config.toml`)
-```
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "A Hugo Site"
-copyright = "This is a customized copyright."
+See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/master/exampleSite/config.toml)
 
-theme = "diary"
-# googleAnalytics = "UA-123-45"
-
-[params]
-subtitle = "Themed by Diary."
-enableGitalk = true
-
-[params.gitalk]
-owner = "user"
-repo = "repo name"
-client_id = "your client id"
-client_secret = "your client secret"
-
-[taxonomies]
-tag = "tags"
-category = "categories"
-```
 
 ## Comparison
 

@@ -2,44 +2,17 @@
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
     <div class="drawer-content">
         <div class="drawer-menu">
-            {{ $current := .Permalink}}
-            {{range $taxonomyname, $taxonomy := .Site.Taxonomies}}
-                
-                {{ with $.Site.GetPage (printf "/%s" $taxonomyname) }}
-
-                {{$actived := "false"}}
-                    {{if eq $current .Permalink}}
-                        {{$actived = "active"}}
-                        
-                    {{end}}
-                    <a class="a-block drawer-menu-item {{$actived}}" href="{{.Permalink}}">
-                        {{.Title}}
-                    </a>
-                {{ end }}
-            {{ end }}
-            <!--
-            <a class="a-block drawer-menu-item <%= is_home() && 'active' %>" href="<%= config.url %>">
-                <%= __('Home') %>
-            </a>
-            <% if (theme.archives) { %>
-            <a class="a-block drawer-menu-item <%= is_current('archives') && 'active' %>" href="<%= config.root + "archives" %>">
-                <%= __('Archive') %>
-            </a>
-            <% } %>
-
-            <% if(site.pages){ %>
-            <% site.pages.each(function (page){ %>
-            <a class="a-block drawer-menu-item <%= is_current(page.path) && 'active' %>" href="<%= config.root + page.path %>">
-                <%= page.title %>
-            </a>
-            <% });} %>
-
-            <% if (theme.rss) { %>
-            <a class="a-block drawer-menu-item" href="<%= config.root + theme.rss %>">
-                <%= __('RSS') %>
-            </a>
-            <% } %>
-        -->
+        {{ $current := .Permalink | absLangURL }}
+        {{ range .Site.Menus.main }}
+            {{$actived := "false"}}
+                <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
+                {{if hasPrefix  $current (.URL|absLangURL)}}
+                    {{$actived = "active"}}
+                {{end}}
+                <a class="a-block drawer-menu-item {{$actived}}" href="{{ .URL }}">
+                    {{ .Name }}
+                </a>
+        {{ end }}
         </div>
     </div>
 </div>

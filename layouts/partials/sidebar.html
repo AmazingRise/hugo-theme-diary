@@ -15,23 +15,20 @@
     </a>
 
     <div class="nav-link-list">
-        {{ $current := .Permalink}}
-        {{range $taxonomyname, $taxonomy := .Site.Taxonomies}}
-            
-            {{ with $.Site.GetPage (printf "/%s" $taxonomyname) }}
-
+        {{ $current := .Permalink | absLangURL }}
+        {{ range .Site.Menus.main }}
             {{$actived := "false"}}
-                {{if eq $current .Permalink}}
+                <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
+                {{if hasPrefix  $current (.URL|absLangURL)}}
                     {{$actived = "active"}}
-                    
                 {{end}}
-                <a class="a-block nav-link-item {{$actived}}" href="{{.Permalink}}">
-                    {{.Title}}
+                <a class="a-block nav-link-item {{$actived}}" href="{{ .URL }}">
+                    {{ .Name }}
                 </a>
-            {{ end }}
         {{ end }}
     </div>
 
+    
 
     <div class="nav-footer">
         {{partial "copyright.html" .}}

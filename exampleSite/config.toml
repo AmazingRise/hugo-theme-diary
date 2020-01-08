@@ -18,3 +18,12 @@ enableGitalk = true
 [taxonomies]
    tag = "tags"
    category = "categories"
+
+[[menu.main]]
+url = "/categories"
+name = "Categories"
+weight = 2
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 1

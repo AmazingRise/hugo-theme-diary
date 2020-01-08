@@ -9,8 +9,9 @@ $sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro",
   "Helvetica", "Arial", $default-font-list;
 
 $side-container-width: 25%; //280px;
-$extra-container-width: 64px;
-$stream-container-max-width: 1480px;
+$extra-container-width: 180px;
+$extra-container-pagination-width: 64px;
+$stream-container-max-width: 1620px;
 
 $nav-title-size: 30px;
 $nav-subtitle-size: 18px;
@@ -70,32 +71,44 @@ body {
 
 * {
   color: $deep-dark-accent;
-  line-height: 1.5em;
+  line-height: 1.7em;
   word-wrap: break-word;
+}
+
+h1, h2, h3{
+
+  font-weight: bold;
+
 }
 
 h1 {
   font-size: $h1;
+  margin: 20px auto;
 }
 
 h2 {
-  font-size: $h1 - 1 * $h-diff;
+  font-size: $h1 - 2 * $h-diff;
+  margin: 20px auto;
 }
 
 h3 {
-  font-size: $h1 - 2 * $h-diff;
+  font-size: $h1 - 3 * $h-diff;
+  margin: 20px auto;
 }
 
 h4 {
   font-size: $h1 - 3 * $h-diff;
+  padding: 20px auto;
 }
 
 h5 {
-  font-size: $h1 - 4 * $h-diff;
+  font-size: $h1 - 3 * $h-diff - 1;
+  padding: 10px auto;
 }
 
 h6 {
-  font-size: $h1 - 5 * $h-diff;
+  font-size: $h1 - 3 * $h-diff - 2;
+  padding: 10px auto;
 }
 
 textarea,
@@ -119,8 +132,8 @@ code {
 }
 
 pre {
-  background: rgba($color-accent, 0.07) !important;
-  color: $dark-accent;
+  background: rgba(46,46,46, 1) !important;
+  color: rgba(255,255,255, 1);
   padding: 12px 15px;
   border-radius: 5px;
   font-family: $mono-font-list;
@@ -449,15 +462,16 @@ a {
   right: 0;
   height: 100vh;
   width: $extra-container-width;
-  text-align: right;
+  /*text-align: right;*/
   font-family: $sans-preferred-font-list;
   overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 30px 0;
+  /*padding: 50px 0;*/
   .pagination {
+
     display: flex;
     flex-direction: column;
     > :not(:last-child) {
@@ -473,6 +487,7 @@ a {
       width: $extra-container-width;
       padding: 15px 0;
       font-size: 12px;
+      width: $extra-container-pagination-width;
       font-family: $mono-font-list;
     }
     .pagination-action {
@@ -482,7 +497,7 @@ a {
       justify-content: center;
       align-items: center;
       justify-items: center;
-      width: $extra-container-width;
+      width: $extra-container-pagination-width;
       cursor: hand;
       cursor: pointer;
       padding: 15px 0;
@@ -915,7 +930,7 @@ a {
         justify-content: center;
         align-items: center;
         justify-items: center;
-        width: $extra-container-width;
+        width: $extra-container-pagination-width;
         cursor: hand;
         cursor: pointer;
         padding: 15px 0;
