@@ -8,15 +8,16 @@ Moments piled up.
 A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/SumiMakito/hexo-theme-Journal/).
 
 ## Links
+
 [Live Demo](https://amazingrise.net/hugo-theme-diary/)
+
 [Changelog (Progress and TODO List)](https://github.com/AmazingRise/hugo-theme-diary/projects/)
+
 [Customization](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
 
 Original Author: [SumiMakito](https://github.com/SumiMakito)
 
 ## Screenshots
-
-[Live Demo here!](https://amazingrise.net/hugo-theme-diary/)
 
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/screenshot.png)
 
