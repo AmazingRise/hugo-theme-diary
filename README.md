@@ -9,27 +9,16 @@ A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/Sumi
 
 ## Links
 
+**Some useful links here:**
+
 [Live Demo](https://amazingrise.net/hugo-theme-diary/)
 
 [Changelog (Progress and TODO List)](https://github.com/AmazingRise/hugo-theme-diary/projects/)
 
-[Customization](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
+[Project Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
 
 Original Author: [SumiMakito](https://github.com/SumiMakito)
 
-## Screenshots
-
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/screenshot.png)
-
-Site Main Page
-
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
-
-An essay with picture.
-
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_main.png)
-
-Mobile Main Page
 
 ## Features
 
@@ -47,6 +36,7 @@ Features in this ported version:
 - Customizable color scheme. (Some bug in original version, fixed.)
 - Firefox-friendly. (CSS issue in original version, fixed.)
 - `featured_image` url bug is fixed.
+
 
 ## Quick Start
 
@@ -92,3 +82,17 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
 ## Comparison
 
 For details about the difference lies in the new version, please click [here.](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comparison)
+
+## Screenshots
+
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/screenshot.png)
+
+Site Main Page
+
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
+
+An essay with picture.
+
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_main.png)
+
+Mobile Main Page
