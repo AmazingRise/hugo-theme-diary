@@ -11,7 +11,7 @@ A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/Sumi
 
 **Some useful links here:**
 
-[Live Demo](https://amazingrise.net/hugo-theme-diary/)
+[Live Demo](https://amazingrise.net/)
 
 [Changelog (Progress and TODO List)](https://github.com/AmazingRise/hugo-theme-diary/projects/)
 
