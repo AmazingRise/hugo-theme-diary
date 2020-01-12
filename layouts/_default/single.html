@@ -52,7 +52,7 @@
                 </a>
                 {{else}}
                 <a class="newer-posts">
-                    No newer posts.
+                    Next<br>No newer posts.
                 </a>
                 {{end}}
                 
@@ -62,18 +62,19 @@
                 </a>
                 {{else}}
                 <a class="older-posts">
-                    No older posts.
+                    Previous<br>No older posts.
                 </a>
                 {{end}}
             </nav>
-
-            {{ if eq .Params.comment false }}
-            <p style="opacity: 0.6; padding: 30px 15px" align="center">
-                <small>Comments Disabled.</small>
-            </p>
-            {{ else }}
-            {{- partial "comment.html" . -}}
-            {{ end }}
+            <div class="post-comment-wrapper">
+                {{ if eq .Params.comment false }}
+                <p style="opacity: 0.6" align="center">
+                    <small>Comments Disabled.</small>
+                </p>
+                {{ else }}
+                {{- partial "comment.html" . -}}
+                {{ end }}
+            </div>
         </div>
     </div>
 </div>

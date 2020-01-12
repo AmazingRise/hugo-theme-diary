@@ -3,7 +3,7 @@
 
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="{{.Site.Params.googleSiteVerification}}">
+<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
 <meta name="renderer" content="webkit">
@@ -33,5 +33,23 @@
 <script>
     loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
-
+{{ if .Site.Params.enableGitalk }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="{{"/vendor/js/md5.min.js" | relLangURL}}"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '{{ .Site.Params.Gitalk.client_id }}',
+  clientSecret: '{{ .Site.Params.Gitalk.client_secret }}',
+  repo: '{{ .Site.Params.Gitalk.repo }}',
+  owner: '{{ .Site.Params.Gitalk.owner }}',
+  admin: ['{{ .Site.Params.Gitalk.owner }}'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+{{ end }}
 </head>
