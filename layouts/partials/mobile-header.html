@@ -2,17 +2,22 @@
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
     <div class="drawer-content">
         <div class="drawer-menu">
-        {{ $current := .Permalink | absLangURL }}
-        {{ range .Site.Menus.main }}
-            {{$actived := "false"}}
-                <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
-                {{if hasPrefix  $current (.URL|absLangURL)}}
-                    {{$actived = "active"}}
-                {{end}}
-                <a class="a-block drawer-menu-item {{$actived}}" href="{{ .URL }}">
-                    {{ .Name }}
-                </a>
-        {{ end }}
+            {{ $current := .Permalink | absLangURL }}
+            {{ range .Site.Menus.main }}
+                {{$actived := "false"}}
+                    <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
+                    {{if hasPrefix  $current (.URL|absLangURL)}}
+                        {{$actived = "active"}}
+                    {{end}}
+                    <a class="a-block drawer-menu-item {{$actived}}" href="{{ .URL }}">
+                        {{ .Name }}
+                    </a>
+            {{ end }}
+            {{ if and (.Site.Params.toc) (.IsPage) }}
+            <div class="toc">
+                {{- partial "toc.html" . -}}
+            </div>
+            {{ end }}
         </div>
     </div>
 </div>

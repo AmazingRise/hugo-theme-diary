@@ -1,0 +1,34 @@
+{{ if not .Params.toc }}
+<div class="toc-content" href="#top">
+<!--  class="animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }" -->
+	<!-- ignore empty links with + -->
+	{{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-2]>" .Content }}
+	<!-- at least one header to link to -->
+	{{ if ge (len $headers) 1 }}
+		{{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
+		{{ $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") }}
+		{{ $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") }}
+		<center>- CATALOG -</center>
+			{{ range $headers }}
+				{{ $header := . }}
+				{{ range first 1 (findRE $re $header 1) }}
+					{{ range findRE $renum . 1 }}
+						{{ $next_heading := (cond (eq $h1_n 0) (sub (int .) 1 ) (int . ) ) }}
+						{{ range seq $next_heading }}
+							<ul>
+						{{ end }}
+						{{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
+								<li>
+				 					<a href="#{{ $anchorId }}">
+										 {{ $header | plainify | htmlUnescape }}
+									</a>
+								</li>
+						{{ range seq $next_heading }}
+							</ul>
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			{{ end }}
+	{{ end }}
+</div>
+{{- end -}}

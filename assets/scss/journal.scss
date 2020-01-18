@@ -9,7 +9,7 @@ $sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro",
   "Helvetica", "Arial", $default-font-list;
 
 $side-container-width: 25%; //280px;
-$extra-container-width: 180px;
+$extra-container-width: 25%;
 $extra-container-pagination-width: 64px;
 $stream-container-max-width: 1620px;
 
@@ -73,6 +73,7 @@ body {
   color: $deep-dark-accent;
   line-height: 1.7em;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 h1, h2, h3{
@@ -460,7 +461,7 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  
   width: $extra-container-width;
   /*text-align: right;*/
   font-family: $sans-preferred-font-list;
@@ -471,7 +472,8 @@ a {
   justify-content: flex-end;
   /*padding: 50px 0;*/
   .pagination {
-
+    position: fixed;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     > :not(:last-child) {
@@ -543,9 +545,8 @@ a {
   padding-left: $side-container-width;
   padding-right: $extra-container-width;
   width: 100%;
+  
   min-height: 100vh;
-  max-width: $stream-container-max-width;
-
   @media screen and (max-width: $single-column-max-width) {
     padding: 0;
     min-height: unset;
@@ -839,31 +840,9 @@ a {
         @media screen and (max-width: $single-column-max-width) {
           font-size: $single-column-post-body-size;
         }
-        .toc {
-          float: right;
-          border-radius: 5px;
-          background: rgba($color-accent, 0.05);
-          padding: 30px;
-          margin-left: 30px;
-          margin-bottom: 30px;
-          &,
-          * {
-            font-size: $toc-size;
-          }
-          ul {
-            list-style: decimal;
-            padding: 0 0 0 20px;
-            margin: 0;
-          }
-          @media screen and (max-width: $single-column-max-width) {
-            &,
-            * {
-              font-size: $single-column-toc-size;
-            }
-          }
-        }
-
-        
+        /*
+        Table of Contents
+        */
       }
     }
 
@@ -970,4 +949,38 @@ a {
       font-family: $sans-preferred-font-list;
       padding: 40px 20px 40px 20px;
     }
+}
+
+.toc {
+  float: right;
+  border-radius: 5px;
+  border: 30px, 30px, 30px, 30px;
+  margin: 20px;
+  background: rgba($color-accent, 0.05);
+  &,
+  * {
+    font-size: $toc-size;
+  }
+  ul {
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin: 0;
+    line-height: 1.7em;
+  }
+  .toc-content{
+    padding: 20px;
+  }
+  @media screen and (max-width: $single-column-max-width) {
+    float: none;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    &,
+    * {
+      /*font-size: $single-column-toc-size;*/
+    }
+    .toc-content{
+      padding: 10px;
+    }
+  }
 }
