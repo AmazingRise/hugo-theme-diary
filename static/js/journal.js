@@ -44,6 +44,10 @@ app = new Vue({
                 this.isDrawerOpen = !this.isDrawerOpen;
                 document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
             },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
     },
     created() {
         window.addEventListener('scroll', this.handleScroll);

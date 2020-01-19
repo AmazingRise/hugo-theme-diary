@@ -31,11 +31,12 @@ Features in the ori.:
 
 Features in this ported version:
 
-- Add support for gitalk.
+- Add Gitalk intergration.
 - Tag & category page appending more easily.
 - Customizable color scheme. (Some bug in original version, fixed.)
 - Firefox-friendly. (CSS issue in original version, fixed.)
 - `featured_image` url bug is fixed.
+- Table of Contents with scroll spy.
 
 
 ## Quick Start
@@ -67,9 +68,11 @@ As for other details, please visit [the project wiki](https://github.com/amazing
 
 [Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
 
+[Enable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#enable-table-of-contents)(Experimental Feature)
+
 [Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
 
-[Add Google Analytics](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
+[Add Google Analytics and Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
 
 [Customize sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
 
