@@ -13,6 +13,8 @@ A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/Sumi
 
 [Live Demo](https://amazingrise.net/)
 
+[Intro Video](https://www.bilibili.com/video/av84273002)
+
 [Changelog (Progress and TODO List)](https://github.com/AmazingRise/hugo-theme-diary/projects/)
 
 [Project Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
@@ -68,7 +70,7 @@ As for other details, please visit [the project wiki](https://github.com/amazing
 
 [Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
 
-[Enable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#enable-table-of-contents)(Experimental Feature)
+[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-table-of-contents)(Experimental Feature)
 
 [Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
 
@@ -88,14 +90,22 @@ For details about the difference lies in the new version, please click [here.](h
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/screenshot.png)
-
 Site Main Page
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/tn.png)
 
 An essay with picture.
 
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
+
+Table of Contents with scroll spy.
+
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay2.png)
+
+Mobile View: Main Page
+
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_main.png)
 
-Mobile Main Page
+Mobile View: Drawer
+
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_drawer.png)

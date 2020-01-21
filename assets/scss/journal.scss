@@ -234,16 +234,18 @@ a {
     }
     button {
       padding: 0;
+      padding-right: 12px;
+      padding-left: 12px;
     }
     .nav-content {
-      padding: 12px 20px;
+      padding: 12px 8px;
       justify-content: flex-start;
       max-width: unset !important;
     }
     .navbar-brand {
       opacity: 0;
       text-align: left;
-      padding-left: 24px !important;
+      padding-left: 12px !important;
     }
     .nav-dropdown-toggle {
       display: flex;

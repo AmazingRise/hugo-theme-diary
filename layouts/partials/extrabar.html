@@ -1,5 +1,5 @@
 <div ref="extraContainer" class="extra-container">
-    {{ if and (.Site.Params.toc) (.IsPage) }}
+    {{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
         {{- partial "toc.html" . -}}
     </div>

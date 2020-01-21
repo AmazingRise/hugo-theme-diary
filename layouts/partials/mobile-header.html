@@ -13,7 +13,7 @@
                         {{ .Name }}
                     </a>
             {{ end }}
-            {{ if and (.Site.Params.toc) (.IsPage) }}
+            {{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
             <div class="toc">
                 {{- partial "toc.html" . -}}
             </div>
