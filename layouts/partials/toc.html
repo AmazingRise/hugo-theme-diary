@@ -1,24 +1,6 @@
 {{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content }}
 <!-- at least one header to link to -->
 {{ if ge (len $headers) 1 }}
-	<script>
-	  $(window).bind('scroll', function() {
-	      var currentTop = $(window).scrollTop();
-	      var currentBottom = $(window).scrollTop() + $(window).height();
-	      var pageBottom = $('#EOF').offset().top;
-	      var elems = $(":header");
-	      elems.each(function(idx){
-	        var elemTop = $(this).offset().top;
-	        var id = $(this).attr('id');
-	        var navElem = $('a[href="#' + id+ '"]');
-	        if(currentTop >= elemTop || currentBottom >= pageBottom){
-	      	  navElem.addClass('toc-active');
-	        } else {
-	          navElem.removeClass('toc-active');
-	        }
-	      })
-	  }); 
-	</script>
 	<div class="toc-content">
 	<!-- ignore empty links with + -->
 		{{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
@@ -35,7 +17,7 @@
 						{{ end }}
 						{{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
 								<li>
-				 					<a href="#{{ $anchorId }}" v-on:click="closeDrawer">
+				 					<a href="#{{ $anchorId }}" v-on:click="closeDrawer" id="{{ $anchorId }}-nav">
 										 {{ $header | plainify | htmlUnescape }}
 									</a>
 								</li>
