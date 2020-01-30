@@ -119,6 +119,14 @@ button {
   outline: none !important;
 }
 
+table {
+    table-layout: fixed;
+}
+
+th,td {
+    word-wrap: break-word;
+}
+
 button {
   cursor: hand;
   cursor: pointer;
