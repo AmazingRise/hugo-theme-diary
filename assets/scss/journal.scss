@@ -50,10 +50,6 @@ $single-column-toc-size: 14px;
 $h1: 30px;
 $h-diff: 3px;
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 ::selection {
   background: rgba($color-accent, 0.4);
 }
@@ -121,10 +117,7 @@ button {
 
 table {
     table-layout: fixed;
-}
-
-th,td {
-    word-wrap: break-word;
+    overflow-x: scroll;
 }
 
 button {
