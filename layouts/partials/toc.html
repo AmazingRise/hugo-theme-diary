@@ -1,27 +1,26 @@
-<script>
-  $(window).bind('scroll', function() {
-      var currentTop = $(window).scrollTop();
-      var currentBottom = $(window).scrollTop() + $(window).height();
-      var pageBottom = $('#EOF').offset().top;
-      var elems = $(":header");
-      elems.each(function(idx){
-        var elemTop = $(this).offset().top;
-        var id = $(this).attr('id');
-        var navElem = $('a[href="#' + id+ '"]');
-        if(currentTop >= elemTop || currentBottom >= pageBottom){
-      	  navElem.addClass('toc-active');
-        } else {
-          navElem.removeClass('toc-active');
-        }
-      })
-  }); 
-</script>
-<div class="toc-content">
-<!--  class="animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }" -->
+{{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content }}
+<!-- at least one header to link to -->
+{{ if ge (len $headers) 1 }}
+	<script>
+	  $(window).bind('scroll', function() {
+	      var currentTop = $(window).scrollTop();
+	      var currentBottom = $(window).scrollTop() + $(window).height();
+	      var pageBottom = $('#EOF').offset().top;
+	      var elems = $(":header");
+	      elems.each(function(idx){
+	        var elemTop = $(this).offset().top;
+	        var id = $(this).attr('id');
+	        var navElem = $('a[href="#' + id+ '"]');
+	        if(currentTop >= elemTop || currentBottom >= pageBottom){
+	      	  navElem.addClass('toc-active');
+	        } else {
+	          navElem.removeClass('toc-active');
+	        }
+	      })
+	  }); 
+	</script>
+	<div class="toc-content">
 	<!-- ignore empty links with + -->
-	{{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content }}
-	<!-- at least one header to link to -->
-	{{ if ge (len $headers) 1 }}
 		{{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
 		{{ $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") }}
 		{{ $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") }}
@@ -46,5 +45,5 @@
 					{{ end }}
 				{{ end }}
 			{{ end }}
-	{{ end }}
-</div>
+	</div>
+{{ end }}
