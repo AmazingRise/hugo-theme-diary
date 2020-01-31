@@ -1,0 +1,31 @@
+{{ if .Paginator }}
+{{ if gt .Paginator.TotalPages 1 }}
+<div class="pagination">
+    {{ if .Paginator.HasPrev }}
+    <a class="pagination-action" href="{{.Paginator.Prev.URL}}" style="opacity:1">
+    {{ else }}
+    <a class="pagination-action" style="opacity:0">
+    {{ end }}
+        <i class="material-icons pagination-action-icon">
+            chevron_left
+        </i>
+    </a>
+
+        <div class="pagination-indicator">
+            <span>{{.Paginator.PageNumber}}/{{.Paginator.TotalPages}}</span>
+        </div>
+
+        {{ if .Paginator.HasNext }}
+        <a class="pagination-action" href="{{.Paginator.Next.URL}}"
+           style="opacity:1">
+        {{ else }}
+            <a class="pagination-action" style="opacity:0">
+        {{ end }}
+                <i class="material-icons pagination-action-icon">
+                    chevron_right
+                </i>
+            </a>
+</div>
+{{ end }}
+
+{{ end }}
