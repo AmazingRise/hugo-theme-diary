@@ -90,6 +90,8 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
 
 [Taxonomies and Sections (Archive, Categories and Tags)](https://github.com/AmazingRise/hugo-theme-diary/wiki/Taxonomies-and-Sections-(Archive,-Categories-and-Tags))
 
+[RSS Feed](https://github.com/AmazingRise/hugo-theme-diary/wiki/RSS-Feed)
+
 [Meta Data of posts](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
 
 ## Comparison

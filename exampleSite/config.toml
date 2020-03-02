@@ -30,3 +30,7 @@ weight = 3
 url = "/posts"
 name = "Archive"
 weight = 1
+[[menu.main]]
+url = "/index.xml"
+name = "RSS Feed"
+weight = 4
