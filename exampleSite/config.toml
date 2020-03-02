@@ -2,7 +2,6 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "A Hugo Site"
 copyright = "This is a customized copyright."
-disableKinds = ["section"]
 theme = "diary"
 # googleAnalytics = "UA-123-45"
 
@@ -26,4 +25,8 @@ weight = 2
 [[menu.main]]
 url = "/tags"
 name = "Tags"
+weight = 3
+[[menu.main]]
+url = "/posts"
+name = "Archive"
 weight = 1

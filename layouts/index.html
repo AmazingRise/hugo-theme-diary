@@ -4,7 +4,7 @@
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-no-background">
         {{range .Paginator.Pages}}
-            {{if .IsPage}}
+            {{if and (.IsPage) (.Params.date)}}
             <a href="{{.Permalink}}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-divider">

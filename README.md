@@ -64,25 +64,33 @@ From the root of themes/diary/exampleSite:
 ```bash
 hugo server --themesDir ../..
 ```
-## Customization
+## Personalization
 
-As for other details, please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
-
-[Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
-
-[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-table-of-contents)(Experimental Feature)
-
-[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
-
-[Add Google Analytics and Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
-
-[Customize sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
-
+Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
 
 ### Example config
 
 See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/master/exampleSite/config.toml)
 
+### Customization
+
+[Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+
+[Change font scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-default-font-scheme)
+
+[Customize sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
+
+[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-table-of-contents)
+
+[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
+
+[Add Google Analytics and Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
+
+### Other Details
+
+[Taxonomies and Sections (Archive, Categories and Tags)](https://github.com/AmazingRise/hugo-theme-diary/wiki/Taxonomies-and-Sections-(Archive,-Categories-and-Tags))
+
+[Meta Data of posts](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
 
 ## Comparison
 

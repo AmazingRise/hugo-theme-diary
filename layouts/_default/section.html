@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        {{ range .Paginator.Pages.GroupByDate "2006" }}
+            <a class="a-block">
+                <div class="post-item-wrapper post-item-wrapper-no-hover">
+                    <div class="post-item post-item-no-gaps">
+                        <div class="post-item-info-wrapper">
+                            <div class="post-item-title post-item-title-small year">
+                                {{ .Key }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {{ range .Pages }}
+            <a href="{{ .RelPermalink }}" class="a-block">
+                <div class="post-item-wrapper">
+                    <div class="post-item post-item-no-gaps">
+                        <div class="post-item-info-wrapper">
+                            <div class="post-item-title">
+                                {{.Title}}
+                            </div>
+                            <div class="post-item-meta">
+                                {{ dateFormat "Jan 2, 2006" .Date }}
+    
+                                {{ if .Draft }}
+                                <span class="draft-label">DRAFT</span>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}
