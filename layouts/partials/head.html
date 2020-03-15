@@ -32,8 +32,14 @@
 <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
 <script src="{{.Site.BaseURL}}/js/table.js"></script>
 
-{{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
+{{ if and (not (.Params.disableToC) ) (.IsPage) }}
 <script src="{{.Site.BaseURL}}/js/toc.js"></script>
+{{ else }}
+<style>
+  .toc{
+    display: none !important;
+  }
+</style>
 {{ end }}
 
 <script>

@@ -1,9 +1,13 @@
 $().ready(function(){
+  var elems = $(":header");
+  if (elems.length == 0) {
+    return;
+  }
   $(window).bind('scroll', function() {
       var currentTop = $(window).scrollTop();
       var currentBottom = $(window).scrollTop() + $(window).height();
       var pageBottom = $('#EOF').offset().top;
-      var elems = $(":header");
+      
       elems.each(function(idx){
         var elemTop = $(this).offset().top;
         var id = $(this).attr('id');
