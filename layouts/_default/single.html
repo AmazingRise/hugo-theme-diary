@@ -10,8 +10,6 @@
 
             <div class="{{$post_class}}"
                  style="background-image: url('{{ $featured_image | relLangURL}}')">
-                <!-- WeChat Moment Thumbnail -->
-                <img src="{{ $featured_image | absLangURL}}" style="display: none;"></img>
                 <div class="post-title">
                     {{ .Title }}
                     <div class="post-meta">
@@ -41,7 +39,7 @@
             <div class="post-body-wrapper">
                 <div class="post-body">
                     {{.Content}}
-                    {{ if .Params.date }}
+                    {{ if not .Lastmod.IsZero }}
                     <HR width="100%" id="EOF">
                     <p style="color:#777;">Last modified on {{ .Page.Lastmod.Format "2006-01-02" }}</p>
                     {{ end }}
