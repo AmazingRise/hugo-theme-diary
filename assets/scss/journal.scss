@@ -18,6 +18,7 @@ $nav-subtitle-size: 18px;
 $nav-link-size: 20px;
 $nav-footer-size: 12px;
 $post-title-size: 30px;
+$post-subtitle-size: 16px;
 $post-summary-size: 16px;
 $post-body-size: 16px;
 $post-meta-size: 16px;
@@ -788,6 +789,14 @@ a {
           font-size: $single-column-post-title-size;
           padding: 80px 20px 30px 20px;
         }
+
+        .post-subtitle {
+          font-size: $post-subtitle-size;
+          width: 80%;
+          opacity: 0.6;
+          padding: 0px 0 8px 0;
+        }
+
         .post-meta {
           margin: 0;
           &,

@@ -12,6 +12,11 @@
                  style="background-image: url('{{ $featured_image | relLangURL}}')">
                 <div class="post-title">
                     {{ .Title }}
+                    {{ if .Params.description }}
+                    <div class="post-subtitle">
+                        {{ .Params.description }}
+                    </div>
+                    {{ end }}
                     <div class="post-meta">
                         {{ if .Params.date}}
                         <time itemprop="datePublished">
