@@ -5,13 +5,22 @@
             {{ $current := .Permalink | absLangURL }}
             {{ range .Site.Menus.main }}
                 {{$actived := "false"}}
-                    <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
-                    {{if hasPrefix  $current (.URL|absLangURL)}}
-                        {{$actived = "active"}}
-                    {{end}}
-                    <a class="a-block drawer-menu-item {{$actived}}" href="{{ .URL }}">
-                        {{ .Name }}
-                    </a>
+                <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
+                {{if hasPrefix  $current (.URL|absLangURL)}}
+                    {{$actived = "active"}}
+                {{end}}
+                {{ if .HasChildren }}
+                <parent name="{{ .Name }}" type="drawer-menu-item {{$actived}}">
+                    {{ range .Children }}
+                        <li><a href="{{ .URL }}"> {{ .Name }}</a></li>
+                    {{ end }}
+                </parent>
+                {{ else }}
+                <!--<a class="a-block nav-link-item {{$actived}}" href="{{ .URL }}">-->
+                <a class="a-block drawer-menu-item {{ $actived }}" href="{{ .URL }}">
+                    {{ .Name }}
+                </a>
+                {{ end }}
             {{ end }}
             {{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
             <div class="toc">

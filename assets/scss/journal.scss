@@ -347,6 +347,18 @@ a {
           cursor: pointer;
           transition: all 0.2s linear;
           color: $deep-dark-accent;
+          .nav-link-subitem {
+            font-size: $single-column-nav-link-size;
+            padding: 2px;
+            li {
+                list-style: none;
+                padding-left: 8px; 
+            }
+            a {
+              text-decoration: none;
+              color: $deep-dark-accent;
+            }
+          }
           &.active {
             border-right: 2px solid $color-accent;
             background: rgba(
@@ -438,6 +450,16 @@ a {
       cursor: pointer;
       transition: all 0.2s linear;
       color: $deep-dark-accent;
+      .nav-link-subitem {
+        font-size: $nav-link-size - 3px;
+        li {
+            list-style: none;
+            padding-left: 2px; 
+        }
+        a {
+          text-decoration: none;
+        }
+      }
       &:hover {
         border-right: 2px solid
           rgba($color-accent, $nav-item-hover-indicator-alpha);
