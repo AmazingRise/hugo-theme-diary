@@ -6,6 +6,7 @@
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
+<meta name="description" content="{{ .Params.description }}">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 <!-- metadata -->
@@ -91,7 +92,10 @@ $(
       {{ end }}
       el: '#vcomments',
       appId: '{{ .Site.Params.Valine.appId }}',
-      appKey: '{{ .Site.Params.Valine.appKey }}'
+      appKey: '{{ .Site.Params.Valine.appKey }}',
+      visitor: true,
+      recordIP: true,
+      verify: true
   }));
 </script>
 {{ end }}

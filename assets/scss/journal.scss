@@ -829,6 +829,12 @@ a {
         font-weight: 600;
         font-style: normal;
         line-height: 1.5em;
+        .post-subtitle {
+          font-size: $post-subtitle-size;
+          width: 80%;
+          opacity: 0.6;
+          padding: 0px 0 8px 0;
+        }
         .post-meta {
           margin: 0;
           &,
