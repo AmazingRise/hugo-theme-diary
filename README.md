@@ -33,13 +33,12 @@ Features in the ori.:
 
 Features in this ported version:
 
-- Add Gitalk intergration.
-- Tag & category page appending more easily.
+- Add Gitalk and Valine intergration.
 - Customizable color scheme. (Some bug in original version, fixed.)
 - Firefox-friendly. (CSS issue in original version, fixed.)
 - `featured_image` url bug is fixed.
 - Table of Contents with scroll spy.
-
+- Dark mode.
 
 ## Quick Start
 

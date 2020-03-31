@@ -1,6 +1,8 @@
 $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
+$dark-mode-back-container-background: #222222;
+$dark-mode-front-container-background: #333333;
 
 $default-font-list: "Lora", "Noto Serif SC", serif;
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
@@ -18,7 +20,7 @@ $nav-subtitle-size: 18px;
 $nav-link-size: 20px;
 $nav-footer-size: 12px;
 $post-title-size: 30px;
-$post-subtitle-size: 16px;
+$post-subtitle-size: 12px;
 $post-summary-size: 16px;
 $post-body-size: 16px;
 $post-meta-size: 16px;
@@ -27,6 +29,8 @@ $toc-size: 16px;
 
 $dark-accent: darken($color-accent, 10%);
 $deep-dark-accent: darken($color-accent, 50%);
+$light-accent: lighten($color-accent, 10%);
+$deep-light-accent: lighten($color-accent, 30%);
 $color-text: $deep-dark-accent;
 
 @if lightness($color-accent) <10% {
@@ -56,6 +60,11 @@ $h-diff: 3px;
 }
 
 body {
+  //-webkit-transition: all 0.5s ease;
+  //-moz-transition: all 0.5s ease;
+  //-o-transition: all 0.5s ease;
+  //transition: all 0.2s ease;
+
   background: $back-container-background;
   padding: 0;
   margin: 0;
@@ -247,7 +256,11 @@ a {
     .navbar-brand {
       opacity: 0;
       text-align: left;
-      padding-left: 12px !important;
+      padding-left: 12px;
+      padding-top: 8px;
+      //justify-content: space-between;
+      //align-items: stretch;
+      flex: 1;
     }
     .nav-dropdown-toggle {
       display: flex;
@@ -257,7 +270,20 @@ a {
       justify-content: center;
       background: none !important;
       border: none;
-      padding-top: 1px;
+      //padding-top: 1px;
+      &:hover {
+        color: #3f587d !important;
+      }
+    }
+    .nav-darkmode-toggle {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      background: none !important;
+      border: none;
+      //padding-top: 1px;
       &:hover {
         color: #3f587d !important;
       }

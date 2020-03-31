@@ -44,6 +44,14 @@
         <a ref="navTitle" class="navbar-brand" href="{{.Site.BaseURL}}">
             {{.Site.Title}}
         </a>
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
     </div>
 </nav>
 <div class="single-column-header-container" ref="pageHead"

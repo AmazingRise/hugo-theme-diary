@@ -30,6 +30,9 @@
 {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
+{{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
+
 <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
 <script src="{{.Site.BaseURL}}/js/table.js"></script>
 
