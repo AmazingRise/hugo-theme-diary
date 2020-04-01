@@ -1,8 +1,7 @@
 $color-accent: #1976d2;
+//$color-accent: #330000;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
-$dark-mode-back-container-background: #222222;
-$dark-mode-front-container-background: #333333;
 
 $default-font-list: "Lora", "Noto Serif SC", serif;
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
@@ -20,7 +19,7 @@ $nav-subtitle-size: 18px;
 $nav-link-size: 20px;
 $nav-footer-size: 12px;
 $post-title-size: 30px;
-$post-subtitle-size: 12px;
+$post-subtitle-size: 14px;
 $post-summary-size: 16px;
 $post-body-size: 16px;
 $post-meta-size: 16px;
@@ -29,11 +28,9 @@ $toc-size: 16px;
 
 $dark-accent: darken($color-accent, 10%);
 $deep-dark-accent: darken($color-accent, 50%);
-$light-accent: lighten($color-accent, 10%);
-$deep-light-accent: lighten($color-accent, 30%);
 $color-text: $deep-dark-accent;
 
-@if lightness($color-accent) <10% {
+@if lightness($color-accent) <20% {
   $dark-accent: $color-accent;
   $deep-dark-accent: $color-accent;
   $color-text: $deep-dark-accent;
@@ -60,10 +57,10 @@ $h-diff: 3px;
 }
 
 body {
-  //-webkit-transition: all 0.5s ease;
-  //-moz-transition: all 0.5s ease;
-  //-o-transition: all 0.5s ease;
-  //transition: all 0.2s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 
   background: $back-container-background;
   padding: 0;
@@ -605,6 +602,11 @@ a {
   }
 
   .post-list-container {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.2s ease;
+
     width: 100%;
     min-height: 100vh;
     padding: 20px 0 20px 0;
@@ -774,6 +776,11 @@ a {
     padding: 15px;
   }
   .post {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.2s ease;
+
     padding: 0 0 20px 0;
     .post-head-wrapper {
       margin-top: -20px;

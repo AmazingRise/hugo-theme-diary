@@ -1,11 +1,17 @@
 @import "journal";
 
-$dark-mode-text: #ccc;
+$light-accent: lighten($color-accent, 10%);
+$deep-light-accent: lighten($color-accent, 30%);
+$dark-mode-text: darken(#FFF, 20%);
+
+$dark-mode-back-container-background: #151515;
+$dark-mode-front-container-background: #252525;
 
 body.night {
   background: $dark-mode-back-container-background;
   :root{
     --color_555: #ccc;
+    --color_ededed: #000;
   }
 
   img {
@@ -34,39 +40,79 @@ body.night {
       }
   }
 
-  .nav-link-list {
-    $nav-item-hover-color-lighten: 30%;
+  .side-container {
+    $nav-item-hover-background-alpha: 0.02;
+    $nav-item-hover-indicator-alpha: 0.6;
+    $nav-item-hover-color-darken: 30%;
     $nav-item-active-background-alpha: 0.03;
-    $nav-item-active-color-lighten: 20%;
-    flex-grow: 1;
-    .nav-link-item {
-      color: $dark-mode-text !important;
+    $nav-item-active-color-darken: 20%;
+
+    .nav-head {
+      //border-right: 4px solid $color-accent;
       &:hover {
-        color: lighten($color-accent, $nav-item-hover-color-lighten) !important;
+        border-right: 2px solid
+          rgba($color-accent, $nav-item-hover-indicator-alpha);
+        background: rgba($color-accent, $nav-item-hover-background-alpha);
+        color: lighten($color-accent, $nav-item-hover-color-darken);
       }
       &.active {
-        color: lighten($color-accent, $nav-item-active-color-lighten) !important;
+        border-right: 2px solid $color-accent;
+        background: rgba($color-accent, $nav-item-active-background-alpha);
+        color: lighten($color-accent, $nav-item-active-color-darken);
+      }
+    }
+
+    .nav-link-list {
+      $nav-item-hover-indicator-alpha: 0.6;
+      $nav-item-hover-color-lighten: 30%;
+      $nav-item-active-background-alpha: 0.03;
+      $nav-item-active-color-lighten: 20%;
+      flex-grow: 1;
+      .nav-link-item {
+        color: $dark-mode-text !important;
+        //border-right: 4px solid transparent;
+        &:hover {
+          border-right: 2px solid
+            rgba($color-accent, $nav-item-hover-indicator-alpha);
+          color: lighten($color-accent, $nav-item-hover-color-lighten) !important;
+        }
+        &.active {
+          border-right: 2px solid $color-accent;
+          color: lighten($color-accent, $nav-item-active-color-lighten) !important;
+        }
       }
     }
   }
-
   .stream-container {
     .post{
       background: $dark-mode-front-container-background;
+      @media screen and (max-width: $single-column-max-width) {
+        background: $dark-mode-back-container-background;
+      }
       .post-comment-wrapper *{
-        color: $dark-mode-text !important;
+        color: $dark-mode-text;
       }
     }
     .post-list-container {
-      background: $dark-mode-back-container-background;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      background: $dark-mode-front-container-background;
+      @media screen and (max-width: $single-column-max-width) {
+        background: $dark-mode-back-container-background;
+      }
       &,
     > * {
       .post-item-wrapper {
+        .post-item-info-wrapper{
           @media screen and (max-width: $single-column-max-width) {
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             background: $dark-mode-front-container-background;
           }
-          .post-item{
+        }
+          @media screen and (max-width: $single-column-max-width) {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             background: $dark-mode-front-container-background;
           }
           &:not(.post-item-wrapper-no-hover):hover {
@@ -77,6 +123,7 @@ body.night {
         }
       }
     }
+    
   }
   * {
     color: $dark-mode-text;
@@ -121,7 +168,10 @@ body.night {
   .single-column-drawer-container {
     @media screen and (max-width: $single-column-max-width) {
       .drawer-content {
-        background: $dark-mode-back-container-background;
+        background: $dark-mode-front-container-background;
+        .toc{
+          background-color: lighten($dark-mode-front-container-background,10%);
+        }
         .drawer-menu {
           .drawer-menu-item {
             color: $dark-mode-text;
@@ -136,11 +186,16 @@ body.night {
   }
 
   .toc{
+    background-color: $dark-mode-front-container-background;
     a {
       color: $dark-mode-text;
     }
     .toc-active{
       color: $light-accent !important;
     }
+  }
+  // Hack of Valine
+  .vsys{
+    background: none;
   }
 }
