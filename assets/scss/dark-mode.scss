@@ -4,8 +4,8 @@ $light-accent: lighten($color-accent, 10%);
 $deep-light-accent: lighten($color-accent, 30%);
 $dark-mode-text: darken(#FFF, 20%);
 
-$dark-mode-back-container-background: #151515;
-$dark-mode-front-container-background: #252525;
+$dark-mode-back-container-background: #232323;
+$dark-mode-front-container-background: #282828;
 
 body.night {
   background: $dark-mode-back-container-background;
@@ -25,7 +25,7 @@ body.night {
   }
 
   code {
-    color: $deep-light-accent;
+    color: $dark-mode-text;
   }
 
   a {
@@ -65,7 +65,7 @@ body.night {
     .nav-link-list {
       $nav-item-hover-indicator-alpha: 0.6;
       $nav-item-hover-color-lighten: 30%;
-      $nav-item-active-background-alpha: 0.03;
+      $nav-item-active-background-alpha: 0.1;
       $nav-item-active-color-lighten: 20%;
       flex-grow: 1;
       .nav-link-item {
@@ -78,6 +78,7 @@ body.night {
         }
         &.active {
           border-right: 2px solid $color-accent;
+          background: rgba($color-accent, $nav-item-active-background-alpha);
           color: lighten($color-accent, $nav-item-active-color-lighten) !important;
         }
       }

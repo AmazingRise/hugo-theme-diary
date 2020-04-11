@@ -10,6 +10,7 @@
                 keyboard_arrow_up
             </i>
         </a>
+        {{ if not .Site.Params.disableDarkMode }}
         <a class="pagination-action" v-on:click="toggleDarkMode">
             <i class="material-icons pagination-action-icon" v-if="isDarkMode">
                 brightness_4
@@ -18,6 +19,7 @@
                 brightness_7
             </i>
         </a>
+        {{ end }}
         {{ if .Paginator }}
         {{ if gt .Paginator.TotalPages 1 }}
             <div class="pagination-indicator">

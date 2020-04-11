@@ -3,7 +3,7 @@ $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: "Lora", "Noto Serif SC", serif;
+$default-font-list: "Lora", "Noto Serif SC";
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
 $sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro",
@@ -57,11 +57,6 @@ $h-diff: 3px;
 }
 
 body {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-
   background: $back-container-background;
   padding: 0;
   margin: 0;
@@ -602,11 +597,6 @@ a {
   }
 
   .post-list-container {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.2s ease;
-
     width: 100%;
     min-height: 100vh;
     padding: 20px 0 20px 0;

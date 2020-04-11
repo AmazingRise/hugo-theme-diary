@@ -81,6 +81,8 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
 
 [Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-table-of-contents)
 
+[Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-dark-mode)
+
 [Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
 
 [Add Google Analytics and Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)

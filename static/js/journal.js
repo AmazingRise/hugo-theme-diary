@@ -75,7 +75,7 @@ app = new Vue({
         var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         if (night==""){
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                this.toggleDarkMode();
+                //this.toggleDarkMode();
             }
         }else{
             // If night is not empty

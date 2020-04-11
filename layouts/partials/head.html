@@ -30,10 +30,16 @@
 {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
+{{ if not .Site.Params.disableDarkmode }}
 {{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
+{{ end }}
 
 <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
 <script src="{{.Site.BaseURL}}/js/table.js"></script>
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
@@ -46,9 +52,6 @@
 </style>
 {{ end }}
 
-<script>
-    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
-</script>
 {{ if and (.Site.Params.enableGitalk) (.IsPage) }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
@@ -97,8 +100,7 @@ $(
       appId: '{{ .Site.Params.Valine.appId }}',
       appKey: '{{ .Site.Params.Valine.appKey }}',
       visitor: true,
-      recordIP: true,
-      verify: true
+      recordIP: true
   }));
 </script>
 {{ end }}
