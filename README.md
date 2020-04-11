@@ -39,6 +39,7 @@ Features in this ported version:
 - `featured_image` url bug is fixed.
 - Table of Contents with scroll spy.
 - Dark mode.
+- MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
 
 ## Quick Start
 
@@ -76,6 +77,8 @@ Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/
 [Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
 
 [Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
+
+[Enable MathJax](https://github.com/AmazingRise/hugo-theme-diary/wiki/MathJax)
 
 [Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
 

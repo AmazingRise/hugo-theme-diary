@@ -69,7 +69,7 @@ body {
 
 * {
   color: $deep-dark-accent;
-  line-height: 1.7em;
+  //line-height: 1.7em;
   word-wrap: break-word;
   box-sizing: border-box;
 }
@@ -815,6 +815,7 @@ a {
 
         .post-subtitle {
           font-size: $post-subtitle-size;
+          line-height: 1.2em;
           width: 80%;
           opacity: 0.6;
           padding: 0px 0 8px 0;
@@ -1060,4 +1061,9 @@ a {
 
 .year {
   color: $dark-accent;
+}
+
+mjx-container
+{
+  overflow-y: hidden !important;
 }

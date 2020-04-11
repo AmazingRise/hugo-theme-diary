@@ -42,6 +42,10 @@
 
 <script src="{{.Site.BaseURL}}/js/table.js"></script>
 
+{{ if .Params.enableMathJax }}
+  {{ partial "mathjax.html" . }}
+{{ end }}
+
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
 <script src="{{.Site.BaseURL}}/js/toc.js"></script>
 {{ else }}
