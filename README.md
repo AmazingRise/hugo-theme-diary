@@ -65,29 +65,21 @@ hugo server --themesDir ../..
 ```
 ## Personalization
 
-Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
-
 ### Example config
 
 See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/master/exampleSite/config.toml)
 
 ### Customization
 
-[Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for more details.
 
-[Change font scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-default-font-scheme)
+[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
 
-[Customize sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
+[Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
 
-[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-table-of-contents)
+[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
 
-[Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-dark-mode)
-
-[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
-
-[Add Google Analytics and Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
-
-### Other Details
+[Customizations](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
 
 [Taxonomies and Sections (Archive, Categories and Tags)](https://github.com/AmazingRise/hugo-theme-diary/wiki/Taxonomies-and-Sections-(Archive,-Categories-and-Tags))
 
