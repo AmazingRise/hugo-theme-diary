@@ -40,6 +40,7 @@ Features in this ported version:
 - Table of Contents with scroll spy.
 - Dark mode.
 - MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
+- Google Custom Search Engine support.
 
 ## Quick Start
 
@@ -81,6 +82,8 @@ Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/
 [Enable MathJax](https://github.com/AmazingRise/hugo-theme-diary/wiki/MathJax)
 
 [Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
+
+[Add Google Search Box on your site](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-search-box-on-your-site)
 
 [Customizations](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
 

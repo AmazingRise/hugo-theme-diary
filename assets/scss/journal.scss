@@ -1063,3 +1063,18 @@ mjx-container
 {
   overflow-y: hidden !important;
 }
+
+.gsc-control-cse {
+  display: flex !important;
+  width: 19vw !important;
+  margin-left: 1.5em;
+  padding-right: 0.2em;
+  @media screen and (max-width: $single-column-max-width) {
+    width: 60vw !important;
+    margin-left: 0.5em;
+    padding-left: 0;
+    .gsst_a {
+      display: none;
+    }
+  }
+}
