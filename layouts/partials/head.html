@@ -94,19 +94,7 @@ $(
 {{ end }}
 
 {{ if and (.Site.Params.enableValine) (.IsPage) }}
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script>
-  $(new Valine({
-      {{ if .Site.Params.Valine.avator }}
-      avator: '{{.Site.Params.Valine.avator}}',
-      {{ end }}
-      el: '#vcomments',
-      appId: '{{ .Site.Params.Valine.appId }}',
-      appKey: '{{ .Site.Params.Valine.appKey }}',
-      visitor: true,
-      recordIP: true
-  }));
-</script>
+<script src='https://unpkg.com/valine@1.4.5/dist/Valine.min.js'></script>
 {{ end }}
 
 </head>
