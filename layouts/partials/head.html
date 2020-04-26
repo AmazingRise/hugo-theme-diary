@@ -15,12 +15,12 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
-<script src="{{"/vendor/js/jquery.min.js" | relLangURL}}" ></script>
-<script src="{{"/vendor/js/popper.min.js" | relLangURL}}" ></script>
-<script src="{{"/vendor/js/bootstrap.min.js" | relLangURL}}" ></script>
-<script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relLangURL}}" ></script>
-<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relLangURL}}">
-<script src="{{"/vendor/js/vue.min.js" | relLangURL}}" ></script>
+<script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
+<script src="{{"/vendor/js/popper.min.js" | relURL}}" ></script>
+<script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
+<script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relURL}}" ></script>
+<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
+<script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
@@ -59,7 +59,7 @@
 {{ if and (.Site.Params.enableGitalk) (.IsPage) }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="{{"/vendor/js/md5.min.js" | relLangURL}}"></script>
+<script src="{{"/vendor/js/md5.min.js" | relURL}}"></script>
 <script>
   var gitalk = new Gitalk({
   clientID: '{{ .Site.Params.Gitalk.client_id }}',
