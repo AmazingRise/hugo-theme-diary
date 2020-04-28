@@ -9,7 +9,7 @@
             {{ end }}
 
             <div class="{{$post_class}}"
-                 style="background-image: url('{{ $featured_image | relLangURL}}')">
+                 style="background-image: url('{{ $featured_image | absURL}}')">
                 <div class="post-title">
                     {{ .Title }}
                     {{ if .Params.description }}
