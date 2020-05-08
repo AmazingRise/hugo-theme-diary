@@ -37,6 +37,16 @@
                                 &nbsp;
                             {{ end }}
                         {{ end }}
+                        {{ if .Site.Params.enableReadingTime }}
+                            <i class="material-icons" style="">schedule</i>
+                            {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
+
+                            {{ $minutes := math.Floor (div $readTime 60) }}
+                            {{ $seconds := mod $readTime 60 }}
+
+                            {{ $minutes }} {{ cond (eq $minutes 1) "minute" "min" }}
+                            {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}.
+                        {{ end }}
                     </div>
                 </div>
             </div>
