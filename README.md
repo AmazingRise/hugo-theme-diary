@@ -93,6 +93,8 @@ Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/
 
 [Meta Data of posts](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
 
+[Enable Reading Time](https://github.com/AmazingRise/hugo-theme-diary/wiki/Reading-Time)
+
 ## Comparison
 
 For details about the difference lies in the new version, please click [here.](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comparison)
