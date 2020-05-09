@@ -21,9 +21,10 @@
                         </div>
                         {{ $featured_image := .Params.featured_image }}
                         {{ if $featured_image }}
+                            {{ $image := .Resources.GetMatch (.Params.featured_image) }}
                             <div class="post-item-image-wrapper">
                             <div class="post-item-image"
-                                 style="background-image: url('{{$featured_image | relLangURL }}')"></div>
+                                 style="background-image: url('{{ $image.Permalink }}')"></div>
                             </div>
                         {{ end }}
                     </div>
