@@ -24,7 +24,12 @@
                             {{ $image := .Resources.GetMatch (.Params.featured_image) }}
                             <div class="post-item-image-wrapper">
                             <div class="post-item-image"
-                                 style="background-image: url('{{ $image.Permalink }}')"></div>
+                            {{ if $image }}
+                                 style="background-image: url('{{ $image.Permalink }}')"
+                            {{ else }}
+                                 style="background-image: url('{{ $featured_image | absURL}}')"
+                            {{ end }}
+                            ></div>
                             </div>
                         {{ end }}
                     </div>

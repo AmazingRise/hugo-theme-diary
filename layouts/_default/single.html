@@ -11,7 +11,11 @@
             <div class="{{$post_class}}"
                 {{ if $featured_image }}
                     {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+                    {{ if $image }}
                     style="background-image: url('{{$image.Permalink }}')"
+                    {{ else }}
+                    style="background-image: url('{{ $featured_image | absURL}}')"
+                    {{ end }}
                 {{ end }}
             >
                 <div class="post-title">
