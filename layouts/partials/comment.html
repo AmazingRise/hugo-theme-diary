@@ -10,14 +10,7 @@
 
 {{ if .Site.Params.enableValine }}
 <div id="vcomments"></div>
-<script>
-    $(new Valine({
-        el: '#vcomments',
-        appId: '{{ .Site.Params.Valine.appId }}',
-        appKey: '{{ .Site.Params.Valine.appKey }}',
-        recordIP: true
-    }))
-</script>
+<!-- Script moved to journal.html -->
 {{ end }}
 
 {{ if .Site.Params.livereId }}
