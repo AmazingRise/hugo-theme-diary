@@ -195,8 +195,13 @@ body.night {
       color: $light-accent !important;
     }
   }
-  // Hack of Valine
-  .vsys{
-    background: none;
+
+  .vwrap * {
+    color: $dark-mode-text !important;
   }
+
+  .vcontent p {
+    color: $dark-mode-text !important;
+  }
+
 }

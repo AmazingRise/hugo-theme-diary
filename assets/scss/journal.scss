@@ -136,8 +136,9 @@ code {
 }
 
 pre {
-  background: rgba(46,46,46, 1) !important;
-  color: rgba(255,255,255, 1);
+  //background: rgba(46,46,46, 1) !important;
+  //color: rgba(255,255,255, 1);
+  background: rgba($color-accent, 0.07);
   padding: 12px 15px;
   border-radius: 5px;
   font-family: $mono-font-list;
@@ -1077,4 +1078,12 @@ mjx-container
       display: none;
     }
   }
+}
+
+.vwrap * {
+  color: black !important;
+}
+
+.vcontent p {
+  color: black !important;
 }
