@@ -4,7 +4,7 @@ $light-accent: lighten($color-accent, 10%);
 $deep-light-accent: lighten($color-accent, 30%);
 $dark-mode-text: darken(#FFF, 20%);
 
-$dark-mode-back-container-background: #232323;
+$dark-mode-back-container-background: #212121;
 $dark-mode-front-container-background: #282828;
 
 body.night {
@@ -19,13 +19,21 @@ body.night {
   }
 
   blockquote {
-      * {
-          color: $deep-light-accent;
-      }
+    * {
+        color: $deep-light-accent !important;
+    }
   }
 
-  code {
-    color: $dark-mode-text;
+
+  code:not([data-lang]) {
+    color: $deep-light-accent !important;
+  }
+
+  pre {
+    code:not([data-lang]) {
+      background: none !important;
+      color: $dark-mode-text !important;
+    }
   }
 
   a {
@@ -40,13 +48,19 @@ body.night {
       }
   }
 
+  table * {
+    color: $dark-mode-text;
+  }
+
   .side-container {
     $nav-item-hover-background-alpha: 0.02;
     $nav-item-hover-indicator-alpha: 0.6;
     $nav-item-hover-color-darken: 30%;
     $nav-item-active-background-alpha: 0.03;
     $nav-item-active-color-darken: 20%;
-
+    * {
+      color: $dark-mode-text;
+    }
     .nav-head {
       //border-right: 4px solid $color-accent;
       &:hover {
@@ -126,9 +140,6 @@ body.night {
     }
     
   }
-  * {
-    color: $dark-mode-text;
-  }
 
   .single-column-nav-container {
       @media screen and (max-width: $single-column-max-width) {
@@ -186,14 +197,36 @@ body.night {
     }
   }
 
+  #single-column-footer {
+    color: $dark-mode-text;
+  }
+
   .toc{
     background-color: $dark-mode-front-container-background;
+    *{
+      color: $dark-mode-text;
+    }
     a {
       color: $dark-mode-text;
     }
     .toc-active{
       color: $light-accent !important;
     }
+  }
+
+  .post-body p,h1,h2,h3,h4,h5,h6 {
+    color: $dark-mode-text;
+    *{
+      color: $dark-mode-text;
+    }
+  }
+
+  .post-pagination a {
+    color: $deep-light-accent;
+  }
+
+  .material-icons {
+    color: $dark-mode-text;
   }
 
   .vwrap * {
