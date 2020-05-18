@@ -5,6 +5,18 @@ copyright = "This is a customized copyright."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "perldoc"
+    tabWidth = 4
+
 [params]
 subtitle = "Themed by Diary."
 enableGitalk = true
