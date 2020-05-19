@@ -99,6 +99,9 @@ body.night {
     }
   }
   .stream-container {
+    .post-head-wrapper-text-only *{
+      color: $dark-mode-text;
+    }
     .post{
       background: $dark-mode-front-container-background;
       @media screen and (max-width: $single-column-max-width) {
