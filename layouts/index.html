@@ -13,7 +13,11 @@
                                 {{.Title}}
                             </div>
                             <div class="post-item-summary">
-                                {{.Description}}
+                                {{ if isset .Params "description" }}
+                                {{ .Description }}
+                                {{ else}}
+                                {{ .Summary }}
+                                {{ end }}
                             </div>
                             {{ partial "post-item-meta.html" . }}
                         </div>
