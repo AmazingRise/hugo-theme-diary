@@ -71,7 +71,6 @@ app = new Vue({
             })(navigator.userAgent || navigator.vendor || window.opera);
             return check;
         };
-        
         // From https://www.jdeal.cn/archives/Dark.html
         var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         if (night==""){
@@ -84,13 +83,12 @@ app = new Vue({
                 this.toggleDarkMode();
             }
         }
-        
     },
     mounted() {
         this.handleScroll();
         this.handleResize();
         this.mounted = true;
-        {{ if .Site.Params.enableValine }}
+        {{ if and (.Site.Params.enableValine) (.IsPage) }}
             new Valine({
                 el: '#vcomments',
                 appId: {{.Site.Params.valine.appId}},
@@ -98,9 +96,6 @@ app = new Vue({
                 requiredFields: ['nick','mail'],
                 enableQQ: true,
                 recordIP: true,
-                {{ range $key, $value := .Site.Params.valine }}
-                {{safeJS (print $key)}}:{{$value}},
-                {{ end }}
             })
         {{ end }}
     },
