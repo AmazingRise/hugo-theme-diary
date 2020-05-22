@@ -36,18 +36,6 @@ body.night {
     }
   }
 
-  a {
-      color: $light-accent;
-      &:hover {
-        color: $deep-light-accent !important;
-      }
-      @media screen and (max-width: $single-column-max-width) {
-        &:hover {
-          text-decoration: none !important;
-        }
-      }
-  }
-
   table * {
     color: $dark-mode-text;
   }
@@ -227,7 +215,18 @@ body.night {
 
   .post-body p,h1,h2,h3,h4,h5,h6,li {
     color: $dark-mode-text;
-    *{
+    a {
+      color: $light-accent;
+      &:hover {
+        color: $deep-light-accent !important;
+      }
+      @media screen and (max-width: $single-column-max-width) {
+        &:hover {
+          text-decoration: none !important;
+        }
+      }
+    }
+    * {
       color: $dark-mode-text;
     }
   }
