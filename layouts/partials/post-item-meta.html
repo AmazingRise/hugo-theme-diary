@@ -1,5 +1,5 @@
 <div class="post-item-meta">
-    {{ .PublishDate.Format "2006-01-02" }}
+    {{ i18n "format_date" .PublishDate }}
     &emsp;
     <!-- Reading Time Start -->
     {{ if .Site.Params.enableReadingTime }}
@@ -17,6 +17,6 @@
     <!-- Reading Time End -->
     &emsp;
     {{ if .Draft }}
-    <span class="draft-label">DRAFT</span>
+    <span class="draft-label">{{ i18n "draft" }}</span>
     {{ end }}
 </div>
