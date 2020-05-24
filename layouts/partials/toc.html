@@ -6,7 +6,7 @@
 		{{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
 		{{ $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") }}
 		{{ $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") }}
-		<center>- CATALOG -</center>
+		<center>- {{ i18n "toc_title" }} -</center>
 			{{ range $headers }}
 				{{ $header := . }}
 				{{ range first 1 (findRE $re $header 1) }}

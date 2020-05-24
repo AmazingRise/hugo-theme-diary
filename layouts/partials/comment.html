@@ -15,6 +15,6 @@
 
 {{ if .Site.Params.livereId }}
 <div id="lv-container" data-id="city" data-uid={{.Site.Params.livereId}}>
-    <noscript>Please activate JavaScript to use Livere Comment.</noscript>
+	<noscript>{{ i18n "livere_comments_activate_js" }}</noscript>
 </div>
 {{ end }}
