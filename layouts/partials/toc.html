@@ -7,25 +7,36 @@
 		{{ $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") }}
 		{{ $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") }}
 		<center>- {{ i18n "toc_title" }} -</center>
+		{{ $scratch := newScratch }}
+		{{ $scratch.Set "prev_heading" 1 }}
+		<ul>
 			{{ range $headers }}
 				{{ $header := . }}
 				{{ range first 1 (findRE $re $header 1) }}
 					{{ range findRE $renum . 1 }}
 						{{ $next_heading := (cond (eq $h1_n 0) (sub (int .) 1 ) (int . ) ) }}
-						{{ range seq $next_heading }}
-							<ul>
+						{{ $prev_heading := $scratch.Get "prev_heading"}}
+						{{ if lt $next_heading $prev_heading }}
+							{{ range seq (sub $prev_heading $next_heading) }}
+								</ul>
+							{{ end }}
+						{{ end }}
+						{{ if gt $next_heading $prev_heading }}
+							{{ range seq (sub $next_heading $prev_heading) }}
+								<ul class="collapse" data-toggle="collapse">
+							{{ end }}
 						{{ end }}
 						{{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
-								<li>
-				 					<a href="#{{ $anchorId }}" v-on:click="closeDrawer" id="{{ $anchorId }}-nav">
-										 {{ $header | plainify | htmlUnescape }}
-									</a>
-								</li>
-						{{ range seq $next_heading }}
-							</ul>
-						{{ end }}
+							<li>
+								<a href="#{{ $anchorId }}" v-on:click="closeDrawer" onclick="collapseOthers(`#{{ $anchorId | safeJS}}-nav`)" id="{{ $anchorId }}-nav">
+									{{ $header | plainify | htmlUnescape }}
+								</a>
+							</li>
+						
+						{{ $scratch.Set "prev_heading" $next_heading }}
 					{{ end }}
 				{{ end }}
 			{{ end }}
+		</ul>
 	</div>
 {{ end }}
