@@ -14,8 +14,8 @@
   translation: 這是最舊的文章了。
 - id: comments_disabled
   translation: 此篇文章的評論功能已經停用。
-- id: livere_comments_activate_js
-  translation: 請開啓 JavaScript 以便使用 Livere 評論服務。
+- id: comments_activate_js
+  translation: 請開啓 JavaScript 以便使用評論服務。
 - id: hugo_theme
   translation: Hugo Theme
 - id: ported_from

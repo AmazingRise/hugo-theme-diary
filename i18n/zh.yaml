@@ -14,8 +14,8 @@
   translation: 这是最旧的文章了。
 - id: comments_disabled
   translation: 此篇文章的评论功能已经停用。
-- id: livere_comments_activate_js
-  translation: 请开启 JavaScript 以便使用 Livere 评论服务。
+- id: comments_activate_js
+  translation: 请开启 JavaScript 以便使用评论服务。
 - id: hugo_theme
   translation: Hugo Theme
 - id: ported_from

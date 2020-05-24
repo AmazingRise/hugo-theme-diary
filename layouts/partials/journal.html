@@ -90,6 +90,7 @@ app = new Vue({
         this.handleScroll();
         this.handleResize();
         this.mounted = true;
+
         {{ if and (.Site.Params.enableValine) (.IsPage) }}
             new Valine({
                 el: '#vcomments',

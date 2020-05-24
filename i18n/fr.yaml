@@ -14,8 +14,8 @@
   translation: Pas de post plus ancien.
 - id: comments_disabled
   translation: Commentaires Désactivés.
-- id: livere_comments_activate_js
-  translation: Veuillez activer JavaScript pour utiliser le système de commentaires Livere.
+- id: comments_activate_js
+  translation: Veuillez activer JavaScript pour utiliser le système de commentaires.
 - id: hugo_theme
   translation: Theme Hugo
 - id: ported_from
