@@ -41,6 +41,7 @@ Features in this ported version:
 - Dark mode.
 - MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
 - Google Custom Search Engine support.
+- Internationalization(i18n) support, with English, French and Chinese(Simplified and Traditional).
 
 ## Quick Start
 
@@ -94,6 +95,8 @@ Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/
 [Meta Data of posts](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
 
 [Enable Reading Time](https://github.com/AmazingRise/hugo-theme-diary/wiki/Reading-Time)
+
+[Internationalization](https://github.com/AmazingRise/hugo-theme-diary/wiki/Internationalization)
 
 ## Comparison
 
