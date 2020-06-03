@@ -62,7 +62,11 @@
             </div>
             
             <div class="post-body-wrapper">
+                {{ if .Params.enableVue }}
                 <div class="post-body">
+                {{ else }}
+                <div class="post-body" v-pre>
+                {{ end }}
                     {{.Content}}
                     {{ if not .Lastmod.IsZero }}
                     <HR width="100%" id="EOF">
