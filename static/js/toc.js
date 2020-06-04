@@ -23,39 +23,33 @@ var spy = function () {
             navElem.removeClass('toc-active');
         }
     })
-    if (currentIndex == -1) {
-        currentIndex = elems.length - 1;
-    }
-    //console.log(elems[currentIndex].id);
-    //Collapse them
-    collapseOthers("#" + elems[currentIndex].id + "-nav");
-}
-var collapseOthers = function (currentId) {
-    //console.log(currentId);
-    $(currentId).parents(".collapse").each(function (idx) {
-        $(this).collapse("show");
-    });
-    $(currentId).parent().next().filter(".collapse").collapse("show");
-    $(".collapse").not($(currentId).parents()).not($(currentId).parent().next()).each(function (idx) {
-        $(this).collapse("hide");
-    });
-
 }
 $().ready(function () {
+    $(".collapse").each(function (idx) {
+        $(this).collapse("show");
+    });
     spy();
-    $(window).bind('scroll', debounce(spy));
+    $(window).bind('scroll', throttle(spy));
 });
 
-function debounce(func, delay = 250) {
-    let timer = null;
-
-    return () => {
-        let context = this;
-        let args = arguments;
-
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            func.apply(context, args);
-        }, delay)
+function throttle(func, timeout = 250) {
+    let last;
+    let timer;
+   
+    return function () {
+      const context = this;
+      const args = arguments;
+      const now = +new Date();
+   
+      if (last && now < last + timeout) {
+        clearTimeout(timer)
+        timer = setTimeout(function () {
+          last = now
+          func.apply(context, args)
+        }, timeout)
+      } else {
+        last = now
+        func.apply(context, args)
+      }
     }
-}
+  }

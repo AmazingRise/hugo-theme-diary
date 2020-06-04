@@ -40,20 +40,16 @@
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
 
-<script src="{{.Site.BaseURL}}/js/table.js"></script>
-
 {{ if .Params.enableMathJax }}
   {{ partial "mathjax.html" . }}
 {{ end }}
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-<script src="{{.Site.BaseURL}}/js/toc.js"></script>
-{{ else }}
-<style>
-  .toc{
-    display: none !important;
-  }
-</style>
+  {{ if .Params.disableAutoCollapse }}
+    <script src="{{.Site.BaseURL}}/js/toc.js"></script>
+  {{ else }}
+    <script src="{{.Site.BaseURL}}/js/toc-collapse.js"></script>
+  {{ end }}
 {{ end }}
 
 {{ if and (.Site.Params.enableGitalk) (.IsPage) }}
