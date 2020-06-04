@@ -1,40 +1,39 @@
-
 {{ define "main" }}
+<!-- <div ref="streamContainer" class="stream-container"> -->
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            {{ $post_class := "post-head-wrapper-text-only"}}
+            {{ $featured_image := .Params.featured_image }}
+            {{ if $featured_image }}
+                {{ $post_class = "post-head-wrapper"}}
+            {{ end }}
 
-    <div class="post-list-container post-list-container-no-background">
-        {{ $paginator := .Paginate (where .Site.RegularPages "Params.hidden" "!=" true) }}
-        {{range $paginator.Pages }}
-            <a href="{{.RelPermalink}}" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                {{.Title}}
-                            </div>
-                            <div class="post-item-summary">
-                                {{.Description}}
-                            </div>
-                            {{ partial "post-item-meta.html" . }}
-                        </div>
-                        {{ $featured_image := .Params.featured_image }}
-                        {{ if $featured_image }}
-                            {{ $image := .Resources.GetMatch (.Params.featured_image) }}
-                            <div class="post-item-image-wrapper">
-                            <div class="post-item-image"
-                            {{ if $image }}
-                                {{ $thumbnail := $image.Resize "690x360" }}
-                                 style="background-image: url('{{ $thumbnail.RelPermalink }}')"
-                            {{ else }}
-                            
-                                style="background-image: url('{{ $featured_image | absURL}}')"
-                            {{ end }}
-                            ></div>
-                            </div>
-                        {{ end }}
+            <div class="{{$post_class}}"
+                {{ if $featured_image }}
+                    {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+                    {{ if $image }}
+                    style="background-image: url('{{$image.Permalink }}')"
+                    {{ else }}
+                    style="background-image: url('{{ $featured_image | absURL}}')"
+                    {{ end }}
+                {{ end }}
+            >
+                <div class="post-title" v-pre>
+                    {{ .Title }}
+                    {{ if .Params.description }}
+                    <div class="post-subtitle">
+                        {{ .Params.description }}
                     </div>
+                    {{ end }}
                 </div>
-        {{ end }}
-        </a>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body" v-pre>
+                    {{.Content}}
+                </div>
+            </div>
+        </div>
     </div>
-
+<!-- </div> -->
 {{ end }}

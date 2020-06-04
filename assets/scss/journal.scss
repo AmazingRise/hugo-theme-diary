@@ -3,13 +3,11 @@ $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$default-font-list: "Lora", "Noto Serif SC";
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
-//$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
-$sans-preferred-font-list: $default-font-list;
+$sans-preferred-font-list: "Exo 2", "Montserrat", "Roboto", "Source Sans Pro",
+  "Helvetica", $default-font-list;
 
 $side-container-width: 25%; //280px;
 $extra-container-width: 25%;
