@@ -41,7 +41,7 @@
                         {{ if gt .Params.tags 0 }}
                             <i class="material-icons" style="">label</i>
                             {{ range .Params.tags }}
-                                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                <a href="{{ "/tag/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 &nbsp;
                             {{ end }}
                         {{ end }}
