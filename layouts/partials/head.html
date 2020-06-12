@@ -20,6 +20,11 @@
 {{ template "_internal/opengraph.html" . }}
 {{end}}
 
+<!-- twitter-cards -->
+{{if .Site.Params.enableTwitterCards}}
+{{ template "_internal/twitter_cards.html" . }}
+{{end}}
+
 <!-- metadata -->
 
 {{ if .Site.GoogleAnalytics }}
