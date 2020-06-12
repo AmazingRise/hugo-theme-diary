@@ -6,7 +6,7 @@
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="{{ .Params.description }}">
+<meta name="description" content="{{if .IsHome}}{{ .Site.Params.homePageDescription }}{{else}}{{ .Params.description }}{{end}}">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 <!-- metadata -->

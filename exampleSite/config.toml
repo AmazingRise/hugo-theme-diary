@@ -21,6 +21,7 @@ theme = "diary"
 [params]
 subtitle = "Themed by Diary."
 enableGitalk = true
+homePageDescription = "My HomePage Description"
 
 [params.gitalk]
   owner = "user"
