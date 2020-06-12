@@ -38,6 +38,10 @@
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
+{{if .Site.Params.manifest}}
+<link rel="manifest" href="{{.Site.Params.manifest}}">
+{{end}}
+
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
 <!-- favicon -->
