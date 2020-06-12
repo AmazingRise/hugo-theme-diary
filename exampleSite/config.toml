@@ -21,7 +21,10 @@ theme = "diary"
 [params]
 subtitle = "Themed by Diary."
 enableGitalk = true
-homePageDescription = "My HomePage Description"
+description = "My HomePage Description"
+enableOpenGraph = true
+title = "My Blog" # will set 'og:title'
+description = "A collection of blogposts" # will set 'og:description'
 
 [params.gitalk]
   owner = "user"
