@@ -37,7 +37,7 @@ Features in this ported version:
 - Customizable color scheme. (Some bug in original version, fixed.)
 - Firefox-friendly. (CSS issue in original version, fixed.)
 - `featured_image` url bug is fixed.
-- Table of Contents with scroll spy.
+- Table of Contents with scroll spy and auto collapse.
 - Dark mode.
 - MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
 - Google Custom Search Engine support.
@@ -76,7 +76,7 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
 
 Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for more details.
 
-[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
+[Settings of Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
 
 [Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
 
