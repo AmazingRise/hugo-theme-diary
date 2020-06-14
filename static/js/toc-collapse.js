@@ -23,15 +23,24 @@ var spy = function () {
             navElem.removeClass('toc-active');
         }
     })
-    if (currentIndex == -1) {
-        currentIndex = elems.length - 1;
-    }
     //console.log(elems[currentIndex].id);
     //Collapse them
-    collapseOthers("#" + elems[currentIndex].id + "-nav");
+    collapseOthers(currentIndex);
 }
-var collapseOthers = function (currentId) {
+
+
+
+var collapseOthers = function (currentIndex) {
+    if (currentIndex == -1) {
+      $(".collapse").each(function (idx) {
+        $(this).collapse("hide");
+      });
+      return;
+    }
+    var elems = $(":header");
+    currentId = "#" + elems[currentIndex].id + "-nav";
     //console.log(currentId);
+    
     $(currentId).parents(".collapse").each(function (idx) {
         $(this).collapse("show");
     });
@@ -39,7 +48,6 @@ var collapseOthers = function (currentId) {
     $(".collapse").not($(currentId).parents()).not($(currentId).parent().next()).each(function (idx) {
         $(this).collapse("hide");
     });
-
 }
 $().ready(function () {
     spy();
