@@ -21,6 +21,8 @@ theme = "diary"
 [params]
 subtitle = "Themed by Diary."
 enableGitalk = true
+
+# Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
 title = "My Blog" # will set 'og:site_name'
