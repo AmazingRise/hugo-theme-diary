@@ -11,18 +11,33 @@
             </div>
         </div>
         {{- range .Data.Pages -}}
-        <a href="{{ .RelPermalink }}" class="a-block">
+        <a href="{{.Permalink}}" class="a-block">
             <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
+                <div class="post-item post-item-no-divider">
                     <div class="post-item-info-wrapper">
                         <div class="post-item-title">
                             {{.Title}}
                         </div>
+                        <div class="post-item-summary">
+                            {{.Description}}
+                        </div>
                         {{ partial "post-item-meta.html" . }}
                     </div>
+                    {{ $featured_image := .Params.featured_image }}
+                    {{ if $featured_image }}
+                        {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+                        <div class="post-item-image-wrapper">
+                        <div class="post-item-image"
+                        {{ if $image }}
+                             style="background-image: url('{{ $image.Permalink }}')"
+                        {{ else }}
+                             style="background-image: url('{{ $featured_image | absURL}}')"
+                        {{ end }}
+                        ></div>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
-        </a>
         {{- end -}}
     </div>
 </div>
