@@ -1,14 +1,30 @@
 <head>
 <title>{{.Title}}</title>
 
+{{ $description := .Params.description}}
+{{if .IsHome}}
+  {{ $description = .Site.Params.description}}
+{{end}}
+
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="{{ .Params.description }}">
+<meta name="description" content="{{ $description }}">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
+
+<!-- open-graph -->
+{{if .Site.Params.enableOpenGraph}}
+{{ template "_internal/opengraph.html" . }}
+{{end}}
+
+<!-- twitter-cards -->
+{{if .Site.Params.enableTwitterCards}}
+{{ template "_internal/twitter_cards.html" . }}
+{{end}}
+
 <!-- metadata -->
 
 {{ if .Site.GoogleAnalytics }}
@@ -21,6 +37,10 @@
 <script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relURL}}" ></script>
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
+
+{{if .Site.Params.manifest}}
+<link rel="manifest" href="{{.Site.Params.manifest}}">
+{{end}}
 
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
