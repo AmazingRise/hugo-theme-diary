@@ -9,7 +9,15 @@
             {{ end }}
 
             <div class="{{$post_class}}"
-                 style="background-image: url('{{ $featured_image | relLangURL}}')">
+                {{ if $featured_image }}
+                    {{ $image := .Resources.GetMatch (.Params.featured_image) }}
+                    {{ if $image }}
+                    style="background-image: url('{{$image.Permalink }}')"
+                    {{ else }}
+                    style="background-image: url('{{ $featured_image | absURL}}')"
+                    {{ end }}
+                {{ end }}
+            >
                 <div class="post-title">
                     {{ .Title }}
                     {{ if .Params.description }}
@@ -20,7 +28,7 @@
                     <div class="post-meta">
                         {{ if .Params.date}}
                         <time itemprop="datePublished">
-                            {{ .PublishDate.Format "2006-01-02 15:04" }}
+                            {{ i18n "format_date_tosec" .PublishDate }}
                         </time>
                         {{ end }}
 
@@ -37,16 +45,32 @@
                                 &nbsp;
                             {{ end }}
                         {{ end }}
+                        {{ if .Site.Params.enableReadingTime }}
+                            <i class="material-icons" style="">schedule</i>
+                            {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
+
+                            {{ $minutes := math.Floor (div $readTime 60) }}
+                            {{ $seconds := mod $readTime 60 }}
+
+                            {{ if gt $minutes 0}}
+                            {{ $minutes }} {{ cond (eq $minutes 1) "minute" "min" }}
+                            {{ end }}
+                            {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}.
+                        {{ end }}
                     </div>
                 </div>
             </div>
             
             <div class="post-body-wrapper">
+                {{ if .Params.enableVue }}
                 <div class="post-body">
+                {{ else }}
+                <div class="post-body" v-pre>
+                {{ end }}
                     {{.Content}}
                     {{ if not .Lastmod.IsZero }}
                     <HR width="100%" id="EOF">
-                    <p style="color:#777;">Last modified on {{ .Page.Lastmod.Format "2006-01-02" }}</p>
+		    <p style="color:#777;">{{ i18n "last_mod_on" .Page.Lastmod }}</p>
                     {{ end }}
                 </div>
             </div>
@@ -56,28 +80,28 @@
 
                 {{if .Next}}
                 <a class="newer-posts" href="{{.Next.Permalink}}">
-                    Next<br>{{.Next.Title}}
+			{{ i18n "next_link" }}<br>{{.Next.Title}}
                 </a>
                 {{else}}
                 <a class="newer-posts">
-                    Next<br>No newer posts.
+			{{ i18n "next_link" }}<br>{{ i18n "no_newer_posts"}}
                 </a>
                 {{end}}
                 
                 {{if .Prev}}
                 <a class="older-posts" href="{{.Prev.Permalink}}">
-                    Previous<br>{{.Prev.Title}}
+			{{ i18n "prev_link" }}<br>{{.Prev.Title}}
                 </a>
                 {{else}}
                 <a class="older-posts">
-                    Previous<br>No older posts.
+			{{ i18n "prev_link" }}<br>{{ i18n "no_older_posts" }}
                 </a>
                 {{end}}
             </nav>
             <div class="post-comment-wrapper">
                 {{ if eq .Params.comment false }}
                 <p style="opacity: 0.6" align="center">
-                    <small>Comments Disabled.</small>
+                    <small>{{ i18n "comments_disabled" }}</small>
                 </p>
                 {{ else }}
                 {{- partial "comment.html" . -}}

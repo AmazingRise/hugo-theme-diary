@@ -1,4 +1,8 @@
 <div ref="extraContainer" class="extra-container">
+    {{ if and (isset .Site.Params "googlesearchcode") (.IsHome) }}
+    <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
+    <div class="gcse-search"></div>
+    {{ end }}
     {{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
         {{- partial "toc.html" . -}}
@@ -10,6 +14,16 @@
                 keyboard_arrow_up
             </i>
         </a>
+        {{ if not .Site.Params.disableDarkMode }}
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        {{ end }}
         {{ if .Paginator }}
         {{ if gt .Paginator.TotalPages 1 }}
             <div class="pagination-indicator">

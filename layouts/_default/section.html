@@ -21,13 +21,7 @@
                             <div class="post-item-title">
                                 {{.Title}}
                             </div>
-                            <div class="post-item-meta">
-                                {{ dateFormat "Jan 2, 2006" .Date }}
-    
-                                {{ if .Draft }}
-                                <span class="draft-label">DRAFT</span>
-                                {{ end }}
-                            </div>
+                            {{ partial "post-item-meta.html" . }}
                         </div>
                     </div>
                 </div>

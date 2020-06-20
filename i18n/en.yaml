@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: Last modified on {{ .Format "2006-01-02" }}
+- id: format_date
+  translation: '{{ .Format "2006-01-02" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "2006-01-02 15:04" }}'
+- id: next_link
+  translation: Next
+- id: prev_link
+  translation: Previous
+- id: no_newer_posts
+  translation: No newer posts.
+- id: no_older_posts
+  translation: No older posts.
+- id: comments_disabled
+  translation: Comments Disabled.
+- id: comments_activate_js
+  translation: Please activate JavaScript to view comments.
+- id: hugo_theme
+  translation: Hugo Theme
+- id: ported_from
+  translation: Ported from
+- id: by
+  translation: by
+- id: draft
+  translation: DRAFT
+- id: toc_title
+  translation: CATALOG

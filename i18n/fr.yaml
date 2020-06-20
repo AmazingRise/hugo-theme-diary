@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: Dernière modification le {{ .Format "02/01/2006" }}
+- id: format_date
+  translation: '{{ .Format "02/01/2006" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "02/01/2006 15h04" }}'
+- id: next_link
+  translation: Suivant
+- id: prev_link
+  translation: Précédent
+- id: no_newer_posts
+  translation: Pas de post plus récent.
+- id: no_older_posts
+  translation: Pas de post plus ancien.
+- id: comments_disabled
+  translation: Commentaires Désactivés.
+- id: comments_activate_js
+  translation: Veuillez activer JavaScript pour utiliser le système de commentaires.
+- id: hugo_theme
+  translation: Theme Hugo
+- id: ported_from
+  translation: Adapté de
+- id: by
+  translation: par
+- id: draft
+  translation: BROUILLON
+- id: toc_title
+  translation: TABLE

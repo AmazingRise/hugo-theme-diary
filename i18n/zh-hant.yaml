@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: 上次修改於 {{ .Format "2006-01-02" }}
+- id: format_date
+  translation: '{{ .Format "2006-01-02" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "2006-01-02 15:04" }}'
+- id: next_link
+  translation: 下回
+- id: prev_link
+  translation: 上回
+- id: no_newer_posts
+  translation: 已經到底啦。
+- id: no_older_posts
+  translation: 這是最舊的文章了。
+- id: comments_disabled
+  translation: 此篇文章的評論功能已經停用。
+- id: comments_activate_js
+  translation: 請開啓 JavaScript 以便使用評論服務。
+- id: hugo_theme
+  translation: Hugo Theme
+- id: ported_from
+  translation: 移植自
+- id: by
+  translation: by
+- id: draft
+  translation: 草稿
+- id: toc_title
+  translation: 目錄

@@ -1,0 +1,22 @@
+<div class="post-item-meta">
+    {{ i18n "format_date" .PublishDate }}
+    &emsp;
+    <!-- Reading Time Start -->
+    {{ if .Site.Params.enableReadingTime }}
+    <i class="material-icons" style="font-size:10px">schedule</i>
+    {{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
+
+    {{ $minutes := math.Floor (div $readTime 60) }}
+    {{ $seconds := mod $readTime 60 }}
+
+    {{ if gt $minutes 0}}
+    {{ $minutes }} {{ cond (eq $minutes 1) "minute" "min" }}
+    {{ end }}
+    {{ $seconds }} {{ cond (eq $seconds 1) "second" "s" }}
+    {{ end }}
+    <!-- Reading Time End -->
+    &emsp;
+    {{ if .Draft }}
+    <span class="draft-label">{{ i18n "draft" }}</span>
+    {{ end }}
+</div>

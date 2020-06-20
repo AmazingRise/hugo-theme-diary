@@ -1,7 +1,9 @@
 {{ if .Site.Params.disqusShortname }}
-<div class="post-comment-wrapper">
-{{ template "_internal/disqus.html" . }}
+<div class="comments">
+    <vue-disqus shortname="{{.Site.Params.disqusShortname}}"></vue-disqus>
 </div>
+<noscript><noscript>{{ i18n "comments_activate_js" }}</noscript></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
 {{ end }}
 
 {{ if .Site.Params.enableGitalk }}
@@ -10,10 +12,11 @@
 
 {{ if .Site.Params.enableValine }}
 <div id="vcomments"></div>
+<!-- Script moved to journal.html -->
 {{ end }}
 
 {{ if .Site.Params.livereId }}
 <div id="lv-container" data-id="city" data-uid={{.Site.Params.livereId}}>
-    <noscript>Please activate JavaScript to use Livere Comment.</noscript>
+	<noscript>{{ i18n "comments_activate_js" }}</noscript>
 </div>
 {{ end }}

@@ -1,26 +1,46 @@
 <head>
 <title>{{.Title}}</title>
 
+{{ $description := .Params.description}}
+{{if .IsHome}}
+  {{ $description = .Site.Params.description}}
+{{end}}
+
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="{{ .Params.description }}">
+<meta name="description" content="{{ $description }}">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
+
+<!-- open-graph -->
+{{if .Site.Params.enableOpenGraph}}
+{{ template "_internal/opengraph.html" . }}
+{{end}}
+
+<!-- twitter-cards -->
+{{if .Site.Params.enableTwitterCards}}
+{{ template "_internal/twitter_cards.html" . }}
+{{end}}
+
 <!-- metadata -->
 
 {{ if .Site.GoogleAnalytics }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
-<script src="{{"/vendor/js/jquery.min.js" | relLangURL}}" ></script>
-<script src="{{"/vendor/js/popper.min.js" | relLangURL}}" ></script>
-<script src="{{"/vendor/js/bootstrap.min.js" | relLangURL}}" ></script>
-<script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relLangURL}}" ></script>
-<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relLangURL}}">
-<script src="{{"/vendor/js/vue.min.js" | relLangURL}}" ></script>
+<script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
+<script src="{{"/vendor/js/popper.min.js" | relURL}}" ></script>
+<script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
+<script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relURL}}" ></script>
+<link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
+<script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
+
+{{if .Site.Params.manifest}}
+<link rel="manifest" href="{{.Site.Params.manifest}}">
+{{end}}
 
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon }}">
@@ -30,26 +50,32 @@
 {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-<script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
-<script src="{{.Site.BaseURL}}/js/table.js"></script>
-
-{{ if and (not (.Params.disableToC) ) (.IsPage) }}
-<script src="{{.Site.BaseURL}}/js/toc.js"></script>
-{{ else }}
-<style>
-  .toc{
-    display: none !important;
-  }
-</style>
+{{ if not .Site.Params.disableDarkmode }}
+{{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
+<script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
 <script>
-    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
+
+{{ if .Params.enableMathJax }}
+  {{ partial "mathjax.html" . }}
+{{ end }}
+
+{{ if and (not (.Params.disableToC) ) (.IsPage) }}
+  {{ if .Params.disableAutoCollapse }}
+    <script src="{{.Site.BaseURL}}/js/toc.js"></script>
+  {{ else }}
+    <script src="{{.Site.BaseURL}}/js/toc-collapse.js"></script>
+  {{ end }}
+{{ end }}
+
 {{ if and (.Site.Params.enableGitalk) (.IsPage) }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="{{"/vendor/js/md5.min.js" | relLangURL}}"></script>
+<script src="{{"/vendor/js/md5.min.js" | relURL}}"></script>
 <script>
   var gitalk = new Gitalk({
   clientID: '{{ .Site.Params.Gitalk.client_id }}',
@@ -84,20 +110,11 @@ $(
 {{ end }}
 
 {{ if and (.Site.Params.enableValine) (.IsPage) }}
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script>
-  $(new Valine({
-      {{ if .Site.Params.Valine.avator }}
-      avator: '{{.Site.Params.Valine.avator}}',
-      {{ end }}
-      el: '#vcomments',
-      appId: '{{ .Site.Params.Valine.appId }}',
-      appKey: '{{ .Site.Params.Valine.appKey }}',
-      visitor: true,
-      recordIP: true,
-      verify: true
-  }));
-</script>
+<script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
+{{ end }}
+
+{{ if .Site.Params.disqusShortname }}
+<script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
 {{ end }}
 
 </head>

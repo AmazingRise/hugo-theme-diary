@@ -1,8 +1,9 @@
 $color-accent: #1976d2;
+//$color-accent: #330000;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: "Lora", "Noto Serif SC", serif;
+$default-font-list: "Lora", "Noto Serif SC";
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
 $sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro",
@@ -18,7 +19,7 @@ $nav-subtitle-size: 18px;
 $nav-link-size: 20px;
 $nav-footer-size: 12px;
 $post-title-size: 30px;
-$post-subtitle-size: 16px;
+$post-subtitle-size: 14px;
 $post-summary-size: 16px;
 $post-body-size: 16px;
 $post-meta-size: 16px;
@@ -29,7 +30,7 @@ $dark-accent: darken($color-accent, 10%);
 $deep-dark-accent: darken($color-accent, 50%);
 $color-text: $deep-dark-accent;
 
-@if lightness($color-accent) <10% {
+@if lightness($color-accent) <20% {
   $dark-accent: $color-accent;
   $deep-dark-accent: $color-accent;
   $color-text: $deep-dark-accent;
@@ -68,7 +69,7 @@ body {
 
 * {
   color: $deep-dark-accent;
-  line-height: 1.7em;
+  //line-height: 1.7em;
   word-wrap: break-word;
   box-sizing: border-box;
 }
@@ -135,8 +136,9 @@ code {
 }
 
 pre {
-  background: rgba(46,46,46, 1) !important;
-  color: rgba(255,255,255, 1);
+  //background: rgba(46,46,46, 1) !important;
+  //color: rgba(255,255,255, 1);
+  background: rgba($color-accent, 0.07);
   padding: 12px 15px;
   border-radius: 5px;
   font-family: $mono-font-list;
@@ -247,7 +249,11 @@ a {
     .navbar-brand {
       opacity: 0;
       text-align: left;
-      padding-left: 12px !important;
+      padding-left: 12px;
+      //padding-top: 8px;
+      //justify-content: space-between;
+      //align-items: stretch;
+      flex: 1;
     }
     .nav-dropdown-toggle {
       display: flex;
@@ -257,7 +263,20 @@ a {
       justify-content: center;
       background: none !important;
       border: none;
-      padding-top: 1px;
+      //padding-top: 1px;
+      &:hover {
+        color: #3f587d !important;
+      }
+    }
+    .nav-darkmode-toggle {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      background: none !important;
+      border: none;
+      //padding-top: 1px;
       &:hover {
         color: #3f587d !important;
       }
@@ -402,8 +421,8 @@ a {
   text-align: right;
   font-family: $sans-preferred-font-list;
   padding: 20px 0 50px 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  //overflow-x: hidden;
+  //overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -491,8 +510,8 @@ a {
   width: $extra-container-width;
   /*text-align: right;*/
   font-family: $sans-preferred-font-list;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  //overflow-x: hidden;
+  //overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -688,7 +707,7 @@ a {
           }
         }
 
-        transition: all 0.2s linear;
+        //transition: all 0.2s linear;
         * {
           transition: all 0.2s linear;
         }
@@ -748,6 +767,7 @@ a {
     padding: 15px;
   }
   .post {
+
     padding: 0 0 20px 0;
     .post-head-wrapper {
       margin-top: -20px;
@@ -792,6 +812,7 @@ a {
 
         .post-subtitle {
           font-size: $post-subtitle-size;
+          line-height: 1.2em !important;
           width: 80%;
           opacity: 0.6;
           padding: 0px 0 8px 0;
@@ -1037,4 +1058,32 @@ a {
 
 .year {
   color: $dark-accent;
+}
+
+mjx-container
+{
+  overflow-y: hidden !important;
+}
+
+.gsc-control-cse {
+  display: flex !important;
+  width: 19vw !important;
+  margin-left: 1.5em;
+  padding-right: 0.2em;
+  @media screen and (max-width: $single-column-max-width) {
+    width: 60vw !important;
+    margin-left: 0.5em;
+    padding-left: 0;
+    .gsst_a {
+      display: none;
+    }
+  }
+}
+
+.vwrap * {
+  color: black !important;
+}
+
+.vcontent p {
+  color: black !important;
 }

@@ -33,13 +33,15 @@ Features in the ori.:
 
 Features in this ported version:
 
-- Add Gitalk intergration.
-- Tag & category page appending more easily.
+- Add Gitalk and Valine intergration.
 - Customizable color scheme. (Some bug in original version, fixed.)
 - Firefox-friendly. (CSS issue in original version, fixed.)
 - `featured_image` url bug is fixed.
-- Table of Contents with scroll spy.
-
+- Table of Contents with scroll spy and auto collapse.
+- Dark mode.
+- MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
+- Google Custom Search Engine support.
+- Internationalization(i18n) support, with English, French and Chinese(Simplified and Traditional).
 
 ## Quick Start
 
@@ -66,33 +68,35 @@ hugo server --themesDir ../..
 ```
 ## Personalization
 
-Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.
-
 ### Example config
 
 See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/master/exampleSite/config.toml)
 
 ### Customization
 
-[Change color scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for more details.
 
-[Change font scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-default-font-scheme)
+[Settings of Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
 
-[Customize sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
+[Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
 
-[Disable Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#disable-table-of-contents)
+[Enable MathJax](https://github.com/AmazingRise/hugo-theme-diary/wiki/MathJax)
 
-[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-comment-area)
+[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
 
-[Add Google Analytics and Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
+[Add Google Search Box on your site](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-search-box-on-your-site)
 
-### Other Details
+[Customizations](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
 
 [Taxonomies and Sections (Archive, Categories and Tags)](https://github.com/AmazingRise/hugo-theme-diary/wiki/Taxonomies-and-Sections-(Archive,-Categories-and-Tags))
 
 [RSS Feed](https://github.com/AmazingRise/hugo-theme-diary/wiki/RSS-Feed)
 
 [Meta Data of posts](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
+
+[Enable Reading Time](https://github.com/AmazingRise/hugo-theme-diary/wiki/Reading-Time)
+
+[Internationalization](https://github.com/AmazingRise/hugo-theme-diary/wiki/Internationalization)
 
 ## Comparison
 

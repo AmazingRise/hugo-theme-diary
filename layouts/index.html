@@ -15,15 +15,19 @@
                             <div class="post-item-summary">
                                 {{.Description}}
                             </div>
-                            <div class="post-item-meta">
-                                {{ .PublishDate.Format "2006-01-02" }}
-                            </div>
+                            {{ partial "post-item-meta.html" . }}
                         </div>
                         {{ $featured_image := .Params.featured_image }}
                         {{ if $featured_image }}
+                            {{ $image := .Resources.GetMatch (.Params.featured_image) }}
                             <div class="post-item-image-wrapper">
                             <div class="post-item-image"
-                                 style="background-image: url('{{$featured_image | relLangURL }}')"></div>
+                            {{ if $image }}
+                                 style="background-image: url('{{ $image.Permalink }}')"
+                            {{ else }}
+                                 style="background-image: url('{{ $featured_image | absURL}}')"
+                            {{ end }}
+                            ></div>
                             </div>
                         {{ end }}
                     </div>
