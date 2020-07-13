@@ -65,7 +65,7 @@
 {{ end }}
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-  {{ if .Params.disableAutoCollapse }}
+  {{ if .Site.Params.disableAutoCollapse }}
     <script src="{{.Site.BaseURL}}/js/toc.js"></script>
   {{ else }}
     <script src="{{.Site.BaseURL}}/js/toc-collapse.js"></script>
