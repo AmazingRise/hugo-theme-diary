@@ -106,7 +106,10 @@ body.night {
       @media screen and (max-width: $single-column-max-width) {
         background: $dark-mode-back-container-background;
       }
-      .post-comment-wrapper *{
+      .post-pagination a:not([href]){
+        color: $dark-mode-text;
+      }
+      .post-comment-wrapper * {
         color: $dark-mode-text;
       }
     }
