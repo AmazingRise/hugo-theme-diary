@@ -42,6 +42,7 @@ Features in this ported version:
 - MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
 - Google Custom Search Engine support.
 - Internationalization(i18n) support, with English, French and Chinese(Simplified and Traditional).
+- Inserting figures more easily, see [wiki](https://github.com/AmazingRise/hugo-theme-diary/wiki/Inserting-Figures) for details.
 
 ## Quick Start
 
