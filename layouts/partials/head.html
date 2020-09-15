@@ -43,7 +43,7 @@
 {{end}}
 
 {{ if .Site.Params.favicon }}
-<link rel="icon" href="{{ .Site.Params.favicon }}">
+<link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 <!-- favicon -->
 {{ end }}
 
