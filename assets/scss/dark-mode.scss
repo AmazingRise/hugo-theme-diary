@@ -2,7 +2,7 @@
 
 $light-accent: lighten($color-accent, 10%);
 $deep-light-accent: lighten($color-accent, 30%);
-$dark-mode-text: darken(#FFF, 20%);
+$dark-mode-text: darken(#FFF, 10%);
 
 $dark-mode-back-container-background: #212121;
 $dark-mode-front-container-background: #282828;
@@ -243,6 +243,10 @@ body.night {
 
   .vcontent p {
     color: $dark-mode-text !important;
+  }
+  
+  .gsc-control-searchbox-only table *{
+    color: black !important;
   }
 
 }
