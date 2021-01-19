@@ -1,9 +1,9 @@
 - id: last_mod_on
-  translation: Zuletzt bearbeitet am {{ .Format "01.02.2006" }}
+  translation: Zuletzt bearbeitet am {{ .Format "02.01.2006" }}
 - id: format_date
-  translation: '{{ .Format "01.02.2006" }}'
+  translation: '{{ .Format "02.01.2006" }}'
 - id: format_date_tosec
-  translation: '{{ .Format "01.02.2006 15:04" }}'
+  translation: '{{ .Format "02.01.2006 15:04" }}'
 - id: next_link
   translation: Nächste
 - id: prev_link
