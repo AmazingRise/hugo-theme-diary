@@ -113,7 +113,7 @@ $(
 <script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
 {{ end }}
 
-{{ if and (.Site.Params.disqusShortname (.IsPage) }}
+{{ if and (.Site.Params.disqusShortname) (.IsPage) }}
 <script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
 {{ end }}
 
