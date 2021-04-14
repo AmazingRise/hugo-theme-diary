@@ -101,6 +101,9 @@ app = new Vue({
                 recordIP: true,
             })
         {{ end }}
+        {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
+            twikoo.init({ envId: {{.Site.Params.twikooEnvId}}, el: '#tcomment' });
+        {{ end }}
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
