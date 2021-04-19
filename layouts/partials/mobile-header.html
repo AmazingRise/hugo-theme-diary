@@ -4,7 +4,7 @@
         <div class="drawer-menu">
             {{ if and (isset .Site.Params "googlesearchcode") (.IsHome) }}
             <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
-            <div class="gcse-search" mobileLayout="true"></div>
+            <div class="gcse-searchbox-only" mobileLayout="true"></div>
             {{ end }}
             {{ $current := .Permalink | absLangURL }}
             {{ range .Site.Menus.main }}

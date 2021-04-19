@@ -2,7 +2,7 @@
 
 $light-accent: lighten($color-accent, 10%);
 $deep-light-accent: lighten($color-accent, 30%);
-$dark-mode-text: darken(#FFF, 20%);
+$dark-mode-text: darken(#FFF, 10%);
 
 $dark-mode-back-container-background: #212121;
 $dark-mode-front-container-background: #282828;
@@ -106,7 +106,10 @@ body.night {
       @media screen and (max-width: $single-column-max-width) {
         background: $dark-mode-back-container-background;
       }
-      .post-comment-wrapper *{
+      .post-pagination a:not([href]){
+        color: $dark-mode-text;
+      }
+      .post-comment-wrapper * {
         color: $dark-mode-text;
       }
     }
@@ -240,6 +243,10 @@ body.night {
 
   .vcontent p {
     color: $dark-mode-text !important;
+  }
+  
+  .gsc-control-searchbox-only table *{
+    color: black !important;
   }
 
 }

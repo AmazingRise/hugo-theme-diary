@@ -43,7 +43,7 @@
 {{end}}
 
 {{ if .Site.Params.favicon }}
-<link rel="icon" href="{{ .Site.Params.favicon }}">
+<link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 <!-- favicon -->
 {{ end }}
 
@@ -65,7 +65,7 @@
 {{ end }}
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-  {{ if .Params.disableAutoCollapse }}
+  {{ if .Site.Params.disableAutoCollapse }}
     <script src="{{.Site.BaseURL}}/js/toc.js"></script>
   {{ else }}
     <script src="{{.Site.BaseURL}}/js/toc-collapse.js"></script>
@@ -113,8 +113,12 @@ $(
 <script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
 {{ end }}
 
-{{ if .Site.Params.disqusShortname }}
+{{ if and (.Site.Params.disqusShortname) (.IsPage) }}
 <script src="https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
+{{ end }}
+
+{{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.0/dist/twikoo.all.min.js"></script>
 {{ end }}
 
 </head>

@@ -1065,15 +1065,16 @@ mjx-container
   overflow-y: hidden !important;
 }
 
-.gsc-control-cse {
+.gsc-control-searchbox-only {
   display: flex !important;
-  width: 19vw !important;
+  background: none !important;
+  max-width: 70%;
+  margin-top: 1em;
   margin-left: 1.5em;
-  padding-right: 0.2em;
+  margin-right: 0.2em;
   @media screen and (max-width: $single-column-max-width) {
-    width: 60vw !important;
     margin-left: 0.5em;
-    padding-left: 0;
+    padding-left: 0.2em;
     .gsst_a {
       display: none;
     }

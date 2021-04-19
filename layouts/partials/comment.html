@@ -20,3 +20,8 @@
 	<noscript>{{ i18n "comments_activate_js" }}</noscript>
 </div>
 {{ end }}
+
+{{ if .Site.Params.enableTwikoo }}
+<div id="tcomment"></div>
+{{ end }}
+        

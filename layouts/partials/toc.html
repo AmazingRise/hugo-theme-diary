@@ -28,7 +28,7 @@
 						{{ end }}
 						{{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
 							<li>
-								<a href="#{{ $anchorId }}" onclick="collapseOthers(`#{{ $anchorId | safeJS}}-nav`)" id="{{ $anchorId }}-nav">
+								<a href="#{{ $anchorId }}" onclick="onNavClick(`#{{ $anchorId | safeJS}}-nav`)" id="{{ $anchorId }}-nav">
 									{{ $header | plainify | htmlUnescape }}
 								</a>
 							</li>
