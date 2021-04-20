@@ -55,7 +55,7 @@
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
-<script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
+<script src="{{"/js/loadCSS.js" | relURL}}"></script>
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
@@ -66,9 +66,9 @@
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
   {{ if .Site.Params.disableAutoCollapse }}
-    <script src="{{.Site.BaseURL}}/js/toc.js"></script>
+    <script src="{{"/js/toc.js" | relURL}}"></script>
   {{ else }}
-    <script src="{{.Site.BaseURL}}/js/toc-collapse.js"></script>
+    <script src="{{"/js/toc-collapse.js" | relURL}}"></script>
   {{ end }}
 {{ end }}
 
