@@ -41,10 +41,14 @@
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
 {{end}}
+  
+{{if .Params.canonicalUrl}}
+<link rel="canonical" href="{{.Params.canonicalUrl}}" />
+{{end}}
 
+<!-- favicon -->
 {{ if .Site.Params.favicon }}
 <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
-<!-- favicon -->
 {{ end }}
 
 {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
