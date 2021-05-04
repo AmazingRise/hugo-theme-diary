@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: Última modificação em {{ .Format "2006-01-02" }}
+- id: format_date
+  translation: '{{ .Format "2006-01-02" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "2006-01-02 15:04" }}'
+- id: next_link
+  translation: Próximo
+- id: prev_link
+  translation: Anterior
+- id: no_newer_posts
+  translation: Não há posts mais novos.
+- id: no_older_posts
+  translation: Não há posts mais antigos.
+- id: comments_disabled
+  translation: Comentários desativados.
+- id: comments_activate_js
+  translation: Favor ativar o JavaScript para ver os comentários.
+- id: hugo_theme
+  translation: Tema do Hugo
+- id: ported_from
+  translation: Criado a partir de
+- id: by
+  translation: por
+- id: draft
+  translation: RASCUNHO
+- id: toc_title
+  translation: CONTEÚDO
