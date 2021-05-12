@@ -99,6 +99,7 @@ app = new Vue({
                 requiredFields: ['nick','mail'],
                 enableQQ: true,
                 recordIP: true,
+                avatar: {{.Site.Params.valine.avator}},
             })
         {{ end }}
         {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
