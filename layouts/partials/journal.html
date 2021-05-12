@@ -102,7 +102,11 @@ app = new Vue({
             })
         {{ end }}
         {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
-            twikoo.init({ envId: {{.Site.Params.twikooEnvId}}, el: '#tcomment' });
+            twikoo.init({
+                envId: {{.Site.Params.twikooEnvId}},
+                el: '#tcomment',
+                region: {{.Site.Params.twikooRegion}},
+            });
         {{ end }}
     },
     destroyed() {
