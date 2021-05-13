@@ -3,7 +3,7 @@
     <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
     <div class="gcse-searchbox-only" mobileLayout="true"></div>
     {{ end }}
-    {{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
+    {{ if and (not (.Params.disableToC) ) (.IsPage) }}
     <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
         {{- partial "toc.html" . -}}
     </div>
