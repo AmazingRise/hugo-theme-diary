@@ -1,6 +1,6 @@
 {{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content }}
 <!-- at least one header to link to -->
-{{ if ge (len $headers) 1 }}
+{{ if and (not .Params.disableToC) (ge (len $headers) 1) }}
 	<div class="toc-content">
 	<!-- ignore empty links with + -->
 		{{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
