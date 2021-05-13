@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/version-1.2.1-brightgreen)
 
-[Live Demo](https://amazingrise.net/) -
+[✨Live Demo✨](https://amazingrise.net/) -
 [Intro Video](https://www.bilibili.com/video/av84273002) -
 [Progress](https://github.com/AmazingRise/hugo-theme-diary/projects/) -
 [Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
@@ -30,11 +30,11 @@ Features in the ori.:
 Features in this ported version:
 
 - Dark mode.
-- Comment service intergration (Gitalk, LiveRe, Disqus, Waline, Twikoo).
+- Abundant 3rd. service intergration. (Gitalk, LiveRe, Disqus, Waline, Twikoo, Google Search, Analytics... )
 - Table of Contents with scroll spy and auto collapse.
 - LaTeX support (disabled by default).
-- Google Search, Analytics and many services intergrated.
 - English, Chinese (CHS/CHT), French, German, Portuguese(Brazil) support.
+- ...
 
 For details, please visit [project wiki](https://github.com/AmazingRise/hugo-theme-diary/wiki/).
 
