@@ -1,9 +1,21 @@
-# hugo-theme-diary
+# <div align="center">Hugo Theme Diary</div>
+
+<center>
+
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/badge/version-1.2.1-brightgreen)
+
+[Live Demo](https://amazingrise.net/) -
+[Intro Video](https://www.bilibili.com/video/av84273002) -
+[Progress](https://github.com/AmazingRise/hugo-theme-diary/projects/) -
+[Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
 
 隻言片語・於此匯聚
 
 Moments piled up.
+
+</center>
+
 
 A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/SumiMakito/hexo-theme-Journal/).
 
@@ -11,13 +23,7 @@ A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/Sumi
 
 **Some useful links here:**
 
-[Live Demo](https://amazingrise.net/)
 
-[Intro Video](https://www.bilibili.com/video/av84273002)
-
-[Changelog (Progress and TODO List)](https://github.com/AmazingRise/hugo-theme-diary/projects/)
-
-[Project Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
 
 Original Author: [SumiMakito](https://github.com/SumiMakito)
 
@@ -27,22 +33,20 @@ Original Author: [SumiMakito](https://github.com/SumiMakito)
 Features in the ori.:
 
 - Simple and easy to customize
-- Concentrated on reading <del>and writing (find a Markdown editor then)</del> experience
+- Concentrated on reading experience
 - Mobile-friendly & widescreen-friendly
 - Flexible commenting control
 
 Features in this ported version:
 
-- Add Gitalk and Valine intergration.
-- Customizable color scheme. (Some bug in original version, fixed.)
-- Firefox-friendly. (CSS issue in original version, fixed.)
-- `featured_image` url bug is fixed.
-- Table of Contents with scroll spy and auto collapse.
 - Dark mode.
-- MathJax support. (Needs to be enabled manually, see [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for details.)
-- Google Custom Search Engine support.
-- Internationalization(i18n) support, with English, French and Chinese(Simplified and Traditional).
-- Inserting figures more easily, see [wiki](https://github.com/AmazingRise/hugo-theme-diary/wiki/Inserting-Figures) for details.
+- Comment service intergration (Gitalk, LiveRe, Disqus, Waline, Twikoo).
+- Table of Contents with scroll spy and auto collapse.
+- LaTeX support (disabled by default).
+- Google Search, Analytics and many services intergrated.
+- English, Chinese (CHS/CHT), French, German, Portuguese(Brazil) support.
+
+For details, please visit [project wiki](https://github.com/AmazingRise/hugo-theme-diary/wiki/).
 
 ## Quick Start
 
@@ -75,33 +79,30 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
 
 ### Customization
 
-Please visit [the project wiki](https://github.com/amazingrise/hugo-theme-diary/wiki) for more details.
-
-[Settings of Table of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
-
-[Disable Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
-
-[Enable MathJax](https://github.com/AmazingRise/hugo-theme-diary/wiki/MathJax)
-
-[Add or disable comment area](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
-
-[Add Google Search Box on your site](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-search-box-on-your-site)
-
-[Customizations](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization)
-
-[Taxonomies and Sections (Archive, Categories and Tags)](https://github.com/AmazingRise/hugo-theme-diary/wiki/Taxonomies-and-Sections-(Archive,-Categories-and-Tags))
-
-[RSS Feed](https://github.com/AmazingRise/hugo-theme-diary/wiki/RSS-Feed)
-
-[Meta Data of posts](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
-
-[Enable Reading Time](https://github.com/AmazingRise/hugo-theme-diary/wiki/Reading-Time)
-
-[Internationalization](https://github.com/AmazingRise/hugo-theme-diary/wiki/Internationalization)
-
-## Comparison
-
-For details about the difference lies in the new version, please click [here.](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comparison)
+- [Wiki Home](https://github.com/AmazingRise/hugo-theme-diary/wiki)
+- Configurations
+  * [Internationalization(i18n)](https://github.com/AmazingRise/hugo-theme-diary/wiki/Internationalization)
+  * [Sidebar](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#customize-sidebar)
+  * [Favicon](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-favicon)
+  * [Table Of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
+  * [Enable/Disable Comment](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
+- 3rd. party services
+  * [Comment Services](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
+  * [Google Analytics](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
+  * [Google Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-site-verification)
+  * [Google Search Intergration](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-search-box-on-your-site)
+- Writing
+  * [Meta Data](https://github.com/AmazingRise/hugo-theme-diary/wiki/Post's-meta-data)
+  * [LaTeX Support](https://github.com/AmazingRise/hugo-theme-diary/wiki/MathJax)
+  * [RSS Feed](https://github.com/AmazingRise/hugo-theme-diary/wiki/RSS-Feed)
+  * [Inserting Figures](https://github.com/AmazingRise/hugo-theme-diary/wiki/Inserting-Figures)
+- Styling
+  * [Color Scheme](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-color-scheme)
+  * [Code Highlight](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#about-highlight)
+  * [Font Family](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#change-default-font-scheme)
+  * [Reading Time](https://github.com/AmazingRise/hugo-theme-diary/wiki/Reading-Time)
+  * [Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
+- [Troubleshooting](https://github.com/AmazingRise/hugo-theme-diary/wiki/Troubleshooting)
 
 ## Screenshots
 
