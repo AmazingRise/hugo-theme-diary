@@ -1,6 +1,6 @@
 # <div align="center">Hugo Theme Diary</div>
 
-<center>
+<div align="center">
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/version-1.2.1-brightgreen)
@@ -14,8 +14,7 @@
 
 Moments piled up.
 
-</center>
-
+</div>
 
 A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/SumiMakito/hexo-theme-Journal/).
 
