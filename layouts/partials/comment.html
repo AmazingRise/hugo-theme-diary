@@ -24,4 +24,7 @@
 {{ if .Site.Params.enableTwikoo }}
 <div id="tcomment"></div>
 {{ end }}
-        
+
+{{ if .Site.Params.walineServer }}
+<div id="waline"></div>
+{{ end }}

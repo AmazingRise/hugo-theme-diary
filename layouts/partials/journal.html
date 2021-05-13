@@ -102,6 +102,13 @@ app = new Vue({
                 avatar: {{.Site.Params.valine.avator}},
             })
         {{ end }}
+        {{ if and (.Site.Params.walineServer) (.IsPage) }}
+            new Waline({
+                el: '#waline',
+                path: location.pathname,
+                serverURL: {{.Site.Params.walineServer}} ,
+            });
+        {{ end }}
         {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
             twikoo.init({
                 envId: {{.Site.Params.twikooEnvId}},
