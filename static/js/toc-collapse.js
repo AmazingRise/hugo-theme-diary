@@ -51,11 +51,6 @@ var collapseOthers = function (currentIndex) {
     $(this).collapse("hide");
   });
 }
-$().ready(function () {
-  spy();
-  $(window).bind('scroll', debounce(spy, 250, { 'maxWait': 1000 }));
-});
-
 
 //From https://github.com/lodash/lodash/blob/master/debounce.js
 // and https://github.com/lodash/lodash/blob/master/isObject.js
