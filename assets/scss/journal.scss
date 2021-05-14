@@ -3,11 +3,11 @@ $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: "Lora", "Noto Serif SC";
+$default-font-list: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
-$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro",
-  "Helvetica", $default-font-list;
+//$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
+$sans-preferred-font-list: $default-font-list;
 
 $side-container-width: 25%; //280px;
 $extra-container-width: 25%;
@@ -75,9 +75,7 @@ body {
 }
 
 h1, h2, h3{
-
-  font-weight: bold;
-
+  font-weight: 400;
 }
 
 h1 {
@@ -637,7 +635,7 @@ a {
             }
             .post-item-title {
               font-size: $post-title-size;
-              font-weight: 600;
+              font-weight: 500;
               font-style: normal;
               margin-bottom: 10px;
               line-height: 1.5em;
@@ -661,6 +659,7 @@ a {
               font-size: $post-summary-size;
               line-height: 1.5em;
               margin-bottom: 10px;
+              //font-weight:300;
 
               @media screen and (max-width: $single-column-max-width) {
                 font-size: $single-column-post-summary-size;
@@ -716,7 +715,7 @@ a {
           background: rgba(0, 0, 0, 0.03);
           .post-item-title {
             text-decoration: underline;
-            text-decoration-style: 2px solid $color-accent;
+            text-decoration-style: 0.5px solid $color-accent;
             text-underline-position: under;
           }
           * {
