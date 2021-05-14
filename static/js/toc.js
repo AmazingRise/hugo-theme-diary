@@ -11,7 +11,7 @@ var spy = function () {
   var pageBottom = window.pageBottom;
 
   var meetUnread = false
-  var currentIndex = -1
+  var lastId = ""
   elems.forEach(function (elem, idx) {
     var elemTop = elem.offsetTop;
     var id = elem.getAttribute('id');
@@ -21,19 +21,21 @@ var spy = function () {
       return
     }
     if (currentTop >= elemTop || currentBottom >= pageBottom) {
-      
       navElem.classList.add('toc-active');
     } else {
       if (meetUnread == false) {
-        meetUnread = true
-        currentIndex = idx - 1
+        meetUnread = true;
+        try{
+          document.getElementById(elems[idx-1].id+"-nav").scrollIntoView({ block:"center", behavior: 'smooth' });
+        } catch {
+
+        }
+        
       }
       navElem.classList.remove('toc-active');
     }
   })
-  document.querySelectorAll(".collapse").forEach(function(elem){
-    elem.classList.remove("collapse");
-  })
+
 }
 
 var onNavClick = function () {

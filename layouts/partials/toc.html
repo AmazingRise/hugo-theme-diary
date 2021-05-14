@@ -23,7 +23,11 @@
 						{{ end }}
 						{{ if gt $next_heading $prev_heading }}
 							{{ range seq (sub $next_heading $prev_heading) }}
-								<ul class="collapse" data-toggle="collapse">
+								{{ if site.Params.enableAutoCollapse }}
+									<ul class="collapse" data-toggle="collapse">
+								{{ else }}
+									<ul>
+								{{ end }}
 							{{ end }}
 						{{ end }}
 						{{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
