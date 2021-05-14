@@ -3,7 +3,7 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
-![](https://img.shields.io/badge/version-1.2.1-brightgreen)
+![](https://img.shields.io/badge/version-1.3.0-brightgreen)
 
 [✨Live Demo✨](https://amazingrise.net/) -
 [Intro Video](https://www.bilibili.com/video/av84273002) -
@@ -20,25 +20,35 @@ A Hugo theme ported from [SumiMakito/hexo-theme-Journal](https://github.com/Sumi
 
 ## Features
 
-Features in the ori.:
+### Features of this theme
 
-- Simple and easy to customize
-- Concentrated on reading experience
-- Mobile-friendly & widescreen-friendly
-- Flexible commenting control
-
-Features in this ported version:
-
-- Dark mode.
-- Abundant 3rd. service intergration. (Gitalk, LiveRe, Disqus, Waline, Twikoo, Google Search, Analytics... )
-- Table of Contents with scroll spy and auto collapse.
-- LaTeX support (disabled by default).
-- English, Chinese (CHS/CHT), French, German, Portuguese(Brazil) support.
+- Customizable: Easy to customize with detailed project wiki.
+- Adaptive: Mobile-friendly & widescreen-friendly.
+- Abundant: 3rd. service intergration (Gitalk, LiveRe, Disqus, Waline, Twikoo, Google Search, Analytics... ).
+- Convenient: Table of Contents with scroll spy.
+- Professional: LaTeX support (disabled by default).
+- Graceful: Dark mode (automatic or manual switch).
+- International: English, Chinese (CHS/CHT), French, German, Portuguese(Brazil) support.
 - ...
 
 For details, please visit [project wiki](https://github.com/AmazingRise/hugo-theme-diary/wiki/).
 
+### Features in new version
+
+<details>
+<summary>CHANGELOG</summary>
+
+1.3.0:
+
+- Removed jQuery and other redundant scripts.
+- Some improvements on performance.
+
+</details>
+
 ## Quick Start
+
+<details>
+<summary>Click to expand</summary>
 
 If your website is using Git as version control, please do as follows:
 
@@ -61,6 +71,9 @@ From the root of themes/diary/exampleSite:
 ```bash
 hugo server --themesDir ../..
 ```
+
+</details>
+
 ## Personalization
 
 ### Example config
@@ -94,24 +107,41 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
   * [Dark Mode](https://github.com/AmazingRise/hugo-theme-diary/wiki/Dark-Mode)
 - [Troubleshooting](https://github.com/AmazingRise/hugo-theme-diary/wiki/Troubleshooting)
 
+
 ## Screenshots
 
-Site Main Page
+<details>
+<summary>Index Page</summary>
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/tn.png)
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/main.png)
 
-An essay with picture.
+</details>
+
+<details>
+<summary>Post</summary>
 
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
 
-Table of Contents with scroll spy.
-
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay2.png)
 
-Mobile View: Main Page
+</details>
+
+<details>
+<summary>Dark Mode</summary>
+
+![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/dark.png)
+
+</details>
+
+<details>
+<summary>Mobile View</summary>
 
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_main.png)
 
-Mobile View: Drawer
-
 ![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_drawer.png)
+
+</details>
+
+
+
+</details>
