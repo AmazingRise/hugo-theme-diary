@@ -113,32 +113,32 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
 <details>
 <summary>Index Page</summary>
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/main.png)
+![](images/main.png)
 
 </details>
 
 <details>
 <summary>Post</summary>
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay.png)
+![](images/essay.png)
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/essay2.png)
+![](images/essay2.png)
 
 </details>
 
 <details>
 <summary>Dark Mode</summary>
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/dark.png)
+![](images/dark.png)
 
 </details>
 
 <details>
 <summary>Mobile View</summary>
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_main.png)
+![](images/m_main.png)
 
-![](https://raw.githubusercontent.com/AmazingRise/hugo-theme-diary/master/images/m_drawer.png)
+![](images/m_drawer.png)
 
 </details>
 
