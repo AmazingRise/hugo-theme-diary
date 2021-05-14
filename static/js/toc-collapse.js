@@ -35,7 +35,7 @@ var onNavClick = function (name) {
   var elems = $(":header");
   elems.each(function (idx) {
     var id = $(this).attr('id');
-    if (name == '#' + id + '-nav'){
+    if (name == '#' + id + '-nav') {
       collapseOthers(idx);
       return;
     }
@@ -52,7 +52,7 @@ var collapseOthers = function (currentIndex) {
   var elems = $(":header");
   //console.log(currentIndex);
   currentId = "#" + elems[currentIndex].id + "-nav";
-  
+
   $(currentId).parents(".collapse").each(function (idx) {
     $(this).collapse("show");
   });

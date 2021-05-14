@@ -116,12 +116,20 @@ app = new Vue({
                 region: {{.Site.Params.twikooRegion}},
             });
         {{ end }}
+
+        document.querySelectorAll("table").forEach(function(elem){
+            elem.classList.add("table-striped");
+            elem.classList.add("table");
+            elem.classList.add("table-responsive");
+            elem.classList.add("table-hover");
+        })
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
         window.removeEventListener('resize', this.handleResize);
     }
 });
-</script>
 
-<script src="{{"/js/journal.js" | relURL}}"></script>
+new SmoothScroll('a#globalBackToTop');
+
+</script>
