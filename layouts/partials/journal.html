@@ -279,7 +279,7 @@ app = new Vue({
 
         {{ if and (not (.Params.disableToC) ) (.IsPage) }}
         spy();
-        window.addEventListener('wheel', this.debounce(spy, 250, { 'maxWait': 1000 }), false);
+        window.addEventListener('scroll', this.debounce(spy, 250, { 'maxWait': 250 }), false);
         {{ end }}
         
     },

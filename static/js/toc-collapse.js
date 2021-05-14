@@ -31,6 +31,9 @@ var spy = function () {
   collapseOthers(currentIndex);
 }
 
+var onNavClick = function () {
+  spy()
+}
 
 var collapseOthers = function (currentIndex) {
   if (currentIndex == -1) {
