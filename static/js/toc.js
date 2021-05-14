@@ -1,36 +1,53 @@
 var spy = function () {
-  var elems = $(":header");
+  var elems = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
   if (elems.length == 0) {
     return;
   }
-  var currentTop = $(window).scrollTop();
-  var currentBottom = $(window).scrollTop() + $(window).height();
-  var pageBottom = $('#EOF').offset().top;
+  var supportPageOffset = window.pageXOffset !== undefined;
+  var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+
+  var currentTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+  var currentBottom =  currentTop + window.height;
+  var pageBottom = window.pageBottom;
 
   var meetUnread = false
   var currentIndex = -1
-  elems.each(function (idx) {
-    var elemTop = $(this).offset().top;
-    var id = $(this).attr('id');
-    var navElem = $('#' + id + '-nav');
-    if (currentTop + $(this).height() >= elemTop || currentBottom >= pageBottom) {
-      navElem.addClass('toc-active');
+  elems.forEach(function (elem, idx) {
+    var elemTop = elem.offsetTop;
+    var id = elem.getAttribute('id');
+    //console.log(id,elem.offsetTop)
+    var navElem = document.getElementById(id + '-nav');
+    if (navElem==null) {
+      return
+    }
+    if (currentTop >= elemTop || currentBottom >= pageBottom) {
+      
+      navElem.classList.add('toc-active');
     } else {
       if (meetUnread == false) {
         meetUnread = true
         currentIndex = idx - 1
       }
-      navElem.removeClass('toc-active');
+      navElem.classList.remove('toc-active');
     }
   })
+  document.querySelectorAll(".collapse").forEach(function(elem){
+    elem.classList.remove("collapse");
+  })
 }
-$().ready(function () {
+
+var onNavClick = function () {
+  
+}
+
+
+/*$().ready(function () {
   $(".collapse").each(function (idx) {
     $(this).collapse("show");
   });
-  spy();
-  $(window).bind('scroll', throttle(spy));
-});
+  //spy();
+  //$(window).bind('scroll', throttle(spy));
+});*/
 
 function throttle(func, timeout = 250) {
   let last;

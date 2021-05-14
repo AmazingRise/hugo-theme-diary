@@ -31,16 +31,6 @@ var spy = function () {
   collapseOthers(currentIndex);
 }
 
-var onNavClick = function (name) {
-  var elems = $(":header");
-  elems.each(function (idx) {
-    var id = $(this).attr('id');
-    if (name == '#' + id + '-nav') {
-      collapseOthers(idx);
-      return;
-    }
-  });
-}
 
 var collapseOthers = function (currentIndex) {
   if (currentIndex == -1) {

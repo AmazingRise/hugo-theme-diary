@@ -31,10 +31,6 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
-<script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
-<script src="{{"/vendor/js/popper.min.js" | relURL}}" ></script>
-<script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
-<script src="{{"/vendor/js/smooth-scroll.polyfills.min.js" | relURL}}" ></script>
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
 <script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
@@ -72,7 +68,9 @@
   {{ if .Site.Params.disableAutoCollapse }}
     <script src="{{"/js/toc.js" | relURL}}"></script>
   {{ else }}
+    <script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
     <script src="{{"/js/toc-collapse.js" | relURL}}"></script>
+    <script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
   {{ end }}
 {{ end }}
 

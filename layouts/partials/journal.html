@@ -59,6 +59,18 @@ app = new Vue({
                     document.cookie = "night=0;path=/";
                     document.body.classList.remove("night");
                 }
+            },
+            throttle(callback, limit) {
+                var wait = false;
+                return function (...args) { 
+                    if (!wait) {
+                        callback(...args);
+                        wait = true; 
+                        setTimeout(function () { 
+                            wait = false; 
+                        }, limit);
+                    }
+                }
             }
     },
     created() {
@@ -123,6 +135,12 @@ app = new Vue({
             elem.classList.add("table-responsive");
             elem.classList.add("table-hover");
         })
+
+        {{ if and (not (.Params.disableToC) ) (.IsPage) }}
+        spy();
+        window.addEventListener('wheel', this.throttle(spy,200), false);
+        {{ end }}
+        
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
