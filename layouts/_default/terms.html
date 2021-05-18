@@ -6,7 +6,13 @@
                 <div class="post-item post-item-no-gaps">
                     <div class="post-item-info-wrapper">
                         <div class="post-item-title post-item-title-small">
+                            {{ if eq .Title "Categories" }}
+                                {{ i18n "Categories" }}
+                            {{ else if eq .Title "Tags" }}
+                                {{ i18n "Tags" }}
+                            {{ else }}
                             {{.Title}}
+                            {{ end }}
                         </div>
                     </div>
                 </div>
