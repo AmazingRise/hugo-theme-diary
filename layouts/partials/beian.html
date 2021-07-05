@@ -1,0 +1,15 @@
+{{ if .Site.Params.beian.icp }}
+<br>
+<a href="https://beian.miit.gov.cn/" target="_blank">{{ .Site.Params.beian.icp }}</a>
+{{ end }}
+{{ if .Site.Params.beian.gongan }}
+<br>
+<div>
+    <div style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+        <img src="/images/gongan.png" style="float:left;" alt="gongan icon"/>
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ .Site.Params.beian.gonganId }}" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+            {{ .Site.Params.beian.gongan }}
+        </a>
+    </div>
+</div>
+{{ end }}

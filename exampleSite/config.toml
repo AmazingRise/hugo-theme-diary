@@ -28,6 +28,11 @@ enableTwitterCards = true
 title = "My Blog" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
+# [params.beian]
+# icp = ""
+# gongan = ""
+# gonganId = ""
+
 [params.gitalk]
   owner = "user"
   repo = "repo name"
