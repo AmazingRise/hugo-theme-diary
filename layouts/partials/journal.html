@@ -259,6 +259,7 @@ app = new Vue({
             new Waline({
                 el: '#waline',
                 path: location.pathname,
+                requiredFields: ['nick','mail'],
                 serverURL: {{.Site.Params.walineServer}} ,
             });
         {{ end }}
