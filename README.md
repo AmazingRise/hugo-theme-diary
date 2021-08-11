@@ -90,7 +90,7 @@ See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/b
   * [Table Of Contents](https://github.com/AmazingRise/hugo-theme-diary/wiki/Table-Of-Contents)
   * [Enable/Disable Comment](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
 - 3rd. party services
-  * [Comment Services](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment-Area)
+  * [Comment Services](https://github.com/AmazingRise/hugo-theme-diary/wiki/Comment)
   * [Google Analytics](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-analytics)
   * [Google Site Verification](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-site-verification)
   * [Google Search Intergration](https://github.com/AmazingRise/hugo-theme-diary/wiki/Customization#add-google-search-box-on-your-site)
