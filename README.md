@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/version-1.3.0-brightgreen)
 
-[My Blog with ✨Theme Diary✨](https://amazingrise.net/) -
+[My Blog with ✨Theme Diary✨](https://risehere.net/) -
 [Intro Video](https://www.bilibili.com/video/av84273002) -
 [Progress](https://github.com/AmazingRise/hugo-theme-diary/projects/) -
 [Wiki](https://github.com/amazingrise/hugo-theme-diary/wiki)
