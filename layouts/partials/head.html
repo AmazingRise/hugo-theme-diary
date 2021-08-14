@@ -32,7 +32,6 @@
 {{ end }}
 
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
-<script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
@@ -55,23 +54,19 @@
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
-<script src="{{"/js/loadCSS.js" | relURL}}"></script>
+<script src="{{"/vendor/js/loadCSS.js" | relURL}}"></script>
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
 </script>
+
+
 
 {{ if .Params.enableMathJax }}
   {{ partial "mathjax.html" . }}
 {{ end }}
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-  {{ if not .Site.Params.enableAutoCollapse }}
-    <script src="{{"/js/toc.js" | relURL}}"></script>
-  {{ else }}
-    <script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
-    <script src="{{"/js/toc-collapse.js" | relURL}}"></script>
-    <script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
-  {{ end }}
+  <script src="{{"/js/toc.js" | relURL}}"></script>
 {{ end }}
 
 {{ if and (.Site.Params.enableGitalk) (.IsPage) }}
@@ -96,23 +91,7 @@
 
 {{ if and (.Site.Params.livereId) (.IsPage) }}
 <script type="text/javascript">
-$(
-  (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-  })(document, 'script'));
 </script>
-{{ end }}
-
-{{ if and (.Site.Params.enableValine) (.IsPage) }}
-<script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
 {{ end }}
 
 {{ if and (.Site.Params.disqusShortname) (.IsPage) }}
@@ -125,6 +104,7 @@ $(
 
 {{ if and (.Site.Params.walineServer) (.IsPage) }}
 <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
+
 {{ end }}
 
 </head>
