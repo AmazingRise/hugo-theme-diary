@@ -47,3 +47,14 @@ twikoo.init({
     });
     </script>
 {{ end }}
+
+{{ if .Site.Params.enableUtterances }}
+<script src="https://utteranc.es/client.js"
+        repo="{{ .Site.Params.utterances.repo }}"
+        issue-term="{{ .Site.Params.utterances.term }}"
+        label="{{ .Site.Params.utterances.label }}"
+        theme="{{ .Site.Params.utterances.theme }}"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}
