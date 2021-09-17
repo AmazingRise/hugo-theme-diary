@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div ref="streamContainer" class="stream-container">
+
     <div class="post-list-container post-list-container-shadow">
         {{ range .Paginator.Pages.GroupByDate "2006" }}
             <a class="a-block">
@@ -29,6 +29,6 @@
             {{ end }}
         {{ end }}
     </div>
-</div>
+
 
 {{ end }}

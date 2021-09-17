@@ -32,7 +32,6 @@
 {{ end }}
 
 <link type="text/css" rel="stylesheet" href="{{"/vendor/css/bootstrap.min.css" | relURL}}">
-<script src="{{"/vendor/js/vue.min.js" | relURL}}" ></script>
 
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
@@ -55,23 +54,37 @@
 <link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
-<script src="{{"/js/loadCSS.js" | relURL}}"></script>
+<script src="{{"/vendor/js/loadCSS.js" | relURL}}"></script>
 <script>
   loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
 </script>
 
-{{ if .Params.enableMathJax }}
-  {{ partial "mathjax.html" . }}
+
+
+{{ if or (.Params.enableLaTeX) (.Site.Params.enableLaTeX) }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
 {{ end }}
 
 {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-  {{ if not .Site.Params.enableAutoCollapse }}
-    <script src="{{"/js/toc.js" | relURL}}"></script>
-  {{ else }}
-    <script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
-    <script src="{{"/js/toc-collapse.js" | relURL}}"></script>
-    <script src="{{"/vendor/js/bootstrap.min.js" | relURL}}" ></script>
-  {{ end }}
+  <script src="{{"/js/toc.js" | relURL}}"></script>
 {{ end }}
 
 {{ if and (.Site.Params.enableGitalk) (.IsPage) }}
@@ -96,23 +109,7 @@
 
 {{ if and (.Site.Params.livereId) (.IsPage) }}
 <script type="text/javascript">
-$(
-  (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-  })(document, 'script'));
 </script>
-{{ end }}
-
-{{ if and (.Site.Params.enableValine) (.IsPage) }}
-<script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
 {{ end }}
 
 {{ if and (.Site.Params.disqusShortname) (.IsPage) }}
@@ -125,6 +122,7 @@ $(
 
 {{ if and (.Site.Params.walineServer) (.IsPage) }}
 <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
+
 {{ end }}
 
 <!-- head custom -->

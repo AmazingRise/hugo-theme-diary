@@ -37,6 +37,12 @@ description = "My HomePage Description"  # will set 'og:description'
    tag = "tags"
    category = "categories"
 
+[params.utterances]
+repo="your repo"
+term="[ENTER TERM HERE]"
+label="your label"
+theme="github-light"
+
 [[menu.main]]
 url = "/categories"
 name = "Categories"

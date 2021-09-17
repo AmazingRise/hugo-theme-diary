@@ -3,7 +3,9 @@ $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$default-font-list: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
 //$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
@@ -74,7 +76,9 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -116,8 +120,8 @@ button {
 }
 
 table {
-    table-layout: fixed;
-    overflow-x: scroll;
+  table-layout: fixed;
+  overflow-x: scroll;
 }
 
 button {
@@ -369,8 +373,8 @@ a {
             font-size: $single-column-nav-link-size;
             padding: 2px;
             li {
-                list-style: none;
-                padding-left: 8px; 
+              list-style: none;
+              padding-left: 8px;
             }
             a {
               text-decoration: none;
@@ -471,8 +475,8 @@ a {
       .nav-link-subitem {
         font-size: $nav-link-size - 3px;
         li {
-            list-style: none;
-            padding-left: 2px; 
+          list-style: none;
+          padding-left: 2px;
         }
         a {
           text-decoration: none;
@@ -504,7 +508,7 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  
+
   width: $extra-container-width;
   /*text-align: right;*/
   font-family: $sans-preferred-font-list;
@@ -588,7 +592,7 @@ a {
   padding-left: $side-container-width;
   padding-right: $extra-container-width;
   width: 100%;
-  
+
   min-height: 100vh;
   @media screen and (max-width: $single-column-max-width) {
     padding: 0;
@@ -766,7 +770,6 @@ a {
     padding: 15px;
   }
   .post {
-
     padding: 0 0 20px 0;
     .post-head-wrapper {
       margin-top: -20px;
@@ -941,22 +944,18 @@ a {
       }
     }
   }
-
-
-
-  
 }
 
 #single-column-footer {
-    display: none;
+  display: none;
 
-    @media screen and (max-width: $single-column-max-width) {
-      display: block !important;
-      text-align: center;
-      font-size: $single-column-nav-footer-size;
-      font-family: $sans-preferred-font-list;
-      padding: 40px 20px 40px 20px;
-    }
+  @media screen and (max-width: $single-column-max-width) {
+    display: block !important;
+    text-align: center;
+    font-size: $single-column-nav-footer-size;
+    font-family: $sans-preferred-font-list;
+    padding: 40px 20px 40px 20px;
+  }
 }
 
 .toc {
@@ -979,10 +978,10 @@ a {
     margin: 0;
     line-height: 1.7em;
   }
-  .toc-content{
+  .toc-content {
     padding: 20px;
   }
-  .toc-active{
+  .toc-active {
     color: darken($color-accent, 40%) !important;
   }
   @media screen and (max-width: $single-column-max-width) {
@@ -995,7 +994,7 @@ a {
     * {
       /*font-size: $single-column-toc-size;*/
     }
-    .toc-content{
+    .toc-content {
       padding: 10px;
     }
   }
@@ -1059,8 +1058,7 @@ a {
   color: $dark-accent;
 }
 
-mjx-container
-{
+mjx-container {
   overflow-y: hidden !important;
 }
 

@@ -10,21 +10,51 @@
 <div id="gitalk-container"></div>
 {{ end }}
 
-{{ if .Site.Params.enableValine }}
-<div id="vcomments"></div>
-<!-- Script moved to journal.html -->
-{{ end }}
-
 {{ if .Site.Params.livereId }}
 <div id="lv-container" data-id="city" data-uid={{.Site.Params.livereId}}>
 	<noscript>{{ i18n "comments_activate_js" }}</noscript>
 </div>
+<script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
 {{ end }}
 
 {{ if .Site.Params.enableTwikoo }}
 <div id="tcomment"></div>
+<script>
+twikoo.init({
+    envId: {{.Site.Params.twikooEnvId}},
+    el: '#tcomment',
+    region: {{.Site.Params.twikooRegion}},
+});
+</script>
 {{ end }}
 
 {{ if .Site.Params.walineServer }}
 <div id="waline"></div>
+<script>
+    new Waline({
+        el: '#waline',
+        path: location.pathname,
+        serverURL: {{.Site.Params.walineServer}} ,
+    });
+    </script>
+{{ end }}
+
+{{ if .Site.Params.enableUtterances }}
+<script src="https://utteranc.es/client.js"
+        repo="{{ .Site.Params.utterances.repo }}"
+        issue-term="{{ .Site.Params.utterances.term }}"
+        label="{{ .Site.Params.utterances.label }}"
+        theme="{{ .Site.Params.utterances.theme }}"
+        crossorigin="anonymous"
+        async>
+</script>
 {{ end }}
