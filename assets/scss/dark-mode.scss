@@ -2,25 +2,25 @@
 
 $light-accent: lighten($color-accent, 10%);
 $deep-light-accent: lighten($color-accent, 30%);
-$dark-mode-text: darken(#FFF, 10%);
+$dark-mode-text: darken(#fff, 10%);
 
 $dark-mode-back-container-background: #212121;
 $dark-mode-front-container-background: #282828;
 
 body.night {
   background: $dark-mode-back-container-background;
-  :root{
+  :root {
     --color_555: #ccc;
     --color_ededed: #000;
   }
 
   img {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   blockquote {
     * {
-        color: $deep-light-accent !important;
+      color: $deep-light-accent !important;
     }
   }
 
@@ -45,6 +45,7 @@ body.night {
       background: none !important;
       color: $dark-mode-text !important;
     }
+    color: $dark-mode-text !important;
   }
 
   table * {
@@ -87,26 +88,32 @@ body.night {
         &:hover {
           border-right: 2px solid
             rgba($color-accent, $nav-item-hover-indicator-alpha);
-          color: lighten($color-accent, $nav-item-hover-color-lighten) !important;
+          color: lighten(
+            $color-accent,
+            $nav-item-hover-color-lighten
+          ) !important;
         }
         &.active {
           border-right: 2px solid $color-accent;
           background: rgba($color-accent, $nav-item-active-background-alpha);
-          color: lighten($color-accent, $nav-item-active-color-lighten) !important;
+          color: lighten(
+            $color-accent,
+            $nav-item-active-color-lighten
+          ) !important;
         }
       }
     }
   }
   .stream-container {
-    .post-head-wrapper-text-only *{
+    .post-head-wrapper-text-only * {
       color: $dark-mode-text;
     }
-    .post{
+    .post {
       background: $dark-mode-front-container-background;
       @media screen and (max-width: $single-column-max-width) {
         background: $dark-mode-back-container-background;
       }
-      .post-pagination a:not([href]){
+      .post-pagination a:not([href]) {
         color: $dark-mode-text;
       }
       .post-comment-wrapper * {
@@ -114,45 +121,40 @@ body.night {
       }
     }
     .post-list-container {
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
       background: $dark-mode-front-container-background;
       @media screen and (max-width: $single-column-max-width) {
         background: $dark-mode-back-container-background;
       }
       &,
-    > * {
-      .post-item-wrapper {
-        * {
-          color: $dark-mode-text;
-        }
-        .post-item-info-wrapper{
+      > * {
+        .post-item-wrapper {
+          * {
+            color: $dark-mode-text;
+          }
+          .post-item-info-wrapper {
+            @media screen and (max-width: $single-column-max-width) {
+              box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+              background: $dark-mode-front-container-background;
+            }
+          }
+
           @media screen and (max-width: $single-column-max-width) {
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             background: $dark-mode-front-container-background;
           }
-        }
-
-        @media screen and (max-width: $single-column-max-width) {
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-          background: $dark-mode-front-container-background;
-        }
-        &:not(.post-item-wrapper-no-hover):hover {
-          background: rgba(255,255,255, 0.03);
-          * {
-            color: $deep-light-accent !important;
+          &:not(.post-item-wrapper-no-hover):hover {
+            background: rgba(255, 255, 255, 0.03);
+            * {
+              color: $deep-light-accent !important;
+            }
           }
-        }
         }
       }
     }
-    
   }
 
   .single-column-nav-container {
-    * { 
+    * {
       color: $dark-mode-text;
     }
     @media screen and (max-width: $single-column-max-width) {
@@ -164,7 +166,7 @@ body.night {
       .navbar-brand {
         color: $dark-mode-text;
         &:hover {
-            color: $dark-mode-text;
+          color: $dark-mode-text;
         }
       }
       .nav-background {
@@ -175,27 +177,26 @@ body.night {
   }
 
   .single-column-header-container {
-      @media screen and (max-width: $single-column-max-width) {
-        * {
-          font-family: $sans-preferred-font-list;
-          color: $deep-light-accent;
-        }
-        .single-column-header-title {
-          color: $dark-mode-text;
-        }
-        .single-column-header-subtitle {
-          color: $dark-mode-text;
-        }
+    @media screen and (max-width: $single-column-max-width) {
+      * {
+        font-family: $sans-preferred-font-list;
+        color: $deep-light-accent;
       }
+      .single-column-header-title {
+        color: $dark-mode-text;
+      }
+      .single-column-header-subtitle {
+        color: $dark-mode-text;
+      }
+    }
   }
-
 
   .single-column-drawer-container {
     @media screen and (max-width: $single-column-max-width) {
       .drawer-content {
         background: $dark-mode-front-container-background;
-        .toc{
-          background-color: lighten($dark-mode-front-container-background,10%);
+        .toc {
+          background-color: lighten($dark-mode-front-container-background, 10%);
         }
         .drawer-menu {
           .drawer-menu-item {
@@ -214,22 +215,29 @@ body.night {
     color: $dark-mode-text;
   }
 
-  .toc{
+  .toc {
     background-color: $dark-mode-front-container-background;
-    *{
+    * {
       color: $dark-mode-text;
     }
     a {
       color: $dark-mode-text;
     }
-    .toc-active{
+    .toc-active {
       color: $light-accent !important;
     }
   }
 
-  .post-body p,h1,h2,h3,h4,h5,h6,li {
+  .post-body p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li {
     color: $dark-mode-text;
-    *:not(a){
+    *:not(a) {
       color: $dark-mode-text;
     }
   }
@@ -244,9 +252,8 @@ body.night {
   .vcontent p {
     color: $dark-mode-text !important;
   }
-  
-  .gsc-control-searchbox-only table *{
+
+  .gsc-control-searchbox-only table * {
     color: black !important;
   }
-
 }

@@ -212,26 +212,7 @@ document.querySelectorAll("table").forEach(function (elem) {
 
 // Night mode
 
-var night = document.cookie.replace(
-  /(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,
-  "$1"
-);
-
 var isDarkMode = false;
-
-if (night == "") {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    isDarkMode = true;
-  }
-} else {
-  // If night is not empty
-  if (night == "1") {
-    isDarkMode = true;
-  }
-}
 
 var toggleDarkMode = function () {
   isDarkMode = !isDarkMode;
@@ -249,6 +230,25 @@ var toggleDarkMode = function () {
     icon2.innerText = "dark_mode";
   }
 };
+
+let night = document.cookie.replace(
+  /(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1"
+);
+
+if (night == "") {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    toggleDarkMode();
+  }
+} else {
+  // If night is not empty
+  if (night === "1") {
+    toggleDarkMode();
+  }
+}
 
 document
   .getElementById("darkModeToggleButton")
