@@ -48,7 +48,7 @@
                 menu
             </i>
         </button>
-        <a id="navTitle" class="navbar-brand" href="{{.Site.BaseURL}}">
+        <a id="navTitle" class="navbar-brand" href="{{ "" | absLangURL }}">
             {{.Site.Title}}
         </a>
         {{ if not .Site.Params.disableDarkMode }}
@@ -62,7 +62,7 @@
 </nav>
 <div class="single-column-header-container" id="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="{{.Site.BaseURL}}">
+    <a href="{{ "" | absLangURL }}">
         <div class="single-column-header-title">{{.Site.Title}}</div>
         {{ with .Site.Params.subtitle }}
         <div class="single-column-header-subtitle">{{.}}</div>
