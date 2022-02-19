@@ -250,7 +250,8 @@ if (night == "") {
   }
 }
 
-document
+try {
+  document
   .getElementById("darkModeToggleButton")
   .addEventListener("click", function () {
     toggleDarkMode();
@@ -261,6 +262,11 @@ document
   .addEventListener("click", function () {
     toggleDarkMode();
   });
+} catch(_) {
+  
+}
+
+
 
 // Drawer
 
