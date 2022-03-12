@@ -1003,6 +1003,10 @@ a {
 .pagination {
   display: none;
 
+  .pagination-action {
+    -webkit-appearance: none; // Fix bootstrap set the appearance to button.
+  }
+
   @media screen and (max-width: $single-column-max-width) {
     display: flex !important;
     flex-direction: row;

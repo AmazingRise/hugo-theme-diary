@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: Última modificación {{ .Format "2006-01-31" }}
+- id: format_date
+  translation: '{{ .Format "2006-01-31" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "2006-01-31 15:04" }}'
+- id: next_link
+  translation: Siguiente
+- id: prev_link
+  translation: Previo
+- id: no_newer_posts
+  translation: No hay más publicaciones nuevas.
+- id: no_older_posts
+  translation: No hay más publicaciones antiguas.
+- id: comments_disabled
+  translation: Comentarios deshabilitados.
+- id: comments_activate_js
+  translation: Por favor habilita JavaScript para ver los comentarios
+- id: hugo_theme
+  translation: Tema para Hugo
+- id: ported_from
+  translation: Basado en
+- id: by
+  translation: por
+- id: draft
+  translation: BORRADOR
+- id: toc_title
+  translation: Tabla de contenidos

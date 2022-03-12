@@ -1,9 +1,29 @@
 {{ if .Site.Params.disqusShortname }}
-<div class="comments">
-    <vue-disqus shortname="{{.Site.Params.disqusShortname}}"></vue-disqus>
-</div>
-<noscript><noscript>{{ i18n "comments_activate_js" }}</noscript></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+     *  PLATFORM OR CMS.
+     *  
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+     *  https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_config = function () {
+        // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = '{{ .Permalink }}';  
+        
+        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = '{{ .Permalink }}'; 
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{.Site.Params.disqusShortname}}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript> Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow"> comments powered by Disqus.  </a> </noscript>
 {{ end }}
 
 {{ if .Site.Params.enableGitalk }}
