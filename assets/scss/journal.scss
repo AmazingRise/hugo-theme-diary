@@ -1089,3 +1089,14 @@ mjx-container {
 .vcontent p {
   color: black !important;
 }
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  .tag {
+    margin: 10px;
+  }
+}

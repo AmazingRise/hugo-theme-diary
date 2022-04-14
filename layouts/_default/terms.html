@@ -1,32 +1,28 @@
 {{ define "main" }}
 
-    <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            {{.Title}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        
-        {{ range .Paginator.Pages }}
-                <a href="{{.Permalink}}" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    {{.Title}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-        {{ end }}
+<div class="post-list-container post-list-container-shadow">
+  <a class="a-block">
+    <div class="post-item-wrapper post-item-wrapper-no-hover">
+      <div class="post-item post-item-no-gaps">
+        <div class="post-item-info-wrapper">
+          <div class="post-item-title post-item-title-small">
+            {{.Title}}
+          </div>
+        </div>
+      </div>
     </div>
+  </a>
+  <div class="tags">
+    {{ range .Data.Terms }}
+    <div class="tag">
+      <a href="{{.Page.Permalink}}" class="btn btn-outline-secondary position-relative rounded-pill">
+        {{.Page.Title}}
+        <span class="badge">({{.Count}})</span>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</div>
 
 
 {{ end }}

@@ -21,7 +21,7 @@
             </span>
         </a>
         {{ end }}
-        {{ if .Paginator }}
+        {{ if and (.Paginator) (not (.Data.Terms)) }}
         {{ if gt .Paginator.TotalPages 1 }}
             <div class="pagination-indicator">
                 <span style="text-align: center">
