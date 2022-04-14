@@ -256,4 +256,13 @@ body.night {
   .gsc-control-searchbox-only table * {
     color: black !important;
   }
+
+  .tags {
+    .tag a {
+      color: white;
+      span {
+        color: white;
+      }
+    }
+  }
 }
