@@ -51,6 +51,15 @@ body.night {
   table * {
     color: $dark-mode-text;
   }
+  .gt-btn * {
+    color: black !important;
+  }
+  .gt-header-textarea {
+    background: lighten($dark-mode-back-container-background, 20%)  !important;
+  }
+  .gt-header-preview {
+    background: lighten($dark-mode-back-container-background, 20%)  !important;
+  }
 
   .side-container {
     $nav-item-hover-background-alpha: 0.02;
