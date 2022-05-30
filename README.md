@@ -80,6 +80,19 @@ hugo server --themesDir ../..
 
 See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/master/exampleSite/config.toml)
 
+
+
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
 ### Customization
 
 - [Wiki Home](https://github.com/AmazingRise/hugo-theme-diary/wiki)
