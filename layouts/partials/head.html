@@ -128,8 +128,11 @@
 {{ end }}
 
 {{ if and (.Site.Params.walineServer) (.IsPage) }}
-<script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
-
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
 {{ end }}
 
 <!-- head custom -->

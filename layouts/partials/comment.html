@@ -60,11 +60,12 @@ twikoo.init({
 {{ if .Site.Params.walineServer }}
 <div id="waline"></div>
 <script>
-    new Waline({
+    Waline.init({
         el: '#waline',
-        path: location.pathname,
+        //path: location.pathname,
         serverURL: {{.Site.Params.walineServer}} ,
     });
+    
     </script>
 {{ end }}
 
