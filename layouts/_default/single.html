@@ -12,7 +12,7 @@
                 {{ if $featured_image }}
                     {{ $image := .Resources.GetMatch (.Params.featured_image) }}
                     {{ if $image }}
-                    style="background-image: url('{{$image.Permalink }}')"
+                    style="background-image: url('{{$image.RelPermalink }}')"
                     {{ else }}
                     style="background-image: url('{{ $featured_image | absURL}}')"
                     {{ end }}
@@ -79,7 +79,7 @@
             <nav class="post-pagination">
 
                 {{if .Next}}
-                <a class="newer-posts" href="{{.Next.Permalink}}">
+                <a class="newer-posts" href="{{.Next.RelPermalink}}">
 			{{ i18n "next_link" }}<br>{{.Next.Title}}
                 </a>
                 {{else}}
@@ -89,7 +89,7 @@
                 {{end}}
                 
                 {{if .Prev}}
-                <a class="older-posts" href="{{.Prev.Permalink}}">
+                <a class="older-posts" href="{{.Prev.RelPermalink}}">
 			{{ i18n "prev_link" }}<br>{{.Prev.Title}}
                 </a>
                 {{else}}

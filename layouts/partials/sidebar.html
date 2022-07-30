@@ -15,7 +15,7 @@
     </a>
 
     <div class="nav-link-list">
-        {{ $current := .Permalink | absLangURL }}
+        {{ $current := .RelPermalink | absLangURL }}
         {{ range .Site.Menus.main }}
             {{$actived := "false"}}
             <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->

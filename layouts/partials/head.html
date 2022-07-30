@@ -47,11 +47,11 @@
 {{ end }}
 
 {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 {{ if not .Site.Params.disableDarkmode }}
 {{ $darkmode := resources.Get "scss/dark-mode.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $darkmode.Permalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
+<link rel="stylesheet" href="{{ $darkmode.RelPermalink }}" integrity="{{ $darkmode.Data.Integrity }}" media="screen">
 {{ end }}
 
 <script src="{{"/vendor/js/loadCSS.js" | relURL}}"></script>

@@ -5,7 +5,7 @@
     <div class="post-list-container post-list-container-no-background">
         {{range .Paginator.Pages}}
             {{if and (.IsPage) (.Params.date)}}
-            <a href="{{.Permalink}}" class="a-block">
+            <a href="{{.RelPermalink}}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-divider">
                         <div class="post-item-info-wrapper">
@@ -24,7 +24,7 @@
                             <div class="post-item-image"
                             {{ if $image }}
                                 {{ $thumbnail := $image.Resize "690x360" }}
-                                 style="background-image: url('{{ $thumbnail.Permalink }}')"
+                                 style="background-image: url('{{ $thumbnail.RelPermalink }}')"
                             {{ else }}
                             
                                 style="background-image: url('{{ $featured_image | absURL}}')"

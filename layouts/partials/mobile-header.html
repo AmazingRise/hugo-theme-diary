@@ -6,7 +6,7 @@
             <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
             <div class="gcse-searchbox-only" mobileLayout="true"></div>
             {{ end }}
-            {{ $current := .Permalink | absLangURL }}
+            {{ $current := .RelPermalink | absLangURL }}
             {{ range .Site.Menus.main }}
                 {{$actived := "false"}}
                 <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->

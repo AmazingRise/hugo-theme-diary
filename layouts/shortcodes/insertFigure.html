@@ -25,8 +25,8 @@
 {{ end }}
 
 <figure align="{{$align}}" role="group" aria-describedby="caption-{{ $caption | md5 }}">
-  <a href="{{ $original.Permalink }}" class="img-link">
-    <img src="{{ $new.Permalink }}">
+  <a href="{{ $original.RelPermalink }}" class="img-link">
+    <img src="{{ $new.RelPermalink }}">
   </a>
   <figcaption id="caption-{{ $caption | md5 }}">
     {{ $caption | markdownify }}
