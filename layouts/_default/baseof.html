@@ -19,6 +19,15 @@
             <!-- mobile footer -->
             </div>
     {{ partial "journal.html" .}}
-    <script src="{{"/js/journal.js" | relURL}}"></script>
+    <!-- For compatibility. View https://github.com/AmazingRise/hugo-theme-diary/pull/135 for details.-->
+    {{- $hugoVersion := split (replaceRE ".*([0-9]+)\\.([0-9]+)\\.([0-9]+).*" "$1 $2 $3" hugo.Version) " " -}}
+    {{- if and (eq (int (index $hugoVersion 0)) 0) (ge (int (index $hugoVersion 1)) 101) -}}
+        {{- /* no leading slash */ -}}
+        <script src="{{"js/journal.js" | relURL}}"></script>
+    {{- else -}}
+        {{- /* with leading slash */ -}}
+        <script src="{{"/js/journal.js" | relURL}}"></script>
+    {{- end -}}
+    
     </body>
 </html>
