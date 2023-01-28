@@ -20,7 +20,8 @@ theme = "diary"
 
 [params]
 subtitle = "Themed by Diary."
-enableGitalk = true
+enableGitalk = false
+enableGiscus = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
@@ -42,6 +43,22 @@ repo="your repo"
 term="[ENTER TERM HERE]"
 label="your label"
 theme="github-light"
+
+# Please visit https://giscus.app/ to generate settings.
+[params.giscus]
+    data_repo="username/repo"
+    data-repo-id="**************************"    
+    data_category="General"
+    data_category_id="*********************"
+    data_mapping="pathname"
+    data_strict="0"
+    data_reactions_enabled="1"
+    data_emit_metadata="0"
+    data_input_position="bottom"
+    data_theme="preferred_color_scheme"
+    data_lang="en"
+    crossorigin="anonymous"
+
 
 [[menu.main]]
 url = "/categories"
