@@ -131,7 +131,7 @@ button {
 
 code {
   color: $dark-accent;
-  background: rgba($color-accent, 0.07) !important;
+  background: rgba($color-accent, 0.07);
   padding: 2px 5px;
   border-radius: 3px;
   font-family: $mono-font-list;
@@ -145,7 +145,7 @@ pre {
   border-radius: 5px;
   font-family: $mono-font-list;
   * {
-    background: none !important;
+    background: none;
     font-family: $mono-font-list !important;
   }
   code {
