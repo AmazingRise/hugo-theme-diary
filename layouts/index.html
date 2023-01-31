@@ -1,10 +1,9 @@
 
 {{ define "main" }}
 
-
     <div class="post-list-container post-list-container-no-background">
-        {{range .Paginator.Pages}}
-            {{if and (.IsPage) (.Params.date)}}
+        {{ $paginator := .Paginate (where .Site.RegularPages "Params.hidden" "!=" true) }}
+        {{range $paginator.Pages }}
             <a href="{{.RelPermalink}}" class="a-block">
                 <div class="post-item-wrapper">
                     <div class="post-item post-item-no-divider">
@@ -34,7 +33,6 @@
                         {{ end }}
                     </div>
                 </div>
-            {{ end }}
         {{ end }}
         </a>
     </div>
