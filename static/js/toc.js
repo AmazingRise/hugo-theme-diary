@@ -11,17 +11,18 @@ var spy = function () {
   var pageBottom = window.pageBottom;
 
   var meetUnread = false
-  var lastId = ""
   elems.forEach(function (elem, idx) {
     var elemTop = elem.offsetTop;
     var id = elem.getAttribute('id');
     //console.log(id,elem.offsetTop)
-    var navElem = document.getElementById(id + '-nav');
-    if (navElem==null) {
+    var navElems = document.getElementsByClassName(id + '-nav');
+    if (navElems.length == 0) {
       return
     }
     if (currentTop >= elemTop || currentBottom >= pageBottom) {
-      navElem.classList.add('toc-active');
+      Array.from(navElems).forEach((e) => {
+        e.classList.add('toc-active');
+      });
     } else {
       if (meetUnread == false) {
         meetUnread = true;
@@ -32,43 +33,11 @@ var spy = function () {
         }
         
       }
-      navElem.classList.remove('toc-active');
+      Array.from(navElems).forEach((e) => {
+        e.classList.remove('toc-active');
+      });
+      
     }
   })
 
-}
-
-var onNavClick = function () {
-  
-}
-
-
-/*$().ready(function () {
-  $(".collapse").each(function (idx) {
-    $(this).collapse("show");
-  });
-  //spy();
-  //$(window).bind('scroll', throttle(spy));
-});*/
-
-function throttle(func, timeout = 250) {
-  let last;
-  let timer;
-
-  return function () {
-    const context = this;
-    const args = arguments;
-    const now = +new Date();
-
-    if (last && now < last + timeout) {
-      clearTimeout(timer)
-      timer = setTimeout(function () {
-        last = now
-        func.apply(context, args)
-      }, timeout)
-    } else {
-      last = now
-      func.apply(context, args)
-    }
-  }
 }
