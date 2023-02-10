@@ -1,15 +1,19 @@
 <div id="extraContainer" class="extra-container">
-    {{ if and (isset .Site.Params "googlesearchcode") (.IsHome) }}
-    <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
-    <div class="gcse-searchbox-only" mobileLayout="true"></div>
-    {{ end }}
-    {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-        {{- partial "toc.html" . -}}
+    <div class="toc-wrapper">
+        {{ if and (isset .Site.Params "googlesearchcode") (.IsHome) }}
+        <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
+        <div class="gcse-searchbox-only" mobileLayout="true"></div>
+        {{ end }}
+
+        {{ if and (not (.Params.disableToC) ) (.IsPage) }}
+        <div class="toc">
+            {{- partial "toc.html" . -}}
+        </div>
+        {{ end }}
     </div>
-    {{ end }}
     <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
                 keyboard_arrow_up
             </i>
@@ -24,34 +28,31 @@
         {{ if and (.Paginator) (not (.Data.Terms)) }}
         {{ if gt .Paginator.TotalPages 1 }}
 
-            <a class="pagination-action"
-                {{ if .Paginator.HasPrev }}
-                    href="{{.Paginator.Prev.URL}}">
-                {{ else }}
-                    style="visibility:hidden">
-                {{ end }}
-                <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i>
-            </a>
+        <a class="pagination-action" {{ if .Paginator.HasPrev }} href="{{.Paginator.Prev.URL}}">
+            {{ else }}
+            style="visibility:hidden">
+            {{ end }}
+            <i class="material-icons pagination-action-icon">
+                chevron_left
+            </i>
+        </a>
 
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    {{.Paginator.PageNumber}}<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>{{.Paginator.TotalPages}}
-                </span>
-            </div>
+        <div class="pagination-indicator">
+            <span style="text-align: center">
+                {{.Paginator.PageNumber}}<br>
+                <div style="display: inline-block; transform: rotate(-28deg)">-</div><br>{{.Paginator.TotalPages}}
+            </span>
+        </div>
 
 
-            <a class="pagination-action" 
-                {{ if .Paginator.HasNext }}
-                    href="{{.Paginator.Next.URL}}">
-                {{ else }}
-                    style="visibility:hidden">
-                {{ end }}
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
+        <a class="pagination-action" {{ if .Paginator.HasNext }} href="{{.Paginator.Next.URL}}">
+            {{ else }}
+            style="visibility:hidden">
+            {{ end }}
+            <i class="material-icons pagination-action-icon">
+                chevron_right
+            </i>
+        </a>
         {{ end }}
         {{ end }}
     </div>
