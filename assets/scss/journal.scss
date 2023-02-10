@@ -58,6 +58,10 @@ $h-diff: 3px;
   background: rgba($color-accent, 0.4);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   background: $back-container-background;
   padding: 0;
@@ -441,7 +445,6 @@ a {
     cursor: hand;
     cursor: pointer;
     margin-bottom: 10px;
-    transition: all 0.2s linear;
     color: $deep-dark-accent;
     .nav-title {
       font-size: $nav-title-size;
@@ -473,7 +476,6 @@ a {
       padding: 8px 28px 8px 30px;
       cursor: hand;
       cursor: pointer;
-      transition: all 0.2s linear;
       color: $deep-dark-accent;
       .nav-link-subitem {
         font-size: $nav-link-size - 3px;
