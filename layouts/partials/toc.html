@@ -32,7 +32,7 @@
 						{{ end }}
 						{{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
 							<li>
-								<a href="#{{ $anchorId }}" class="{{ $anchorId }}-nav">
+								<a href="#{{ $anchorId }}" class="nav-{{ $anchorId }}">
 									{{ $header | plainify | htmlUnescape }}
 								</a>
 							</li>
