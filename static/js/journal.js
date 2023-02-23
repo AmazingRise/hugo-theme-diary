@@ -215,6 +215,18 @@ document.querySelectorAll("table").forEach(function (elem) {
 var isDarkMode = false;
 
 var toggleDarkMode = function () {
+  let setGiscusTheme = function (themeName) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage({
+      giscus: {
+        setConfig: {
+          theme: themeName
+        }
+      }
+    }, '*');
+  }
+
   isDarkMode = !isDarkMode;
   let icon = document.getElementById("darkModeToggleIcon");
   let icon2 = document.getElementById("darkModeToggleIcon2");
@@ -223,11 +235,13 @@ var toggleDarkMode = function () {
     document.body.classList.add("night");
     icon.innerText = "light_mode";
     icon2.innerText = "light_mode";
+    setGiscusTheme("dark");
   } else {
     document.cookie = "night=0;path=/";
     document.body.classList.remove("night");
     icon.innerText = "dark_mode";
     icon2.innerText = "dark_mode";
+    setGiscusTheme("light");
   }
 };
 
@@ -252,18 +266,18 @@ if (night == "") {
 
 try {
   document
-  .getElementById("darkModeToggleButton")
-  .addEventListener("click", function () {
-    toggleDarkMode();
-  });
+    .getElementById("darkModeToggleButton")
+    .addEventListener("click", function () {
+      toggleDarkMode();
+    });
 
-document
-  .getElementById("darkModeToggleButton2")
-  .addEventListener("click", function () {
-    toggleDarkMode();
-  });
-} catch(_) {
-  
+  document
+    .getElementById("darkModeToggleButton2")
+    .addEventListener("click", function () {
+      toggleDarkMode();
+    });
+} catch (_) {
+
 }
 
 
