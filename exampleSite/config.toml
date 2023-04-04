@@ -5,6 +5,7 @@ title = "A Hugo Site"
 copyright = "This is a customized copyright."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
+# clarity = "abcdefghzd"
 
 [markup]
   [markup.highlight]
