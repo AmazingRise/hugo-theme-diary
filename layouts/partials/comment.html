@@ -98,3 +98,14 @@ twikoo.init({
         async>
 </script>
 {{ end }}
+
+{{ if .Site.Params.cusdisAppID }}
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="{{ .Site.Params.cusdisAppID }}"
+  data-page-id="{{ .File.UniqueID }}"
+  data-page-url="{{ .Permalink }}"
+  data-page-title="{{ .Title }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+{{ end }}
