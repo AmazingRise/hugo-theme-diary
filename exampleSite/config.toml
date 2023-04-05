@@ -5,7 +5,6 @@ title = "A Hugo Site"
 copyright = "This is a customized copyright."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
-# clarity = "abcdefghzd"
 
 [markup]
   [markup.highlight]
@@ -23,6 +22,9 @@ theme = "diary"
 subtitle = "Themed by Diary."
 enableGitalk = false
 enableGiscus = true
+
+# Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
+clarity = "abcdefghzd"
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
