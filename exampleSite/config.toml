@@ -23,6 +23,9 @@ subtitle = "Themed by Diary."
 enableGitalk = false
 enableGiscus = true
 
+# Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
+clarity = "abcdefghzd"
+
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
