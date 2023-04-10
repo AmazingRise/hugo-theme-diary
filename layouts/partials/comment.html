@@ -106,6 +106,8 @@ twikoo.init({
   data-page-id="{{ .File.UniqueID }}"
   data-page-url="{{ .Permalink }}"
   data-page-title="{{ .Title }}"
+  data-theme="auto"
+  <!-- Automatically set theme by prefers-color-scheme -->
 ></div>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 {{ end }}
