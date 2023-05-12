@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: Ultima modifica {{ .Format "02/01/2006" }}
+- id: format_date
+  translation: '{{ .Format "02/01/2006" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "02/01/2006 15h04" }}'
+- id: next_link
+  translation: Prossimo
+- id: prev_link
+  translation: Precedente
+- id: no_newer_posts
+  translation: Non ci sono post più recenti.
+- id: no_older_posts
+  translation: Non ci sono post più vecchi.
+- id: comments_disabled
+  translation: Commenti disabilitati.
+- id: comments_activate_js
+  translation: Per favore abilita JavaScript per vedere i commenti.
+- id: hugo_theme
+  translation: Tema Hugo
+- id: ported_from
+  translation: Basato su
+- id: by
+  translation: realizzato da
+- id: draft
+  translation: BOZZA
+- id: toc_title
+  translation: CONTENUTO
