@@ -78,7 +78,7 @@ hugo server --themesDir ../..
 
 ### Example config
 
-See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/master/exampleSite/config.toml)
+See [/exampleSite/config.toml](https://github.com/AmazingRise/hugo-theme-diary/blob/main/exampleSite/config.toml)
 
 ### Customization
 
