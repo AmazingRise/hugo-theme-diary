@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Hugo
+_gen/

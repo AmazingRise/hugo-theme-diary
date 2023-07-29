@@ -1,0 +1,88 @@
+$default-font-list: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
+  monospace;
+//$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
+$sans-preferred-font-list: $default-font-list;
+
+$side-container-width: 25%; //280px;
+$extra-container-width: 25%;
+$extra-container-pagination-width: 64px;
+$stream-container-max-width: 1620px;
+
+$nav-title-size: 30px;
+$nav-subtitle-size: 18px;
+$nav-link-size: 20px;
+$nav-footer-size: 12px;
+$post-title-size: 30px;
+$post-subtitle-size: 14px;
+$post-summary-size: 16px;
+$post-body-size: 16px;
+$post-meta-size: 16px;
+$tag-category-title-size: 22px;
+$toc-size: 16px;
+
+$single-column-max-width: 1020px;
+$single-column-drawer-width: 260px;
+$single-column-nav-title-size: 28px;
+$single-column-nav-subtitle-size: 20px;
+$single-column-nav-link-size: 18px;
+$single-column-nav-footer-size: 13px;
+$single-column-post-title-size: 22px;
+$single-column-post-summary-size: 16px;
+$single-column-post-body-size: 16px;
+$single-column-post-meta-size: 14px;
+$single-column-tag-category-title-size: 14px;
+$single-column-toc-size: 14px;
+
+$nav-item-hover-background-alpha: 0.02;
+$nav-item-hover-indicator-alpha: 0.6;
+$nav-item-hover-color-emphasis: 30%;
+$nav-item-active-background-alpha: 0.03;
+$nav-item-active-background-alpha-night: 0.1;
+$nav-item-active-color-emphasis: 20%;
+
+// $nav-item-hover-indicator-alpha: 0.6;
+// $nav-item-hover-color-lighten: 30%;
+// $nav-item-active-background-alpha: 0.1;
+// $nav-item-active-color-lighten: 20%;
+
+$h1: 30px;
+$h-diff: 3px;
+
+// colors & themes
+$color-accent: #1976d2;
+//$color-accent: #330000;
+
+@mixin theme-day {
+  --back-container-background: #fcfcfc;
+  --front-container-background: #ffffff;
+
+  --emphasis-accent: #{darken($color-accent, 10%)};
+  --extra-emphasis-accent: #{darken($color-accent, 50%)};
+  --color-text: var(--extra-emphasis-accent);
+
+  @if lightness($color-accent) <20% {
+    --emphasis-accent: #{$color-accent};
+    --extra-emphasis-accent: #{$color-accent};
+    --color-text: #{$color-accent};
+  }
+}
+
+@mixin theme-night {
+  --back-container-background: #212121;
+  --front-container-background: #282828;
+
+  --emphasis-accent: #{lighten($color-accent, 10%)};
+  // lighten($color-accent, $nav-item-hover-color-emphasis);
+  // #{lighten($color-accent, 10%)};
+  --extra-emphasis-accent: #{lighten($color-accent, 30%)};
+  --color-text: #{darken(#fff, 10%)};
+
+    @if lightness($color-accent) <20% {
+    --emphasis-accent: #{lighten($color-accent, 30%)};
+    --extra-emphasis-accent: #{lighten($color-accent, 50%)};
+    --color-text: #{darken(#fff, 10%)};
+  }
+}
