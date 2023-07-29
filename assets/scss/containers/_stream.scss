@@ -138,6 +138,10 @@
           text-decoration: none;
           background: rgba(0, 0, 0, 0.03);
 
+          body.night & {
+            background: rgba(255, 255, 255, 0.03);
+          }
+
           .post-item-title {
             text-decoration: underline;
             text-decoration-style: 0.5px solid $color-accent;
