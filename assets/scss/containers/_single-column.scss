@@ -117,7 +117,7 @@
 
     * {
       font-family: $sans-preferred-font-list;
-      color: var(--extra-emphasis-accent);
+      color: var(--middle-accent);
     }
 
     .single-column-header-title {
@@ -173,7 +173,7 @@
           cursor: hand;
           cursor: pointer;
           transition: all 0.2s linear;
-          color: var(--extra-emphasis-accent);
+          color: var(--middle-accent);
 
           body.night & {
             color: var(--color-text);
@@ -190,7 +190,7 @@
 
             a {
               text-decoration: none;
-              color: var(--extra-emphasis-accent);
+              color: var(--middle-accent);
             }
           }
 

@@ -93,7 +93,7 @@ code {
   font-family: $mono-font-list;
 
   body.night &:not([data-lang]) {
-    color: var(--extra-emphasis-accent);
+    color: var(--middle-accent);
   }
 }
 
@@ -133,7 +133,7 @@ blockquote {
     color: var(--emphasis-accent);
 
     body.night & {
-      color: var(--extra-emphasis-accent);
+      color: var(--middle-accent);
     }
   }
 }
@@ -157,7 +157,7 @@ a {
 
 
     body.night & {
-      color: var(--extra-emphasis-accent);
+      color: var(--middle-accent);
     }
   }
 

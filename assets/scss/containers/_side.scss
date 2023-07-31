@@ -17,7 +17,7 @@
     cursor: hand;
     cursor: pointer;
     margin-bottom: 10px;
-    color: var(--extra-emphasis-accent);
+    color: var(--middle-accent);
     border-right: 2px solid transparent;
 
     .nav-title {
@@ -61,7 +61,7 @@
       border-right: 2px solid transparent;
       padding: 8px 28px 8px 30px;
       cursor: pointer;
-      color: var(--extra-emphasis-accent);
+      color: var(--middle-accent);
 
       body.night & {
         color: var(--color-text);

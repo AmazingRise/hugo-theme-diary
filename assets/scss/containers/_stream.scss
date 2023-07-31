@@ -148,7 +148,7 @@
             color: var(--emphasis-accent);
 
             body.night & {
-              color: var(--extra-emphasis-accent);
+              color: var(--middle-accent);
             }
           }
 
@@ -193,7 +193,7 @@
     text-align: center;
     width: 100%;
     opacity: 0.3;
-    color: var(--extra-emphasis-accent);
+    color: var(--middle-accent);
     font-family: $default-font-list;
     font-size: 13px;
     padding: 15px;
