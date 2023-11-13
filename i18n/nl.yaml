@@ -3,7 +3,7 @@
 - id: format_date
   translation: '{{ .Format "02.01.2006" }}'
 - id: format_date_tosec
-  translation: '{{ .Format "02.01.2006" }}'
+  translation: '{{ .Format "02.01.2006 15:04" }}'
 - id: next_link
   translation: Volgende
 - id: prev_link
