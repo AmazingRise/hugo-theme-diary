@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: Laatst bijgewerkt op {{ .Format "02.01.2006" }}
+- id: format_date
+  translation: '{{ .Format "02.01.2006" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "02.01.2006 15:04" }}'
+- id: next_link
+  translation: Volgende
+- id: prev_link
+  translation: Vorige
+- id: no_newer_posts
+  translation: Geen nieuwere berichten.
+- id: no_older_posts
+  translation: Geen oudere berichten.
+- id: comments_disabled
+  translation: Reacties Uitgeschakeld.
+- id: comments_activate_js
+  translation: Activeer JavaScript om reacties te bekijken.
+- id: hugo_theme
+  translation: Hugo Theme
+- id: ported_from
+  translation: Aangepast van
+- id: by
+  translation: door
+- id: draft
+  translation: CONCEPT
+- id: toc_title
+  translation: INHOUD
