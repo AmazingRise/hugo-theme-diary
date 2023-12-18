@@ -31,6 +31,7 @@ enableOpenGraph = true
 enableTwitterCards = true
 title = "My Blog" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
+ICPNumbers = "您的备案号" # ICP Numbers,only needed if server is in China
 
 [params.gitalk]
   owner = "user"

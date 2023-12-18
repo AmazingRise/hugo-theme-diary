@@ -10,3 +10,9 @@
 	{{ else }}
 	{{.Site.Home.Date.Year}} {{.Site.Title}}
 	{{ end }}
+<br>  
+{{ if .Site.Params.ICPNumbers }}
+    <span>
+      <a href="https://beian.miit.gov.cn/" target="_blank">{{ .Site.Params.ICPNumbers }}</a>
+    </span>
+{{ end }}
