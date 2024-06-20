@@ -1,0 +1,40 @@
+// Livere
+#lv-container {
+  padding: 0 30px;
+
+  @media screen and (max-width: $single-column-max-width) {
+    padding: 0 15px;
+  }
+}
+
+// Valine
+.vwrap * {
+  color: black !important;
+
+  body.night & {
+    color: var(--color-text) !important;
+  }
+}
+
+.vcontent p {
+  color: black !important;
+
+  body.night & {
+    color: var(--color-text) !important;
+  }
+}
+
+// Gitalk
+body.night {
+  .gt-btn * {
+    color: black !important;
+  }
+
+  .gt-header-textarea {
+    background: lighten(#212121, 20%) !important;
+  }
+
+  .gt-header-preview {
+    background: lighten(#212121, 20%) !important;
+  }
+}
