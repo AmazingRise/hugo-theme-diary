@@ -4,7 +4,11 @@ languageCode = "en-us"
 title = "A Hugo Site"
 copyright = "This is a customized copyright."
 theme = "diary"
-# googleAnalytics = "UA-123-45"
+
+#Google Analytics
+[services]
+  [services.googleAnalytics]
+    id = "G-XXXXXXXXXX"  # Your Google Analytics ID
 
 [markup]
   [markup.highlight]
