@@ -5,7 +5,13 @@ title = "A Hugo Site"
 copyright = "This is a customized copyright."
 theme = "diary"
 
-#Google Analytics
+# Generate sitemap in the public folder
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Google Analytics
 [services]
   [services.googleAnalytics]
     id = "G-XXXXXXXXXX"  # Your Google Analytics ID
