@@ -27,16 +27,15 @@
         {{ end }}
         {{ if and (.Page.IsNode) (.Page.Paginator) (not (.Data.Terms)) }}
         {{ if gt .Paginator.TotalPages 1 }}
-
-        <a class="pagination-action" {{ if .Paginator.HasPrev }} href="{{.Paginator.Prev.URL}}">
+            {{ if .Paginator.HasPrev }}
+            <a class="pagination-action" href="{{.Paginator.Prev.URL}}">
+                <i class="material-icons pagination-action-icon">
+                    chevron_left
+                </i>
+            </a>    
             {{ else }}
-            style="visibility:hidden">
+            <div class="pagination-action" style="visibility:hidden"></div>
             {{ end }}
-            <i class="material-icons pagination-action-icon">
-                chevron_left
-            </i>
-        </a>
-
         <div class="pagination-indicator">
             <span style="text-align: center">
                 {{.Paginator.PageNumber}}<br>
@@ -45,14 +44,15 @@
         </div>
 
 
-        <a class="pagination-action" {{ if .Paginator.HasNext }} href="{{.Paginator.Next.URL}}">
+            {{ if .Paginator.HasNext }}
+            <a class="pagination-action" href="{{.Paginator.Next.URL}}">
+                <i class="material-icons pagination-action-icon">
+                    chevron_right
+                </i>
+            </a>
             {{ else }}
-            style="visibility:hidden">
+            <div class="pagination-action" style="visibility:hidden"></div>
             {{ end }}
-            <i class="material-icons pagination-action-icon">
-                chevron_right
-            </i>
-        </a>
         {{ end }}
         {{ end }}
     </div>
