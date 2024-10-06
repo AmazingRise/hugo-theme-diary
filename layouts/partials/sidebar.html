@@ -7,7 +7,7 @@
         <div class="nav-title">
             {{.Site.Title}}
         </div>
-        {{ with .Site.Params.subtitle }}
+        {{ range .Site.Params.subtitle }}
         <div class="nav-subtitle">
             {{.}}
         </div>
