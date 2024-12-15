@@ -64,7 +64,7 @@
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
     <a href="{{ "" | absLangURL }}">
         <div class="single-column-header-title">{{.Site.Title}}</div>
-        {{ with .Site.Params.subtitle }}
+        {{ range .Site.Params.subtitle }}
         <div class="single-column-header-subtitle">{{.}}</div>
         {{ end }}
 
