@@ -81,6 +81,9 @@
 
 <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Material+Icons">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 
 {{ if .Site.Params.cloudflareToken }}
 <!-- Cloudflare Web Analytics -->
@@ -163,6 +166,8 @@
     href="https://unpkg.com/@waline/client@v2/dist/waline.css"
   />
 {{ end }}
+
+<link type="text/css" rel="stylesheet" href="{{"vendor/css/custom.css" | relURL}}">
 
 <!-- head custom -->
 {{- partial "extended_head.html" . }}

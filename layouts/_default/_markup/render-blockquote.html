@@ -1,0 +1,21 @@
+{{ $icons := dict
+  "note" "information-circle-outline"
+  "tip" "bulb-outline"
+  "important" "sparkles-outline"
+  "warning" "warning-outline"
+  "caution" "alert-circle-outline"
+}}
+
+{{ if eq .Type "alert" }}
+  <blockquote class="dream-alert {{ .AlertType }}">
+    <p class="heading">
+      <ion-icon name="{{ (index $icons .AlertType) }}"></ion-icon>
+      {{- or .Attributes.text (T .AlertType) (title .AlertType) -}}
+    </p>
+    {{ .Text | safeHTML }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text | safeHTML }}
+  </blockquote>
+{{ end }}
