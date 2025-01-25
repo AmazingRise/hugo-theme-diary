@@ -4,9 +4,13 @@
 {{ i18n "ported_from" }} <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
 <br>
 <!-- Because this project is under MIT licence. -->
+	{{ with .Site.Params.CopyrightHtml }}
+	{{ . | safeHTML }}
+    {{ else }}
 &copy;
-	{{ if .Site.Copyright }}
+    {{ if .Site.Copyright }}
 	{{ .Site.Copyright }}
 	{{ else }}
 	{{.Site.Home.Date.Year}} {{.Site.Title}}
 	{{ end }}
+    {{ end }}
