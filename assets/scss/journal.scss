@@ -173,6 +173,53 @@ blockquote {
   }
 }
 
+blockquote.alert-diary {
+  background: $front-container-background;
+  padding-left: 15px;
+
+  .alert-heading {
+    display: flex;
+    align-items: center;
+    font-size: $post-subtitle-size;
+    margin-bottom: 10px;
+  }
+
+  .material-icons {
+    padding-right: 4px;
+  }
+}
+
+@mixin alert-color($color) {
+  border-left-color: $color;
+  .alert-heading {
+    color: $color !important;
+  }
+
+  .material-icons {
+    color: $color !important;
+  }
+}
+
+blockquote.alert-diary-important {
+  @include alert-color(#8250df);
+}
+
+blockquote.alert-diary-tip {
+  @include alert-color(#1a7f37);
+}
+
+blockquote.alert-diary-caution {
+  @include alert-color(#d1242f);
+}
+
+blockquote.alert-diary-note {
+  @include alert-color($color-accent);
+}
+
+blockquote.alert-diary-warning {
+  @include alert-color(#9a6700);
+}
+
 a {
   color: $color-accent;
   &:hover {
