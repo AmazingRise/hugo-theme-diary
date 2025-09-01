@@ -26,3 +26,13 @@
   translation: 草稿
 - id: toc_title
   translation: 目录
+- id: caution
+  translation: 注意
+- id: important
+  translation: 重要
+- id: note
+  translation: 笔记
+- id: tip
+  translation: 提示
+- id: warning
+  translation: 警告

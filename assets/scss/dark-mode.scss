@@ -24,6 +24,10 @@ body.night {
     }
   }
 
+  blockquote.alert-diary {
+    background: $dark-mode-front-container-background;
+  }
+
   a {
     color: $light-accent;
     &:hover {
