@@ -1,0 +1,28 @@
+- id: last_mod_on
+  translation: '최종 수정: {{ .Format "2006-01-02" }}'
+- id: format_date
+  translation: '{{ .Format "2006-01-02" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "2006-01-02 15:04" }}'
+- id: next_link
+  translation: 다음글
+- id: prev_link
+  translation: 이전글
+- id: no_newer_posts
+  translation: 다음글이 없습니다.
+- id: no_older_posts
+  translation: 이전글이 없습니다.
+- id: comments_disabled
+  translation: 댓글 비활성화.
+- id: comments_activate_js
+  translation: 댓글을 이용하려면 JavaScript를 활성화해 주세요.
+- id: hugo_theme
+  translation: Hugo Theme
+- id: ported_from
+  translation: Ported from
+- id: by
+  translation: by
+- id: draft
+  translation: 초안
+- id: toc_title
+  translation: 목차

@@ -1,4 +1,4 @@
-{{ if and (.Paginator) (not (.Data.Terms)) }}
+{{ if and (.Page.IsNode) (.Page.Paginator) (not (.Data.Terms)) }}
 {{ if gt .Paginator.TotalPages 1 }}
 <div class="pagination">
     {{ if .Paginator.HasPrev }}

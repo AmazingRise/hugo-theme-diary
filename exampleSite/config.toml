@@ -4,7 +4,17 @@ languageCode = "en-us"
 title = "A Hugo Site"
 copyright = "This is a customized copyright."
 theme = "diary"
-# googleAnalytics = "UA-123-45"
+
+# Generate sitemap in the public folder
+[sitemap]
+  changefreq = "always"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Google Analytics
+[services]
+  [services.googleAnalytics]
+    id = "G-XXXXXXXXXX"  # Your Google Analytics ID
 
 [markup]
   [markup.highlight]
@@ -50,7 +60,7 @@ theme="github-light"
 # Please visit https://giscus.app/ to generate settings.
 [params.giscus]
     data_repo="username/repo"
-    data-repo-id="**************************"    
+    data_repo_id="**************************"    
     data_category="General"
     data_category_id="*********************"
     data_mapping="pathname"

@@ -12,7 +12,11 @@
                                 {{.Title}}
                             </div>
                             <div class="post-item-summary">
-                                {{.Description}}
+                                {{ if .Description }}
+                                    {{ .Description }}
+                                {{ else }}
+                                    {{ .Summary }}
+                                {{ end }}
                             </div>
                             {{ partial "post-item-meta.html" . }}
                         </div>

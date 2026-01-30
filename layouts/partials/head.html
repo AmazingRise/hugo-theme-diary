@@ -8,8 +8,8 @@
 
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="google-site-verification" content="{{ .Site.Config.Services.GoogleAnalytics.ID }}">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=5" name="viewport">
 <meta content="telephone=no" name="format-detection">
 <meta name="description" content="{{ $description }}">
 <meta name="renderer" content="webkit">
@@ -27,7 +27,7 @@
 
 <!-- metadata -->
 
-{{ if .Site.GoogleAnalytics }}
+{{ if .Site.Config.Services.GoogleAnalytics.ID }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
@@ -86,7 +86,7 @@
 <!-- Cloudflare Web Analytics -->
 <script defer
 	src='https://static.cloudflareinsights.com/beacon.min.js'
-	data-cf-beacon='{"token": {{ .Site.Params.cloudflareToken }}'>
+	data-cf-beacon='{"token": "{{ .Site.Params.cloudflareToken }}"}'>
 </script>
 <!-- End Cloudflare Web Analytics -->
 {{ end }}
@@ -153,7 +153,7 @@
 {{ end }}
 
 {{ if and (.Site.Params.enableTwikoo) (.IsPage) }}
-<script src="https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.16/dist/twikoo.all.min.js"></script>
 {{ end }}
 
 {{ if and (.Site.Params.walineServer) (.IsPage) }}
