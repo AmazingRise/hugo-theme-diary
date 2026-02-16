@@ -1,0 +1,25 @@
+{{ $icons := dict
+  "caution" "report_gmailerrorred"
+  "important" "priority_high"
+  "note" "info_outline"
+  "tip" "lightbulb_outline"
+  "warning" "warning_amber"
+}}
+
+{{ if eq .Type "alert" }}
+  <blockquote class="alert-diary alert-diary-{{ .AlertType }}">
+    <p class="alert-heading">
+    <span class="material-icons">{{ index $icons .AlertType }}</span>
+      {{ with .AlertTitle }}
+        {{ . }}
+      {{ else }}
+        {{ or (i18n .AlertType) (title .AlertType) }}
+      {{ end }}
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}
