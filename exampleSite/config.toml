@@ -36,6 +36,9 @@ enableGiscus = true
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
 clarity = "abcdefghzd"
 
+favicon = "/favicons/favicon.ico"
+# customWallpaper = "/img/customWallpaper.png"
+
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true

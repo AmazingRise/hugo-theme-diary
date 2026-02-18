@@ -1,0 +1,48 @@
+<!-- Sources:
+https://github.com/AmazingRise/hugo-theme-diary/issues/103
+https://www.w3schools.com/jsref/prop_style_backgroundimage.asp
+https://stackoverflow.com/questions/2662039/keep-background-image-fixed-during-scroll-using-css
+https://www.w3schools.com/cssref/pr_background-image.asp
+https://sebhastian.com/javascript-change-background-image/
+-->
+
+{{ if .Site.Params.customWallpaper }}
+
+<script type="text/javascript">
+	function wallpaper() {
+		document.body.style.backgroundImage = "url('{{ .Site.Params.customWallpaper | absURL }}')";
+		document.body.style.backgroundAttachment = "fixed";
+		document.body.style.backgroundPosition = "center";
+		document.body.style.minHeight = "100%";
+		document.body.style.backgroundRepeat = "no-repeat";
+	}
+	wallpaper();
+</script>
+
+
+
+<!-- CSS version does not work for some reason
+<style type="text/css">
+	body {
+		background-image: url('{{ .Site.Params.customWallpaper | absURL }}');
+		background-color: blue;
+	}
+</style>
+
+<style type="text/css">
+	.body {
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 100%;
+		background-attachment: fixed;
+		background-position: center;
+	}
+</style>
+-->
+
+<script>
+	console.log("JS wallpaper:");
+	console.log (document.body.style.backgroundImage);
+</script>
+
+{{ end }}
