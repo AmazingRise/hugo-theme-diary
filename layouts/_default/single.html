@@ -83,9 +83,9 @@
 			{{ i18n "next_link" }}<br>{{.Next.Title}}
                 </a>
                 {{else}}
-                <a class="newer-posts">
+                <div class="newer-posts">
 			{{ i18n "next_link" }}<br>{{ i18n "no_newer_posts"}}
-                </a>
+                </div>
                 {{end}}
                 
                 {{if .Prev}}
@@ -93,9 +93,9 @@
 			{{ i18n "prev_link" }}<br>{{.Prev.Title}}
                 </a>
                 {{else}}
-                <a class="older-posts">
+                <div class="older-posts">
 			{{ i18n "prev_link" }}<br>{{ i18n "no_older_posts" }}
-                </a>
+                </div>
                 {{end}}
             </nav>
             <div class="post-comment-wrapper">

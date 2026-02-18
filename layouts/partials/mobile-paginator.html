@@ -3,13 +3,13 @@
 <div class="pagination">
     {{ if .Paginator.HasPrev }}
     <a class="pagination-action" href="{{.Paginator.Prev.URL}}" style="opacity:1">
-    {{ else }}
-    <a class="pagination-action" style="opacity:0">
-    {{ end }}
         <i class="material-icons pagination-action-icon">
             chevron_left
         </i>
     </a>
+    {{ else }}
+    <div class="pagination-action" style="opacity:0" ></div>
+    {{ end }}
 
         <div class="pagination-indicator">
             <span>{{.Paginator.PageNumber}}/{{.Paginator.TotalPages}}</span>
@@ -18,13 +18,13 @@
         {{ if .Paginator.HasNext }}
         <a class="pagination-action" href="{{.Paginator.Next.URL}}"
            style="opacity:1">
+           <i class="material-icons pagination-action-icon">
+               chevron_right
+           </i>
+       </a>
         {{ else }}
-            <a class="pagination-action" style="opacity:0">
+            <div class="pagination-action" style="opacity:0"></div>
         {{ end }}
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
 </div>
 {{ end }}
 
