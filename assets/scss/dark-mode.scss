@@ -1,8 +1,10 @@
-@import "journal";
+@use "sass:color";
 
-$light-accent: lighten($color-accent, 10%);
-$deep-light-accent: lighten($color-accent, 30%);
-$dark-mode-text: darken(#fff, 10%);
+@use "journal" as *;
+
+$light-accent: color.adjust($color-accent, $lightness: 10%, $space: hsl);
+$deep-light-accent: color.adjust($color-accent, $lightness: 30%, $space: hsl);
+$dark-mode-text: color.adjust(#fff, $lightness: -10%, $space: hsl);
 
 $dark-mode-back-container-background: #212121;
 $dark-mode-front-container-background: #282828;
@@ -55,10 +57,10 @@ body.night {
     color: black !important;
   }
   .gt-header-textarea {
-    background: lighten($dark-mode-back-container-background, 20%)  !important;
+    background: color.adjust($dark-mode-back-container-background, $lightness: 20%, $space: hsl)  !important;
   }
   .gt-header-preview {
-    background: lighten($dark-mode-back-container-background, 20%)  !important;
+    background: color.adjust($dark-mode-back-container-background, $lightness: 20%, $space: hsl)  !important;
   }
 
   .side-container {
@@ -76,12 +78,12 @@ body.night {
         border-right: 2px solid
           rgba($color-accent, $nav-item-hover-indicator-alpha);
         background: rgba($color-accent, $nav-item-hover-background-alpha);
-        color: lighten($color-accent, $nav-item-hover-color-darken);
+        color: color.adjust($color-accent, $lightness: $nav-item-hover-color-darken, $space: hsl);
       }
       &.active {
         border-right: 2px solid $color-accent;
         background: rgba($color-accent, $nav-item-active-background-alpha);
-        color: lighten($color-accent, $nav-item-active-color-darken);
+        color: color.adjust($color-accent, $lightness: $nav-item-active-color-darken, $space: hsl);
       }
     }
 
@@ -97,17 +99,17 @@ body.night {
         &:hover {
           border-right: 2px solid
             rgba($color-accent, $nav-item-hover-indicator-alpha);
-          color: lighten(
+          color: color.adjust(
             $color-accent,
-            $nav-item-hover-color-lighten
+            $lightness: $nav-item-hover-color-lighten, $space: hsl
           ) !important;
         }
         &.active {
           border-right: 2px solid $color-accent;
           background: rgba($color-accent, $nav-item-active-background-alpha);
-          color: lighten(
+          color: color.adjust(
             $color-accent,
-            $nav-item-active-color-lighten
+            $lightness: $nav-item-active-color-lighten, $space: hsl
           ) !important;
         }
       }
@@ -205,7 +207,7 @@ body.night {
       .drawer-content {
         background: $dark-mode-front-container-background;
         .toc {
-          background-color: lighten($dark-mode-front-container-background, 10%);
+          background-color: color.adjust($dark-mode-front-container-background, $lightness: 10%, $space: hsl);
         }
         .drawer-menu {
           .drawer-menu-item {
